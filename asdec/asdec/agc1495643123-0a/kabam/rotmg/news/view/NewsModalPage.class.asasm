@@ -1,0 +1,431 @@
+class
+ refid "kabam.rotmg.news.view:NewsModalPage"
+ instance QName(PackageNamespace("kabam.rotmg.news.view"), "NewsModalPage")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("kabam.rotmg.news.view:NewsModalPage")
+  iinit
+   refid "kabam.rotmg.news.view:NewsModalPage/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   body
+    maxstack 6
+    localcount 7
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("flash.display"), "Sprite")
+     setlocal            4
+
+     pushnull
+     coerce              QName(PackageNamespace("flash.display"), "Sprite")
+     setlocal            5
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     pushfalse
+     initproperty        QName(PackageNamespace(""), "doubleClickEnabled")
+
+     getlocal0
+     pushfalse
+     initproperty        QName(PackageNamespace(""), "mouseEnabled")
+
+     getlocal0
+     getlex              QName(PackageNamespace("kabam.rotmg.news.view"), "NewsModal")
+     getproperty         QName(PackageNamespace(""), "MODAL_WIDTH")
+     pushbyte            2
+     subtract
+     getlex              QName(PackageNamespace(""), "TEXT_MARGIN_HTML")
+     pushbyte            2
+     multiply
+     subtract
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "innerModalWidth")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+     constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "htmlText")
+
+     getlex              QName(PackageNamespace("kabam.rotmg.core"), "StaticInjectorContext")
+     callproperty        QName(PackageNamespace(""), "getInjector"), 0
+     getlex              QName(PackageNamespace("kabam.rotmg.text.model"), "FontModel")
+     callproperty        QName(PackageNamespace(""), "getInstance"), 1
+     coerce              QName(PackageNamespace("kabam.rotmg.text.model"), "FontModel")
+     setlocal3
+
+     getlocal3
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "htmlText")
+     pushbyte            16
+     pushint             15792127
+     pushfalse
+     pushfalse
+     callpropvoid        QName(PackageNamespace(""), "apply"), 5
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "htmlText")
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "innerModalWidth")
+     setproperty         QName(PackageNamespace(""), "width")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "htmlText")
+     pushtrue
+     setproperty         QName(PackageNamespace(""), "multiline")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "htmlText")
+     pushtrue
+     setproperty         QName(PackageNamespace(""), "wordWrap")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "htmlText")
+     getlocal2
+     setproperty         QName(PackageNamespace(""), "htmlText")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "htmlText")
+     findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
+     pushbyte            0
+     dup
+     dup
+     constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 3
+     newarray            1
+     setproperty         QName(PackageNamespace(""), "filters")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "htmlText")
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "htmlText")
+     getproperty         QName(PackageNamespace(""), "textHeight")
+     pushbyte            8
+     add
+     setproperty         QName(PackageNamespace(""), "height")
+
+     findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+     constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+     coerce              QName(PackageNamespace("flash.display"), "Sprite")
+     dup
+     setlocal            4
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "htmlText")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal            4
+     getlex              QName(PackageNamespace(""), "TEXT_TOP_MARGIN_HTML")
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlocal            4
+     getlex              QName(PackageNamespace(""), "TEXT_MARGIN_HTML")
+     setproperty         QName(PackageNamespace(""), "x")
+
+     findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+     constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+     coerce              QName(PackageNamespace("flash.display"), "Sprite")
+     dup
+     setlocal            5
+
+     getproperty         QName(PackageNamespace(""), "graphics")
+     pushint             16711680
+     callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
+
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "graphics")
+     pushbyte            0
+     dup
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "innerModalWidth")
+     getlex              QName(PackageNamespace(""), "HEIGHT")
+     callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+     getlocal            5
+     getlex              QName(PackageNamespace(""), "TEXT_MARGIN_HTML")
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal            5
+     getlex              QName(PackageNamespace(""), "TEXT_TOP_MARGIN_HTML")
+     setproperty         QName(PackageNamespace(""), "y")
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal            5
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal            4
+     getlocal            5
+     setproperty         QName(PackageNamespace(""), "mask")
+
+     findpropstrict      QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "disableMouseOnText")
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "htmlText")
+     callpropvoid        QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "disableMouseOnText"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal            4
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlex              QName(PackageNamespace("kabam.rotmg.news.view"), "NewsModal")
+     getlocal1
+     getlex              QName(PackageNamespace(""), "TEXT_MARGIN")
+     pushbyte            6
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "getText"), 4
+     coerce              QName(PackageNamespace("kabam.rotmg.text.view"), "TextFieldDisplayConcrete")
+     setlocal            6
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal            6
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "htmlText")
+     getproperty         QName(PackageNamespace(""), "height")
+     getlex              QName(PackageNamespace(""), "HEIGHT")
+     ifnge               L174
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.ui"), "Scrollbar")
+     getlex              QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "SCROLLBAR_WIDTH")
+     getlex              QName(PackageNamespace(""), "HEIGHT")
+     pushdouble          0.1
+     getlocal            4
+     constructprop       QName(PackageNamespace("com.company.assembleegameclient.ui"), "Scrollbar"), 4
+     initproperty        QName(ProtectedNamespace("kabam.rotmg.news.view:NewsModalPage"), "scrollBar_")
+
+     getlocal0
+     getproperty         QName(ProtectedNamespace("kabam.rotmg.news.view:NewsModalPage"), "scrollBar_")
+     getlex              QName(PackageNamespace("kabam.rotmg.news.view"), "NewsModal")
+     getproperty         QName(PackageNamespace(""), "MODAL_WIDTH")
+     getlex              QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "SCROLLBAR_WIDTH")
+     subtract
+     pushbyte            10
+     subtract
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal0
+     getproperty         QName(ProtectedNamespace("kabam.rotmg.news.view:NewsModalPage"), "scrollBar_")
+     getlex              QName(PackageNamespace(""), "TEXT_TOP_MARGIN_HTML")
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlocal0
+     getproperty         QName(ProtectedNamespace("kabam.rotmg.news.view:NewsModalPage"), "scrollBar_")
+     getlex              QName(PackageNamespace(""), "HEIGHT")
+     getlocal            4
+     getproperty         QName(PackageNamespace(""), "height")
+     callpropvoid        QName(PackageNamespace(""), "setIndicatorSize"), 2
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal0
+     getproperty         QName(ProtectedNamespace("kabam.rotmg.news.view:NewsModalPage"), "scrollBar_")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L174:
+     getlocal0
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "onAddedHandler")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("kabam.rotmg.news.view:NewsModalPage"), "scrollBar_") type QName(PackageNamespace("com.company.assembleegameclient.ui"), "Scrollbar") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "innerModalWidth") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "htmlText") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait method QName(ProtectedNamespace("kabam.rotmg.news.view:NewsModalPage"), "onScrollBarChange")
+   method
+    refid "kabam.rotmg.news.view:NewsModalPage/instance/kabam.rotmg.news.view:NewsModalPage:onScrollBarChange"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "htmlText")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("kabam.rotmg.news.view:NewsModalPage"), "scrollBar_")
+      callproperty        QName(PackageNamespace(""), "pos"), 0
+      negate
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "htmlText")
+      getproperty         QName(PackageNamespace(""), "height")
+      getlex              QName(PackageNamespace(""), "HEIGHT")
+      subtract
+      multiply
+      setproperty         QName(PackageNamespace(""), "y")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "onAddedHandler")
+   method
+    refid "kabam.rotmg.news.view:NewsModalPage/instance/kabam.rotmg.news.view:NewsModalPage/onAddedHandler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "REMOVED_FROM_STAGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "onRemovedFromStage")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("kabam.rotmg.news.view:NewsModalPage"), "scrollBar_")
+      iffalse             L18
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("kabam.rotmg.news.view:NewsModalPage"), "scrollBar_")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "CHANGE")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("kabam.rotmg.news.view:NewsModalPage"), "onScrollBarChange")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+L18:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "onRemovedFromStage")
+   method
+    refid "kabam.rotmg.news.view:NewsModalPage/instance/kabam.rotmg.news.view:NewsModalPage/onRemovedFromStage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "REMOVED_FROM_STAGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "onRemovedFromStage")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlocal0
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "onAddedHandler")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("kabam.rotmg.news.view:NewsModalPage"), "scrollBar_")
+      iffalse             L24
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("kabam.rotmg.news.view:NewsModalPage"), "scrollBar_")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "CHANGE")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("kabam.rotmg.news.view:NewsModalPage"), "onScrollBarChange")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+L24:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "kabam.rotmg.news.view:NewsModalPage/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "TEXT_MARGIN")
+    pushbyte            22
+    initproperty        QName(PackageNamespace(""), "TEXT_MARGIN")
+
+    findproperty        QName(PackageNamespace(""), "TEXT_MARGIN_HTML")
+    pushbyte            26
+    initproperty        QName(PackageNamespace(""), "TEXT_MARGIN_HTML")
+
+    findproperty        QName(PackageNamespace(""), "TEXT_TOP_MARGIN_HTML")
+    pushbyte            40
+    initproperty        QName(PackageNamespace(""), "TEXT_TOP_MARGIN_HTML")
+
+    findproperty        QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "SCROLLBAR_WIDTH")
+    pushbyte            10
+    initproperty        QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "SCROLLBAR_WIDTH")
+
+    findproperty        QName(PackageNamespace(""), "WIDTH")
+    pushshort           136
+    initproperty        QName(PackageNamespace(""), "WIDTH")
+
+    findproperty        QName(PackageNamespace(""), "HEIGHT")
+    pushshort           310
+    initproperty        QName(PackageNamespace(""), "HEIGHT")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "TEXT_MARGIN") slotid 1 type QName(PackageNamespace(""), "int") value Integer(22) end
+ trait const QName(PackageNamespace(""), "TEXT_MARGIN_HTML") slotid 2 type QName(PackageNamespace(""), "int") value Integer(26) end
+ trait const QName(PackageNamespace(""), "TEXT_TOP_MARGIN_HTML") slotid 3 type QName(PackageNamespace(""), "int") value Integer(40) end
+ trait const QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "SCROLLBAR_WIDTH") slotid 4 type QName(PackageNamespace(""), "int") value Integer(10) end
+ trait const QName(PackageNamespace(""), "WIDTH") slotid 5 type QName(PackageNamespace(""), "int") value Integer(136) end
+ trait const QName(PackageNamespace(""), "HEIGHT") slotid 6 type QName(PackageNamespace(""), "int") value Integer(310) end
+ trait method QName(PrivateNamespace(null, "kabam.rotmg.news.view:NewsModalPage"), "disableMouseOnText") flag FINAL dispid 3
+  method
+   refid "kabam.rotmg.news.view:NewsModalPage/class/kabam.rotmg.news.view:NewsModalPage/disableMouseOnText"
+   param QName(PackageNamespace("flash.text"), "TextField")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 8
+    maxscopedepth 9
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     pushfalse
+     setproperty         QName(PackageNamespace(""), "mouseWheelEnabled")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

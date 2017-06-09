@@ -1,0 +1,260 @@
+class
+ refid "kabam.rotmg.dailyLogin.config:CalendarSettings"
+ instance QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("kabam.rotmg.dailyLogin.config:CalendarSettings")
+  iinit
+   refid "kabam.rotmg.dailyLogin.config:CalendarSettings/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "kabam.rotmg.dailyLogin.config:CalendarSettings/class/init"
+  body
+   maxstack 6
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "NUMBER_OF_COLUMNS")
+    pushbyte            7
+    initproperty        QName(PackageNamespace(""), "NUMBER_OF_COLUMNS")
+
+    findproperty        QName(PackageNamespace(""), "BOX_WIDTH")
+    pushbyte            70
+    initproperty        QName(PackageNamespace(""), "BOX_WIDTH")
+
+    findproperty        QName(PackageNamespace(""), "BOX_HEIGHT")
+    pushbyte            70
+    initproperty        QName(PackageNamespace(""), "BOX_HEIGHT")
+
+    findproperty        QName(PackageNamespace(""), "ITEM_SIZE")
+    pushbyte            100
+    initproperty        QName(PackageNamespace(""), "ITEM_SIZE")
+
+    findproperty        QName(PackageNamespace(""), "BOX_MARGIN")
+    pushbyte            10
+    initproperty        QName(PackageNamespace(""), "BOX_MARGIN")
+
+    findproperty        QName(PackageNamespace(""), "BOX_BORDER")
+    pushbyte            2
+    initproperty        QName(PackageNamespace(""), "BOX_BORDER")
+
+    findproperty        QName(PackageNamespace(""), "CLAIM_WARNING_BEFORE_DAYS")
+    pushbyte            3
+    initproperty        QName(PackageNamespace(""), "CLAIM_WARNING_BEFORE_DAYS")
+
+    findproperty        QName(PackageNamespace(""), "DAILY_LOGIN_MODAL_PADDING")
+    pushbyte            20
+    initproperty        QName(PackageNamespace(""), "DAILY_LOGIN_MODAL_PADDING")
+
+    findproperty        QName(PackageNamespace(""), "DAILY_LOGIN_TABS_PADDING")
+    pushbyte            10
+    initproperty        QName(PackageNamespace(""), "DAILY_LOGIN_TABS_PADDING")
+
+    findproperty        QName(PackageNamespace(""), "DAILY_LOGIN_MODAL_HEIGHT_MARGIN")
+    pushbyte            100
+    initproperty        QName(PackageNamespace(""), "DAILY_LOGIN_MODAL_HEIGHT_MARGIN")
+
+    findproperty        QName(PackageNamespace(""), "TABS_HEIGHT")
+    pushbyte            30
+    initproperty        QName(PackageNamespace(""), "TABS_HEIGHT")
+
+    findproperty        QName(PackageNamespace(""), "TABS_FONT_SIZE")
+    pushbyte            16
+    initproperty        QName(PackageNamespace(""), "TABS_FONT_SIZE")
+
+    findproperty        QName(PackageNamespace(""), "TABS_WIDTH")
+    pushshort           200
+    initproperty        QName(PackageNamespace(""), "TABS_WIDTH")
+
+    findproperty        QName(PackageNamespace(""), "TABS_Y_POSITION")
+    pushbyte            70
+    initproperty        QName(PackageNamespace(""), "TABS_Y_POSITION")
+
+    findproperty        QName(PackageNamespace(""), "GREEN_COLOR_TRANSFORM")
+    findpropstrict      QName(PackageNamespace("flash.geom"), "ColorTransform")
+    pushbyte            0
+    pushshort           198
+    pushshort           255
+    divide
+    pushbyte            6
+    pushshort           255
+    divide
+    constructprop       QName(PackageNamespace("flash.geom"), "ColorTransform"), 3
+    initproperty        QName(PackageNamespace(""), "GREEN_COLOR_TRANSFORM")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "NUMBER_OF_COLUMNS") slotid 1 type QName(PackageNamespace(""), "int") value Integer(7) end
+ trait const QName(PackageNamespace(""), "BOX_WIDTH") slotid 2 type QName(PackageNamespace(""), "int") value Integer(70) end
+ trait const QName(PackageNamespace(""), "BOX_HEIGHT") slotid 3 type QName(PackageNamespace(""), "int") value Integer(70) end
+ trait const QName(PackageNamespace(""), "ITEM_SIZE") slotid 4 type QName(PackageNamespace(""), "int") value Integer(100) end
+ trait const QName(PackageNamespace(""), "BOX_MARGIN") slotid 5 type QName(PackageNamespace(""), "int") value Integer(10) end
+ trait const QName(PackageNamespace(""), "BOX_BORDER") slotid 6 type QName(PackageNamespace(""), "int") value Integer(2) end
+ trait const QName(PackageNamespace(""), "CLAIM_WARNING_BEFORE_DAYS") slotid 7 type QName(PackageNamespace(""), "int") value Integer(3) end
+ trait const QName(PackageNamespace(""), "DAILY_LOGIN_MODAL_PADDING") slotid 8 type QName(PackageNamespace(""), "int") value Integer(20) end
+ trait const QName(PackageNamespace(""), "DAILY_LOGIN_TABS_PADDING") slotid 9 type QName(PackageNamespace(""), "int") value Integer(10) end
+ trait const QName(PackageNamespace(""), "DAILY_LOGIN_MODAL_HEIGHT_MARGIN") slotid 10 type QName(PackageNamespace(""), "int") value Integer(100) end
+ trait const QName(PackageNamespace(""), "TABS_HEIGHT") slotid 11 type QName(PackageNamespace(""), "int") value Integer(30) end
+ trait const QName(PackageNamespace(""), "TABS_FONT_SIZE") slotid 12 type QName(PackageNamespace(""), "int") value Integer(16) end
+ trait const QName(PackageNamespace(""), "TABS_WIDTH") slotid 13 type QName(PackageNamespace(""), "int") value Integer(200) end
+ trait const QName(PackageNamespace(""), "TABS_Y_POSITION") slotid 14 type QName(PackageNamespace(""), "int") value Integer(70) end
+ trait const QName(PackageNamespace(""), "GREEN_COLOR_TRANSFORM") slotid 15 type QName(PackageNamespace("flash.geom"), "ColorTransform") end
+ trait method QName(PackageNamespace(""), "getCalendarModalRectangle") flag FINAL dispid 3
+  method
+   refid "kabam.rotmg.dailyLogin.config:CalendarSettings/class/getCalendarModalRectangle"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "Boolean")
+   returns QName(PackageNamespace("flash.geom"), "Rectangle")
+   body
+    maxstack 7
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal1
+     getlex              QName(PackageNamespace(""), "NUMBER_OF_COLUMNS")
+     divide
+     callproperty        QName(PackageNamespace(""), "ceil"), 1
+     convert_i
+     setlocal3
+
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Rectangle")
+     pushbyte            0
+     dup
+     pushbyte            2
+     getlex              QName(PackageNamespace(""), "DAILY_LOGIN_MODAL_PADDING")
+     multiply
+     pushbyte            2
+     getlex              QName(PackageNamespace(""), "DAILY_LOGIN_TABS_PADDING")
+     multiply
+     add
+     getlex              QName(PackageNamespace(""), "BOX_WIDTH")
+     getlex              QName(PackageNamespace(""), "NUMBER_OF_COLUMNS")
+     multiply
+     add
+     getlex              QName(PackageNamespace(""), "NUMBER_OF_COLUMNS")
+     decrement
+     getlex              QName(PackageNamespace(""), "BOX_MARGIN")
+     multiply
+     add
+     getlex              QName(PackageNamespace(""), "TABS_HEIGHT")
+     pushbyte            2
+     getlex              QName(PackageNamespace(""), "DAILY_LOGIN_TABS_PADDING")
+     multiply
+     add
+     pushbyte            2
+     getlex              QName(PackageNamespace(""), "DAILY_LOGIN_MODAL_PADDING")
+     multiply
+     add
+     getlex              QName(PackageNamespace(""), "BOX_HEIGHT")
+     getlocal3
+     multiply
+     add
+     getlocal3
+     decrement
+     getlex              QName(PackageNamespace(""), "BOX_MARGIN")
+     multiply
+     add
+     getlex              QName(PackageNamespace(""), "DAILY_LOGIN_MODAL_HEIGHT_MARGIN")
+     add
+     getlocal2
+     iffalse             L53
+
+     pushbyte            20
+     coerce_a
+     jump                L55
+
+L53:
+     pushbyte            0
+     coerce_a
+L55:
+     add
+     constructprop       QName(PackageNamespace("flash.geom"), "Rectangle"), 4
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getTabsRectangle") flag FINAL dispid 4
+  method
+   refid "kabam.rotmg.dailyLogin.config:CalendarSettings/class/getTabsRectangle"
+   param QName(PackageNamespace(""), "int")
+   returns QName(PackageNamespace("flash.geom"), "Rectangle")
+   body
+    maxstack 7
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal1
+     getlex              QName(PackageNamespace(""), "NUMBER_OF_COLUMNS")
+     divide
+     callproperty        QName(PackageNamespace(""), "ceil"), 1
+     convert_i
+     setlocal2
+
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Rectangle")
+     pushbyte            0
+     dup
+     getlex              QName(PackageNamespace(""), "BOX_WIDTH")
+     getlex              QName(PackageNamespace(""), "NUMBER_OF_COLUMNS")
+     multiply
+     getlex              QName(PackageNamespace(""), "NUMBER_OF_COLUMNS")
+     decrement
+     getlex              QName(PackageNamespace(""), "BOX_MARGIN")
+     multiply
+     add
+     pushbyte            2
+     getlex              QName(PackageNamespace(""), "DAILY_LOGIN_TABS_PADDING")
+     multiply
+     add
+     getlex              QName(PackageNamespace(""), "BOX_HEIGHT")
+     getlocal2
+     multiply
+     getlocal2
+     decrement
+     getlex              QName(PackageNamespace(""), "BOX_MARGIN")
+     multiply
+     add
+     pushbyte            2
+     getlex              QName(PackageNamespace(""), "DAILY_LOGIN_TABS_PADDING")
+     multiply
+     add
+     constructprop       QName(PackageNamespace("flash.geom"), "Rectangle"), 4
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

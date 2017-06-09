@@ -1,0 +1,1019 @@
+class
+ refid "kabam.rotmg.dailyLogin.view:CalendarDayBox"
+ instance QName(PackageNamespace("kabam.rotmg.dailyLogin.view"), "CalendarDayBox")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("kabam.rotmg.dailyLogin.view:CalendarDayBox")
+  iinit
+   refid "kabam.rotmg.dailyLogin.view:CalendarDayBox/instance/init"
+   param QName(PackageNamespace("kabam.rotmg.dailyLogin.model"), "CalendarDayModel")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "Boolean")
+   body
+    maxstack 10
+    localcount 10
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("kabam.rotmg.dailyLogin.view"), "ItemTileRenderer")
+     setlocal            6
+
+     pushnull
+     coerce              QName(PackageNamespace("flash.display"), "Bitmap")
+     setlocal            7
+
+     pushnull
+     coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+     setlocal            8
+
+     pushnull
+     coerce              QName(PackageNamespace("kabam.rotmg.text.view"), "TextFieldDisplayConcrete")
+     setlocal            9
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsSolidFill")
+     pushint             3552822
+     pushbyte            1
+     constructprop       QName(PackageNamespace("flash.display"), "GraphicsSolidFill"), 2
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "fill_")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsSolidFill")
+     pushint             4889165
+     pushbyte            1
+     constructprop       QName(PackageNamespace("flash.display"), "GraphicsSolidFill"), 2
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "fillCurrent_")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsSolidFill")
+     pushbyte            0
+     pushdouble          0.7
+     constructprop       QName(PackageNamespace("flash.display"), "GraphicsSolidFill"), 2
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "fillBlack_")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsStroke")
+     getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+     getproperty         QName(PackageNamespace(""), "BOX_BORDER")
+     pushfalse
+     getlex              QName(PackageNamespace("flash.display"), "LineScaleMode")
+     getproperty         QName(PackageNamespace(""), "NORMAL")
+     getlex              QName(PackageNamespace("flash.display"), "CapsStyle")
+     getproperty         QName(PackageNamespace(""), "NONE")
+     getlex              QName(PackageNamespace("flash.display"), "JointStyle")
+     getproperty         QName(PackageNamespace(""), "ROUND")
+     pushbyte            3
+     findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsSolidFill")
+     pushint             16777215
+     constructprop       QName(PackageNamespace("flash.display"), "GraphicsSolidFill"), 1
+     constructprop       QName(PackageNamespace("flash.display"), "GraphicsStroke"), 7
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "lineStyle_")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsPath")
+     getlex              Multiname("Vector", [PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), PackageNamespace(""), PackageNamespace("__AS3__.vec"), PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#1"), PackageNamespace("kabam.rotmg.dailyLogin.view"), PackageInternalNs("kabam.rotmg.dailyLogin.view"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("kabam.rotmg.dailyLogin.view:CalendarDayBox"), StaticProtectedNs("kabam.rotmg.dailyLogin.view:CalendarDayBox"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlex              QName(PackageNamespace(""), "int")
+     applytype           1
+     construct           0
+     getlex              Multiname("Vector", [PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), PackageNamespace(""), PackageNamespace("__AS3__.vec"), PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#1"), PackageNamespace("kabam.rotmg.dailyLogin.view"), PackageInternalNs("kabam.rotmg.dailyLogin.view"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("kabam.rotmg.dailyLogin.view:CalendarDayBox"), StaticProtectedNs("kabam.rotmg.dailyLogin.view:CalendarDayBox"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlex              QName(PackageNamespace(""), "Number")
+     applytype           1
+     construct           0
+     constructprop       QName(PackageNamespace("flash.display"), "GraphicsPath"), 2
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "path_")
+
+     getlocal0
+     findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
+     getproperty         Multiname("Vector", [PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), PackageNamespace(""), PackageNamespace("__AS3__.vec"), PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#1"), PackageNamespace("kabam.rotmg.dailyLogin.view"), PackageInternalNs("kabam.rotmg.dailyLogin.view"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("kabam.rotmg.dailyLogin.view:CalendarDayBox"), StaticProtectedNs("kabam.rotmg.dailyLogin.view:CalendarDayBox"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlex              QName(PackageNamespace("flash.display"), "IGraphicsData")
+     applytype           1
+     pushbyte            5
+     construct           1
+     dup
+     pushbyte            0
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "lineStyle_")
+     setproperty         MultinameL([PackageNamespace("")])
+
+     dup
+     pushbyte            1
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "fill_")
+     setproperty         MultinameL([PackageNamespace("")])
+
+     dup
+     pushbyte            2
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "path_")
+     setproperty         MultinameL([PackageNamespace("")])
+
+     dup
+     pushbyte            3
+     getlex              QName(PackageNamespace("com.company.util"), "GraphicsUtil")
+     getproperty         QName(PackageNamespace(""), "END_FILL")
+     setproperty         MultinameL([PackageNamespace("")])
+
+     dup
+     pushbyte            4
+     getlex              QName(PackageNamespace("com.company.util"), "GraphicsUtil")
+     getproperty         QName(PackageNamespace(""), "END_STROKE")
+     setproperty         MultinameL([PackageNamespace("")])
+
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "graphicsDataBackground")
+
+     getlocal0
+     findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
+     getproperty         Multiname("Vector", [PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), PackageNamespace(""), PackageNamespace("__AS3__.vec"), PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#1"), PackageNamespace("kabam.rotmg.dailyLogin.view"), PackageInternalNs("kabam.rotmg.dailyLogin.view"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("kabam.rotmg.dailyLogin.view:CalendarDayBox"), StaticProtectedNs("kabam.rotmg.dailyLogin.view:CalendarDayBox"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlex              QName(PackageNamespace("flash.display"), "IGraphicsData")
+     applytype           1
+     pushbyte            5
+     construct           1
+     dup
+     pushbyte            0
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "lineStyle_")
+     setproperty         MultinameL([PackageNamespace("")])
+
+     dup
+     pushbyte            1
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "fillCurrent_")
+     setproperty         MultinameL([PackageNamespace("")])
+
+     dup
+     pushbyte            2
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "path_")
+     setproperty         MultinameL([PackageNamespace("")])
+
+     dup
+     pushbyte            3
+     getlex              QName(PackageNamespace("com.company.util"), "GraphicsUtil")
+     getproperty         QName(PackageNamespace(""), "END_FILL")
+     setproperty         MultinameL([PackageNamespace("")])
+
+     dup
+     pushbyte            4
+     getlex              QName(PackageNamespace("com.company.util"), "GraphicsUtil")
+     getproperty         QName(PackageNamespace(""), "END_STROKE")
+     setproperty         MultinameL([PackageNamespace("")])
+
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "graphicsDataBackgroundCurrent")
+
+     getlocal0
+     findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
+     getproperty         Multiname("Vector", [PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), PackageNamespace(""), PackageNamespace("__AS3__.vec"), PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#1"), PackageNamespace("kabam.rotmg.dailyLogin.view"), PackageInternalNs("kabam.rotmg.dailyLogin.view"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("kabam.rotmg.dailyLogin.view:CalendarDayBox"), StaticProtectedNs("kabam.rotmg.dailyLogin.view:CalendarDayBox"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlex              QName(PackageNamespace("flash.display"), "IGraphicsData")
+     applytype           1
+     pushbyte            5
+     construct           1
+     dup
+     pushbyte            0
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "lineStyle_")
+     setproperty         MultinameL([PackageNamespace("")])
+
+     dup
+     pushbyte            1
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "fillBlack_")
+     setproperty         MultinameL([PackageNamespace("")])
+
+     dup
+     pushbyte            2
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "path_")
+     setproperty         MultinameL([PackageNamespace("")])
+
+     dup
+     pushbyte            3
+     getlex              QName(PackageNamespace("com.company.util"), "GraphicsUtil")
+     getproperty         QName(PackageNamespace(""), "END_FILL")
+     setproperty         MultinameL([PackageNamespace("")])
+
+     dup
+     pushbyte            4
+     getlex              QName(PackageNamespace("com.company.util"), "GraphicsUtil")
+     getproperty         QName(PackageNamespace(""), "END_STROKE")
+     setproperty         MultinameL([PackageNamespace("")])
+
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "graphicsDataClaimedOverlay")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "day")
+
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "dayNumber")
+     getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+     getproperty         QName(PackageNamespace(""), "NUMBER_OF_COLUMNS")
+     divide
+     callproperty        QName(PackageNamespace(""), "ceil"), 1
+     convert_i
+     setlocal            4
+
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal2
+     getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+     getproperty         QName(PackageNamespace(""), "NUMBER_OF_COLUMNS")
+     divide
+     callproperty        QName(PackageNamespace(""), "ceil"), 1
+     convert_i
+     setlocal            5
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "dayNumber")
+     pushbyte            1
+     ifne                L205
+
+     getlocal            5
+     pushbyte            1
+     ifne                L197
+
+     getlocal0
+     pushbyte            1
+     pushbyte            0
+     dup
+     pushbyte            1
+     newarray            4
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "boxCuts")
+
+     jump                L204
+
+L197:
+     getlocal0
+     pushbyte            1
+     pushbyte            0
+     dup
+     dup
+     newarray            4
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "boxCuts")
+
+L204:
+     jump                L280
+
+L205:
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "dayNumber")
+     getlocal2
+     ifne                L228
+
+     getlocal            5
+     pushbyte            1
+     ifne                L220
+
+     getlocal0
+     pushbyte            0
+     pushbyte            1
+     dup
+     pushbyte            0
+     newarray            4
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "boxCuts")
+
+     jump                L227
+
+L220:
+     getlocal0
+     pushbyte            0
+     dup
+     pushbyte            1
+     pushbyte            0
+     newarray            4
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "boxCuts")
+
+L227:
+     jump                L280
+
+L228:
+     getlocal            4
+     pushbyte            1
+     equals
+     dup
+     iffalse             L241
+
+     pop
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "dayNumber")
+     getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+     getproperty         QName(PackageNamespace(""), "NUMBER_OF_COLUMNS")
+     modulo
+     pushbyte            0
+     equals
+L241:
+     iffalse             L250
+
+     getlocal0
+     pushbyte            0
+     pushbyte            1
+     pushbyte            0
+     dup
+     newarray            4
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "boxCuts")
+
+     jump                L280
+
+L250:
+     getlocal            4
+     getlocal            5
+     equals
+     dup
+     iffalse             L264
+
+     pop
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "dayNumber")
+     decrement
+     getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+     getproperty         QName(PackageNamespace(""), "NUMBER_OF_COLUMNS")
+     modulo
+     pushbyte            0
+     equals
+L264:
+     iffalse             L273
+
+     getlocal0
+     pushbyte            0
+     dup
+     dup
+     pushbyte            1
+     newarray            4
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "boxCuts")
+
+     jump                L280
+
+L273:
+     getlocal0
+     pushbyte            0
+     dup
+     dup
+     pushbyte            0
+     newarray            4
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "boxCuts")
+
+L280:
+     getlocal0
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "boxCuts")
+     getlocal3
+     callpropvoid        QName(PackageNamespace(""), "drawBackground"), 2
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "gold")
+     pushbyte            0
+     equals
+     dup
+     iffalse             L296
+
+     pop
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "itemID")
+     pushbyte            0
+     greaterthan
+L296:
+     iffalse             L322
+
+     findpropstrict      QName(PackageNamespace("kabam.rotmg.dailyLogin.view"), "ItemTileRenderer")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "itemID")
+     constructprop       QName(PackageNamespace("kabam.rotmg.dailyLogin.view"), "ItemTileRenderer"), 1
+     coerce              QName(PackageNamespace("kabam.rotmg.dailyLogin.view"), "ItemTileRenderer")
+     setlocal            6
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal            6
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal            6
+     getlex              QName(PackageNamespace(""), "Math")
+     getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+     getproperty         QName(PackageNamespace(""), "BOX_WIDTH")
+     pushbyte            2
+     divide
+     callproperty        QName(PackageNamespace(""), "round"), 1
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal            6
+     getlex              QName(PackageNamespace(""), "Math")
+     getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+     getproperty         QName(PackageNamespace(""), "BOX_HEIGHT")
+     pushbyte            2
+     divide
+     callproperty        QName(PackageNamespace(""), "round"), 1
+     setproperty         QName(PackageNamespace(""), "y")
+
+L322:
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "gold")
+     pushbyte            0
+     ifngt               L364
+
+     findpropstrict      QName(PackageNamespace("flash.display"), "Bitmap")
+     constructprop       QName(PackageNamespace("flash.display"), "Bitmap"), 0
+     coerce              QName(PackageNamespace("flash.display"), "Bitmap")
+     dup
+     setlocal            7
+
+     getlex              QName(PackageNamespace("kabam.rotmg.assets.services"), "IconFactory")
+     pushbyte            80
+     callproperty        QName(PackageNamespace(""), "makeCoin"), 1
+     setproperty         QName(PackageNamespace(""), "bitmapData")
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal            7
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal            7
+     getlex              QName(PackageNamespace(""), "Math")
+     getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+     getproperty         QName(PackageNamespace(""), "BOX_WIDTH")
+     pushbyte            2
+     divide
+     getlocal            7
+     getproperty         QName(PackageNamespace(""), "width")
+     pushbyte            2
+     divide
+     subtract
+     callproperty        QName(PackageNamespace(""), "round"), 1
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal            7
+     getlex              QName(PackageNamespace(""), "Math")
+     getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+     getproperty         QName(PackageNamespace(""), "BOX_HEIGHT")
+     pushbyte            2
+     divide
+     getlocal            7
+     getproperty         QName(PackageNamespace(""), "height")
+     pushbyte            2
+     divide
+     subtract
+     callproperty        QName(PackageNamespace(""), "round"), 1
+     setproperty         QName(PackageNamespace(""), "y")
+
+L364:
+     getlocal0
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "dayNumber")
+     callpropvoid        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "displayDayNumber"), 1
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "claimKey")
+     pushstring          ""
+     ifeq                L435
+
+     getlex              QName(PackageNamespace("com.company.util"), "AssetLibrary")
+     pushstring          "lofiInterface"
+     pushbyte            52
+     callproperty        QName(PackageNamespace(""), "getImageFromSet"), 2
+     coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+     dup
+     setlocal            8
+
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Rectangle")
+     pushbyte            0
+     dup
+     getlocal            8
+     getproperty         QName(PackageNamespace(""), "width")
+     getlocal            8
+     getproperty         QName(PackageNamespace(""), "height")
+     constructprop       QName(PackageNamespace("flash.geom"), "Rectangle"), 4
+     getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+     getproperty         QName(PackageNamespace(""), "GREEN_COLOR_TRANSFORM")
+     callpropvoid        QName(PackageNamespace(""), "colorTransform"), 2
+
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "TextureRedrawer")
+     getlocal            8
+     pushbyte            40
+     pushtrue
+     pushbyte            0
+     callproperty        QName(PackageNamespace(""), "redraw"), 4
+     coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+     setlocal            8
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "Bitmap")
+     getlocal            8
+     constructprop       QName(PackageNamespace("flash.display"), "Bitmap"), 1
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "redDot")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "redDot")
+     getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+     getproperty         QName(PackageNamespace(""), "BOX_WIDTH")
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "redDot")
+     getproperty         QName(PackageNamespace(""), "width")
+     pushbyte            2
+     divide
+     callproperty        QName(PackageNamespace(""), "round"), 1
+     subtract
+     pushbyte            10
+     subtract
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "redDot")
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "redDot")
+     getproperty         QName(PackageNamespace(""), "width")
+     pushbyte            2
+     divide
+     callproperty        QName(PackageNamespace(""), "round"), 1
+     negate
+     pushbyte            10
+     add
+     setproperty         QName(PackageNamespace(""), "y")
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "redDot")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L435:
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "quantity")
+     pushbyte            1
+     greaterthan
+     dup
+     iftrue              L446
+
+     pop
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "gold")
+     pushbyte            0
+     greaterthan
+L446:
+     iffalse             L493
+
+     findpropstrict      QName(PackageNamespace("kabam.rotmg.text.view"), "TextFieldDisplayConcrete")
+     constructprop       QName(PackageNamespace("kabam.rotmg.text.view"), "TextFieldDisplayConcrete"), 0
+     pushbyte            14
+     callproperty        QName(PackageNamespace(""), "setSize"), 1
+     pushint             16777215
+     callproperty        QName(PackageNamespace(""), "setColor"), 1
+     getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+     getproperty         QName(PackageNamespace(""), "BOX_WIDTH")
+     callproperty        QName(PackageNamespace(""), "setTextWidth"), 1
+     getlex              QName(PackageNamespace("flash.text"), "TextFieldAutoSize")
+     getproperty         QName(PackageNamespace(""), "RIGHT")
+     callproperty        QName(PackageNamespace(""), "setAutoSize"), 1
+     coerce              QName(PackageNamespace("kabam.rotmg.text.view"), "TextFieldDisplayConcrete")
+     dup
+     setlocal            9
+
+     findpropstrict      QName(PackageNamespace("kabam.rotmg.text.view.stringBuilder"), "StaticStringBuilder")
+     pushstring          "x"
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "gold")
+     pushbyte            0
+     greaterthan
+     iffalse             L474
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "gold")
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+     coerce_a
+     jump                L478
+
+L474:
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "quantity")
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+     coerce_a
+L478:
+     add
+     constructprop       QName(PackageNamespace("kabam.rotmg.text.view.stringBuilder"), "StaticStringBuilder"), 1
+     callpropvoid        QName(PackageNamespace(""), "setStringBuilder"), 1
+
+     getlocal            9
+     getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+     getproperty         QName(PackageNamespace(""), "BOX_HEIGHT")
+     pushbyte            18
+     subtract
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlocal            9
+     pushbyte            -2
+     setproperty         QName(PackageNamespace(""), "x")
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal            9
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L493:
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "isClaimed")
+     iffalse             L498
+
+     getlocal0
+     callpropvoid        QName(PackageNamespace(""), "markAsClaimed"), 0
+
+L498:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "fill_") type QName(PackageNamespace("flash.display"), "GraphicsSolidFill") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "fillCurrent_") type QName(PackageNamespace("flash.display"), "GraphicsSolidFill") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "fillBlack_") type QName(PackageNamespace("flash.display"), "GraphicsSolidFill") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "lineStyle_") type QName(PackageNamespace("flash.display"), "GraphicsStroke") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "path_") type QName(PackageNamespace("flash.display"), "GraphicsPath") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "graphicsDataBackground") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "IGraphicsData")>) end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "graphicsDataBackgroundCurrent") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "IGraphicsData")>) end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "graphicsDataClaimedOverlay") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "IGraphicsData")>) end
+  trait slot QName(PackageNamespace(""), "day") type QName(PackageNamespace("kabam.rotmg.dailyLogin.model"), "CalendarDayModel") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "redDot") type QName(PackageNamespace("flash.display"), "Bitmap") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "boxCuts") type QName(PackageNamespace(""), "Array") end
+  trait method QName(PackageNamespace(""), "getDay")
+   method
+    refid "kabam.rotmg.dailyLogin.view:CalendarDayBox/instance/getDay"
+    returns QName(PackageNamespace("kabam.rotmg.dailyLogin.model"), "CalendarDayModel")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "day")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "markAsClaimed")
+   method
+    refid "kabam.rotmg.dailyLogin.view:CalendarDayBox/instance/markAsClaimed"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 8
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "redDot")
+      convert_b
+      dup
+      iffalse             L12
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "redDot")
+      getproperty         QName(PackageNamespace(""), "parent")
+      convert_b
+L12:
+      iffalse             L17
+
+      findpropstrict      QName(PackageNamespace(""), "removeChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "redDot")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L17:
+      getlex              QName(PackageNamespace("com.company.util"), "AssetLibrary")
+      pushstring          "lofiInterfaceBig"
+      pushbyte            11
+      callproperty        QName(PackageNamespace(""), "getImageFromSet"), 2
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal1
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "TextureRedrawer")
+      getlocal1
+      pushbyte            60
+      pushtrue
+      pushint             2997032
+      callproperty        QName(PackageNamespace(""), "redraw"), 4
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal1
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Bitmap")
+      getlocal1
+      constructprop       QName(PackageNamespace("flash.display"), "Bitmap"), 1
+      coerce              QName(PackageNamespace("flash.display"), "Bitmap")
+      setlocal2
+
+      getlocal2
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+      getproperty         QName(PackageNamespace(""), "BOX_WIDTH")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "width")
+      subtract
+      pushbyte            2
+      divide
+      callproperty        QName(PackageNamespace(""), "round"), 1
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal2
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+      getproperty         QName(PackageNamespace(""), "BOX_HEIGHT")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "height")
+      subtract
+      pushbyte            2
+      divide
+      callproperty        QName(PackageNamespace(""), "round"), 1
+      setproperty         QName(PackageNamespace(""), "y")
+
+      findpropstrict      QName(PackageNamespace(""), "drawRectangleWithCuts")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "boxCuts")
+      getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+      getproperty         QName(PackageNamespace(""), "BOX_WIDTH")
+      getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+      getproperty         QName(PackageNamespace(""), "BOX_HEIGHT")
+      pushbyte            0
+      pushbyte            1
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "graphicsDataClaimedOverlay")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "path_")
+      callproperty        QName(PackageNamespace(""), "drawRectangleWithCuts"), 7
+      coerce              QName(PackageNamespace("flash.display"), "Sprite")
+      setlocal3
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "displayDayNumber")
+   method
+    refid "kabam.rotmg.dailyLogin.view:CalendarDayBox/instance/kabam.rotmg.dailyLogin.view:CalendarDayBox/displayDayNumber"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("kabam.rotmg.text.view"), "TextFieldDisplayConcrete")
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace("kabam.rotmg.text.view"), "TextFieldDisplayConcrete")
+      constructprop       QName(PackageNamespace("kabam.rotmg.text.view"), "TextFieldDisplayConcrete"), 0
+      pushbyte            16
+      callproperty        QName(PackageNamespace(""), "setSize"), 1
+      pushint             16777215
+      callproperty        QName(PackageNamespace(""), "setColor"), 1
+      getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+      getproperty         QName(PackageNamespace(""), "BOX_WIDTH")
+      callproperty        QName(PackageNamespace(""), "setTextWidth"), 1
+      coerce              QName(PackageNamespace("kabam.rotmg.text.view"), "TextFieldDisplayConcrete")
+      setlocal2
+
+      getlocal2
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "setBold"), 1
+
+      getlocal2
+      findpropstrict      QName(PackageNamespace("kabam.rotmg.text.view.stringBuilder"), "StaticStringBuilder")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+      constructprop       QName(PackageNamespace("kabam.rotmg.text.view.stringBuilder"), "StaticStringBuilder"), 1
+      callpropvoid        QName(PackageNamespace(""), "setStringBuilder"), 1
+
+      getlocal2
+      pushbyte            4
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal2
+      pushbyte            4
+      setproperty         QName(PackageNamespace(""), "y")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "drawBackground")
+   method
+    refid "kabam.rotmg.dailyLogin.view:CalendarDayBox/instance/drawBackground"
+    param QName(PackageNamespace(""), "Array")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 9
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      findpropstrict      QName(PackageNamespace(""), "drawRectangleWithCuts")
+      getlocal1
+      getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+      getproperty         QName(PackageNamespace(""), "BOX_WIDTH")
+      getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+      getproperty         QName(PackageNamespace(""), "BOX_HEIGHT")
+      pushint             3552822
+      pushbyte            1
+      getlocal2
+      iffalse             L17
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "graphicsDataBackgroundCurrent")
+      coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "IGraphicsData")>)
+      jump                L20
+
+L17:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "graphicsDataBackground")
+      coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "IGraphicsData")>)
+L20:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), "path_")
+      callproperty        QName(PackageNamespace(""), "drawRectangleWithCuts"), 7
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "kabam.rotmg.dailyLogin.view:CalendarDayBox/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "drawRectangleWithCuts") flag FINAL dispid 3
+  method
+   refid "kabam.rotmg.dailyLogin.view:CalendarDayBox/class/drawRectangleWithCuts"
+   param QName(PackageNamespace(""), "Array")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "uint")
+   param QName(PackageNamespace(""), "Number")
+   param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "IGraphicsData")>)
+   param QName(PackageNamespace("flash.display"), "GraphicsPath")
+   returns QName(PackageNamespace("flash.display"), "Sprite")
+   body
+    maxstack 8
+    localcount 13
+    initscopedepth 8
+    maxscopedepth 9
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace("flash.display"), "Shape")
+     constructprop       QName(PackageNamespace("flash.display"), "Shape"), 0
+     coerce              QName(PackageNamespace("flash.display"), "Shape")
+     setlocal            8
+
+     findpropstrict      QName(PackageNamespace("flash.display"), "Shape")
+     constructprop       QName(PackageNamespace("flash.display"), "Shape"), 0
+     coerce              QName(PackageNamespace("flash.display"), "Shape")
+     setlocal            9
+
+     findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+     constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+     coerce              QName(PackageNamespace("flash.display"), "Sprite")
+     dup
+     setlocal            10
+
+     getlocal            8
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal            10
+     getlocal            9
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlex              QName(PackageNamespace("com.company.util"), "GraphicsUtil")
+     getlocal            7
+     callpropvoid        QName(PackageNamespace(""), "clearPath"), 1
+
+     getlex              QName(PackageNamespace("com.company.util"), "GraphicsUtil")
+     pushbyte            0
+     dup
+     getlocal2
+     getlocal3
+     pushbyte            4
+     getlocal1
+     getlocal            7
+     callpropvoid        QName(PackageNamespace(""), "drawCutEdgeRect"), 7
+
+     getlocal            8
+     getproperty         QName(PackageNamespace(""), "graphics")
+     callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+     getlocal            8
+     getproperty         QName(PackageNamespace(""), "graphics")
+     getlocal            6
+     callpropvoid        QName(PackageNamespace(""), "drawGraphicsData"), 1
+
+     findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsSolidFill")
+     getlocal            4
+     getlocal            5
+     constructprop       QName(PackageNamespace("flash.display"), "GraphicsSolidFill"), 2
+     coerce              QName(PackageNamespace("flash.display"), "GraphicsSolidFill")
+     setlocal            11
+
+     getlex              QName(PackageNamespace("com.company.util"), "GraphicsUtil")
+     getlocal            7
+     callpropvoid        QName(PackageNamespace(""), "clearPath"), 1
+
+     findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
+     getproperty         Multiname("Vector", [PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#0"), PackageNamespace(""), PackageNamespace("__AS3__.vec"), PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarDayBox#1"), PackageNamespace("kabam.rotmg.dailyLogin.view"), PackageInternalNs("kabam.rotmg.dailyLogin.view"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("kabam.rotmg.dailyLogin.view:CalendarDayBox"), StaticProtectedNs("kabam.rotmg.dailyLogin.view:CalendarDayBox"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlex              QName(PackageNamespace("flash.display"), "IGraphicsData")
+     applytype           1
+     pushbyte            3
+     construct           1
+     dup
+     pushbyte            0
+     getlocal            11
+     setproperty         MultinameL([PackageNamespace("")])
+
+     dup
+     pushbyte            1
+     getlocal            7
+     setproperty         MultinameL([PackageNamespace("")])
+
+     dup
+     pushbyte            2
+     getlex              QName(PackageNamespace("com.company.util"), "GraphicsUtil")
+     getproperty         QName(PackageNamespace(""), "END_FILL")
+     setproperty         MultinameL([PackageNamespace("")])
+
+     coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "IGraphicsData")>)
+     setlocal            12
+
+     getlex              QName(PackageNamespace("com.company.util"), "GraphicsUtil")
+     pushbyte            0
+     dup
+     getlocal2
+     getlocal3
+     pushbyte            4
+     getlocal1
+     getlocal            7
+     callpropvoid        QName(PackageNamespace(""), "drawCutEdgeRect"), 7
+
+     getlocal            9
+     getproperty         QName(PackageNamespace(""), "graphics")
+     getlocal            12
+     callpropvoid        QName(PackageNamespace(""), "drawGraphicsData"), 1
+
+     getlocal            9
+     pushtrue
+     setproperty         QName(PackageNamespace(""), "cacheAsBitmap")
+
+     getlocal            9
+     pushfalse
+     setproperty         QName(PackageNamespace(""), "visible")
+
+     getlocal            10
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

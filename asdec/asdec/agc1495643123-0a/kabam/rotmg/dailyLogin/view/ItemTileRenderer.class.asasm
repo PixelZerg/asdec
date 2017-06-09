@@ -1,0 +1,500 @@
+class
+ refid "kabam.rotmg.dailyLogin.view:ItemTileRenderer"
+ instance QName(PackageNamespace("kabam.rotmg.dailyLogin.view"), "ItemTileRenderer")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("kabam.rotmg.dailyLogin.view:ItemTileRenderer")
+  iinit
+   refid "kabam.rotmg.dailyLogin.view:ItemTileRenderer/instance/init"
+   param QName(PackageNamespace(""), "int")
+   body
+    maxstack 3
+    localcount 2
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "itemId")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "Bitmap")
+     constructprop       QName(PackageNamespace("flash.display"), "Bitmap"), 0
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "itemBitmap")
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "itemBitmap")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal0
+     callpropvoid        QName(PackageNamespace(""), "drawTile"), 0
+
+     getlocal0
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "MOUSE_OVER")
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "onTileHover")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlocal0
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "MOUSE_OUT")
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "onTileOut")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "itemId") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "bitmapFactory") type QName(PackageNamespace("kabam.rotmg.text.view"), "BitmapTextFactory") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "tooltip") type QName(PackageNamespace("com.company.assembleegameclient.ui.tooltip"), "ToolTip") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "itemBitmap") type QName(PackageNamespace("flash.display"), "Bitmap") end
+  trait method QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "onTileOut")
+   method
+    refid "kabam.rotmg.dailyLogin.view:ItemTileRenderer/instance/kabam.rotmg.dailyLogin.view:ItemTileRenderer/onTileOut"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("kabam.rotmg.core"), "StaticInjectorContext")
+      callproperty        QName(PackageNamespace(""), "getInjector"), 0
+      coerce              QName(PackageNamespace("org.swiftsuspenders"), "Injector")
+      setlocal2
+
+      getlocal2
+      getlex              QName(PackageNamespace("kabam.rotmg.core.signals"), "HideTooltipsSignal")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 1
+      coerce              QName(PackageNamespace("kabam.rotmg.core.signals"), "HideTooltipsSignal")
+      setlocal3
+
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "onTileHover")
+   method
+    refid "kabam.rotmg.dailyLogin.view:ItemTileRenderer/instance/kabam.rotmg.dailyLogin.view:ItemTileRenderer/onTileHover"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "stage")
+      iftrue              L5
+
+      returnvoid
+
+L5:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "currentTarget")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.ui.panels.itemgrids.itemtiles"), "ItemTile")
+      astypelate
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.ui.panels.itemgrids.itemtiles"), "ItemTile")
+      setlocal2
+
+      getlocal0
+      getlocal2
+      callpropvoid        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "addToolTipToTile"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "addToolTipToTile")
+   method
+    refid "kabam.rotmg.dailyLogin.view:ItemTileRenderer/instance/kabam.rotmg.dailyLogin.view:ItemTileRenderer/addToolTipToTile"
+    param QName(PackageNamespace("com.company.assembleegameclient.ui.panels.itemgrids.itemtiles"), "ItemTile")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 10
+     localcount 5
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "itemId")
+      pushbyte            0
+      ifngt               L19
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.ui.tooltip"), "EquipmentToolTip")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "itemId")
+      pushnull
+      pushbyte            -1
+      pushstring          ""
+      constructprop       QName(PackageNamespace("com.company.assembleegameclient.ui.tooltip"), "EquipmentToolTip"), 4
+      initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "tooltip")
+
+      jump                L51
+
+L19:
+      getlocal1
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.ui.panels.itemgrids.itemtiles"), "EquipmentTile")
+      istypelate
+      iffalse             L32
+
+      getlex              QName(PackageNamespace("kabam.rotmg.constants"), "ItemConstants")
+      getlocal1
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.ui.panels.itemgrids.itemtiles"), "EquipmentTile")
+      astypelate
+      getproperty         QName(PackageNamespace(""), "itemType")
+      callproperty        QName(PackageNamespace(""), "itemTypeToName"), 1
+      coerce_s
+      setlocal            4
+
+      jump                L36
+
+L32:
+      getlex              QName(PackageNamespace("kabam.rotmg.text.model"), "TextKey")
+      getproperty         QName(PackageNamespace(""), "ITEM")
+      coerce_s
+      setlocal            4
+
+L36:
+      getlocal0
+      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.ui.tooltip"), "TextToolTip")
+      pushint             3552822
+      pushint             10197915
+      pushnull
+      getlex              QName(PackageNamespace("kabam.rotmg.text.model"), "TextKey")
+      getproperty         QName(PackageNamespace(""), "ITEM_EMPTY_SLOT")
+      pushshort           200
+      pushstring          "itemType"
+      getlex              QName(PackageNamespace("kabam.rotmg.text.model"), "TextKey")
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "wrapForTokenResolution"), 1
+      newobject           1
+      constructprop       QName(PackageNamespace("com.company.assembleegameclient.ui.tooltip"), "TextToolTip"), 6
+      initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "tooltip")
+
+L51:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "tooltip")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "attachToTarget"), 1
+
+      getlex              QName(PackageNamespace("kabam.rotmg.core"), "StaticInjectorContext")
+      callproperty        QName(PackageNamespace(""), "getInjector"), 0
+      coerce              QName(PackageNamespace("org.swiftsuspenders"), "Injector")
+      setlocal2
+
+      getlocal2
+      getlex              QName(PackageNamespace("kabam.rotmg.core.signals"), "ShowTooltipSignal")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 1
+      coerce              QName(PackageNamespace("kabam.rotmg.core.signals"), "ShowTooltipSignal")
+      setlocal3
+
+      getlocal3
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "tooltip")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "drawTile")
+   method
+    refid "kabam.rotmg.dailyLogin.view:ItemTileRenderer/instance/drawTile"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 5
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "XML")
+      setlocal3
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "itemId")
+      convert_i
+      setlocal1
+
+      getlocal1
+      getlex              QName(PackageNamespace("kabam.rotmg.constants"), "ItemConstants")
+      getproperty         QName(PackageNamespace(""), "NO_ITEM")
+      ifeq                L153
+
+      getlocal1
+      pushint             36864
+      greaterequals
+      dup
+      iffalse             L28
+
+      pop
+      getlocal1
+      pushint             61440
+      lessthan
+L28:
+      iffalse             L31
+
+      pushint             36863
+      setlocal1
+
+L31:
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+      getlocal1
+      getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+      getproperty         QName(PackageNamespace(""), "ITEM_SIZE")
+      pushtrue
+      callproperty        QName(PackageNamespace(""), "getRedrawnTextureFromType"), 3
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal2
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+      getproperty         QName(PackageNamespace(""), "xmlLibrary_")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), StaticProtectedNs("kabam.rotmg.dailyLogin.view:ItemTileRenderer"), PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#1"), PackageNamespace(""), PackageNamespace("kabam.rotmg.dailyLogin.view"), PackageInternalNs("kabam.rotmg.dailyLogin.view"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("kabam.rotmg.dailyLogin.view:ItemTileRenderer"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce              QName(PackageNamespace(""), "XML")
+      setlocal3
+
+      getlocal3
+      coerce_a
+      convert_b
+      dup
+      iffalse             L56
+
+      pop
+      getlocal3
+      pushstring          "Doses"
+      callproperty        Multiname("hasOwnProperty", [PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), StaticProtectedNs("kabam.rotmg.dailyLogin.view:ItemTileRenderer"), PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#1"), PackageNamespace(""), PackageNamespace("kabam.rotmg.dailyLogin.view"), PackageInternalNs("kabam.rotmg.dailyLogin.view"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("kabam.rotmg.dailyLogin.view:ItemTileRenderer"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+      coerce_a
+      convert_b
+L56:
+      dup
+      iffalse             L62
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "bitmapFactory")
+      convert_b
+L62:
+      iffalse             L87
+
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "clone"), 0
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "bitmapFactory")
+      findpropstrict      QName(PackageNamespace("kabam.rotmg.text.view.stringBuilder"), "StaticStringBuilder")
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal3
+      getproperty         Multiname("Doses", [PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), StaticProtectedNs("kabam.rotmg.dailyLogin.view:ItemTileRenderer"), PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#1"), PackageNamespace(""), PackageNamespace("kabam.rotmg.dailyLogin.view"), PackageInternalNs("kabam.rotmg.dailyLogin.view"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("kabam.rotmg.dailyLogin.view:ItemTileRenderer"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      constructprop       QName(PackageNamespace("kabam.rotmg.text.view.stringBuilder"), "StaticStringBuilder"), 1
+      pushbyte            12
+      pushint             16777215
+      pushfalse
+      getlex              QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "IDENTITY_MATRIX")
+      pushfalse
+      callproperty        QName(PackageNamespace(""), "make"), 6
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal            4
+
+      getlocal2
+      getlocal            4
+      getlex              QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "DOSE_MATRIX")
+      callpropvoid        QName(PackageNamespace(""), "draw"), 2
+
+L87:
+      getlocal3
+      coerce_a
+      convert_b
+      dup
+      iffalse             L98
+
+      pop
+      getlocal3
+      pushstring          "Quantity"
+      callproperty        Multiname("hasOwnProperty", [PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), StaticProtectedNs("kabam.rotmg.dailyLogin.view:ItemTileRenderer"), PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#1"), PackageNamespace(""), PackageNamespace("kabam.rotmg.dailyLogin.view"), PackageInternalNs("kabam.rotmg.dailyLogin.view"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("kabam.rotmg.dailyLogin.view:ItemTileRenderer"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+      coerce_a
+      convert_b
+L98:
+      dup
+      iffalse             L104
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "bitmapFactory")
+      convert_b
+L104:
+      iffalse             L129
+
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "clone"), 0
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "bitmapFactory")
+      findpropstrict      QName(PackageNamespace("kabam.rotmg.text.view.stringBuilder"), "StaticStringBuilder")
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal3
+      getproperty         Multiname("Quantity", [PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), StaticProtectedNs("kabam.rotmg.dailyLogin.view:ItemTileRenderer"), PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#1"), PackageNamespace(""), PackageNamespace("kabam.rotmg.dailyLogin.view"), PackageInternalNs("kabam.rotmg.dailyLogin.view"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("kabam.rotmg.dailyLogin.view:ItemTileRenderer"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      constructprop       QName(PackageNamespace("kabam.rotmg.text.view.stringBuilder"), "StaticStringBuilder"), 1
+      pushbyte            12
+      pushint             16777215
+      pushfalse
+      getlex              QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "IDENTITY_MATRIX")
+      pushfalse
+      callproperty        QName(PackageNamespace(""), "make"), 6
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal            4
+
+      getlocal2
+      getlocal            4
+      getlex              QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "DOSE_MATRIX")
+      callpropvoid        QName(PackageNamespace(""), "draw"), 2
+
+L129:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "itemBitmap")
+      getlocal2
+      setproperty         QName(PackageNamespace(""), "bitmapData")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "itemBitmap")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "width")
+      negate
+      pushbyte            2
+      divide
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "itemBitmap")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "width")
+      negate
+      pushbyte            2
+      divide
+      setproperty         QName(PackageNamespace(""), "y")
+
+      findproperty        QName(PackageNamespace(""), "visible")
+      pushtrue
+      initproperty        QName(PackageNamespace(""), "visible")
+
+      jump                L156
+
+L153:
+      findproperty        QName(PackageNamespace(""), "visible")
+      pushfalse
+      initproperty        QName(PackageNamespace(""), "visible")
+
+L156:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "kabam.rotmg.dailyLogin.view:ItemTileRenderer/class/init"
+  body
+   maxstack 22
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(StaticProtectedNs("kabam.rotmg.dailyLogin.view:ItemTileRenderer"), "DIM_FILTER")
+    findpropstrict      QName(PackageNamespace("flash.filters"), "ColorMatrixFilter")
+    pushdouble          0.4
+    pushdouble          0
+    pushdouble          0
+    pushdouble          0
+    pushdouble          0
+    pushdouble          0
+    pushdouble          0.4
+    pushdouble          0
+    pushdouble          0
+    pushdouble          0
+    pushdouble          0
+    pushdouble          0
+    pushdouble          0.4
+    pushdouble          0
+    pushdouble          0
+    pushdouble          0
+    pushdouble          0
+    pushdouble          0
+    pushbyte            1
+    pushdouble          0
+    newarray            20
+    constructprop       QName(PackageNamespace("flash.filters"), "ColorMatrixFilter"), 1
+    newarray            1
+    initproperty        QName(StaticProtectedNs("kabam.rotmg.dailyLogin.view:ItemTileRenderer"), "DIM_FILTER")
+
+    findproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "IDENTITY_MATRIX")
+    findpropstrict      QName(PackageNamespace("flash.geom"), "Matrix")
+    constructprop       QName(PackageNamespace("flash.geom"), "Matrix"), 0
+    initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "IDENTITY_MATRIX")
+
+    findproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "DOSE_MATRIX")
+    newfunction         "kabam.rotmg.dailyLogin.view:ItemTileRenderer/class/init/inline_method"
+    getglobalscope
+    call                0
+    initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "DOSE_MATRIX")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(StaticProtectedNs("kabam.rotmg.dailyLogin.view:ItemTileRenderer"), "DIM_FILTER") slotid 1 type QName(PackageNamespace(""), "Array") end
+ trait const QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "IDENTITY_MATRIX") slotid 2 type QName(PackageNamespace("flash.geom"), "Matrix") end
+ trait const QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:ItemTileRenderer#0"), "DOSE_MATRIX") slotid 3 type QName(PackageNamespace("flash.geom"), "Matrix") end
+end ; class

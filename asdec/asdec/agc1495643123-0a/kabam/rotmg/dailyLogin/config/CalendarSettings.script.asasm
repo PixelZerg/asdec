@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "kabam.rotmg.dailyLogin.config:CalendarSettings/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("CalendarSettings", [PackageNamespace("kabam.rotmg.dailyLogin.config")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "kabam.rotmg.dailyLogin.config:CalendarSettings"
+    popscope
+    initproperty        QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+  #include "CalendarSettings.class.asasm"
+ end ; trait
+end ; script

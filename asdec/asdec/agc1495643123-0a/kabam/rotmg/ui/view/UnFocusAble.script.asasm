@@ -1,0 +1,25 @@
+script
+ sinit
+  refid "kabam.rotmg.ui.view:UnFocusAble/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    pushnull
+    newclass            "kabam.rotmg.ui.view:UnFocusAble"
+    initproperty        QName(PackageNamespace("kabam.rotmg.ui.view"), "UnFocusAble")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("kabam.rotmg.ui.view"), "UnFocusAble") slotid 1
+  #include "UnFocusAble.class.asasm"
+ end ; trait
+end ; script

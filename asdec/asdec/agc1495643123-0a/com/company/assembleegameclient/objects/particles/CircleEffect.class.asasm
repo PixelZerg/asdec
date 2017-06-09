@@ -1,0 +1,403 @@
+class
+ refid "com.company.assembleegameclient.objects.particles:CircleEffect"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects.particles"), "CircleEffect")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects.particles"), "ParticleEffect")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.company.assembleegameclient.objects.particles:CircleEffect")
+  iinit
+   refid "com.company.assembleegameclient.objects.particles:CircleEffect/instance/init"
+   param QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+   param QName(PackageNamespace("com.company.assembleegameclient.objects.particles"), "EffectProperties")
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:CircleEffect/instance"), PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:CircleEffect"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects.particles"), PackageInternalNs("com.company.assembleegameclient.objects.particles"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.objects.particles:CircleEffect"), StaticProtectedNs("com.company.assembleegameclient.objects.particles:CircleEffect"), StaticProtectedNs("com.company.assembleegameclient.objects.particles:ParticleEffect"), StaticProtectedNs("com.company.assembleegameclient.objects:GameObject"), StaticProtectedNs("com.company.assembleegameclient.objects:BasicObject"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:CircleEffect"), "CircleParticle")
+     applytype           1
+     construct           0
+     initproperty        QName(PackageNamespace(""), "parts_")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "go_")
+
+     getlocal0
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "color")
+     initproperty        QName(PackageNamespace(""), "color_")
+
+     getlocal0
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "rise")
+     initproperty        QName(PackageNamespace(""), "rise_")
+
+     getlocal0
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "minRadius")
+     initproperty        QName(PackageNamespace(""), "rad_")
+
+     getlocal0
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "maxRadius")
+     initproperty        QName(PackageNamespace(""), "maxRad_")
+
+     getlocal0
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "amount")
+     initproperty        QName(PackageNamespace(""), "amount_")
+
+     getlocal0
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "life")
+     pushshort           1000
+     multiply
+     initproperty        QName(PackageNamespace(""), "maxLife_")
+
+     getlocal0
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "speed")
+     initproperty        QName(PackageNamespace(""), "speed_")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "go_") type QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject") end
+  trait slot QName(PackageNamespace(""), "color_") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PackageNamespace(""), "rise_") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "rad_") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "maxRad_") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "lastUpdate_") type QName(PackageNamespace(""), "int") value Integer(-1) end
+  trait slot QName(PackageNamespace(""), "bInitialized_") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PackageNamespace(""), "amount_") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "maxLife_") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "speed_") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "parts_") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:CircleEffect"), "CircleParticle")>) end
+  trait method QName(PackageNamespace(""), "update") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects.particles:CircleEffect/instance/update"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 6
+     localcount 9
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:CircleEffect"), "CircleParticle")
+      setlocal3
+
+      pushbyte            0
+      setlocal            4
+
+      pushnan
+      setlocal            5
+
+      pushnan
+      setlocal            6
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "go_")
+      getproperty         QName(PackageNamespace(""), "map_")
+      pushnull
+      ifne                L18
+
+      pushfalse
+      returnvalue
+
+L18:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "lastUpdate_")
+      pushbyte            0
+      ifnlt               L30
+
+      getlocal0
+      getlex              QName(PackageNamespace(""), "Math")
+      pushbyte            0
+      getlocal1
+      pushshort           400
+      subtract
+      callproperty        QName(PackageNamespace(""), "max"), 2
+      initproperty        QName(PackageNamespace(""), "lastUpdate_")
+
+L30:
+      findproperty        QName(PackageNamespace(""), "x_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "go_")
+      getproperty         QName(PackageNamespace(""), "x_")
+      initproperty        QName(PackageNamespace(""), "x_")
+
+      findproperty        QName(PackageNamespace(""), "y_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "go_")
+      getproperty         QName(PackageNamespace(""), "y_")
+      initproperty        QName(PackageNamespace(""), "y_")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "bInitialized_")
+      iftrue              L108
+
+      pushbyte            0
+      setlocal            4
+
+      jump                L101
+
+L46:
+      label
+      findpropstrict      QName(PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:CircleEffect"), "CircleParticle")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "ColorUtil")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "color_")
+      callproperty        QName(PackageNamespace(""), "randomSmart"), 1
+      constructprop       QName(PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:CircleEffect"), "CircleParticle"), 1
+      coerce              QName(PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:CircleEffect"), "CircleParticle")
+      setlocal3
+
+      getlocal3
+      getlex              QName(PackageNamespace(""), "x_")
+      setproperty         QName(PackageNamespace(""), "cX_")
+
+      getlocal3
+      getlex              QName(PackageNamespace(""), "y_")
+      setproperty         QName(PackageNamespace(""), "cY_")
+
+      pushbyte            2
+      getlex              QName(PackageNamespace(""), "Math")
+      getproperty         QName(PackageNamespace(""), "PI")
+      multiply
+      convert_d
+      dup
+      setlocal            5
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "amount_")
+      divide
+      convert_d
+      setlocal            6
+
+      getlocal3
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "startTime_")
+
+      getlocal3
+      getlocal            6
+      getlocal            4
+      multiply
+      setproperty         QName(PackageNamespace(""), "angle_")
+
+      getlocal3
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "rad_")
+      setproperty         QName(PackageNamespace(""), "rad_")
+
+      getlocal3
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "speed_")
+      setproperty         QName(PackageNamespace(""), "speed_")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parts_")
+      getlocal3
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlex              QName(PackageNamespace(""), "map_")
+      getlocal3
+      getlex              QName(PackageNamespace(""), "x_")
+      getlex              QName(PackageNamespace(""), "y_")
+      callpropvoid        QName(PackageNamespace(""), "addObj"), 3
+
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "move"), 0
+
+      inclocal_i          4
+L101:
+      getlocal            4
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "amount_")
+      iflt                L46
+
+      getlocal0
+      pushtrue
+      initproperty        QName(PackageNamespace(""), "bInitialized_")
+
+L108:
+      pushbyte            0
+      setlocal            7
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parts_")
+      coerce_a
+      setlocal            8
+
+      jump                L125
+
+L115:
+      label
+      getlocal            8
+      getlocal            7
+      nextvalue
+      coerce              QName(PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:CircleEffect"), "CircleParticle")
+      setlocal3
+
+      getlocal3
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "rad_")
+      setproperty         QName(PackageNamespace(""), "rad_")
+
+L125:
+      hasnext2            8, 7
+      iftrue              L115
+
+      kill                8
+      kill                7
+      getlocal0
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "rad_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "rise_")
+      getlocal2
+      pushshort           1000
+      divide
+      multiply
+      add
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "maxRad_")
+      callproperty        QName(PackageNamespace(""), "min"), 2
+      initproperty        QName(PackageNamespace(""), "rad_")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "maxLife_")
+      getlocal2
+      subtract
+      initproperty        QName(PackageNamespace(""), "maxLife_")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "maxLife_")
+      pushbyte            0
+      ifnle               L158
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:CircleEffect/instance"), "endEffect"), 0
+
+      pushfalse
+      returnvalue
+
+L158:
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "lastUpdate_")
+
+      pushtrue
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:CircleEffect/instance"), "endEffect")
+   method
+    refid "com.company.assembleegameclient.objects.particles:CircleEffect/instance/com.company.assembleegameclient.objects.particles:CircleEffect/instance/endEffect"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:CircleEffect"), "CircleParticle")
+      setlocal1
+
+      pushbyte            0
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parts_")
+      coerce_a
+      setlocal3
+
+      jump                L21
+
+L12:
+      label
+      getlocal3
+      getlocal2
+      nextvalue
+      coerce              QName(PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:CircleEffect"), "CircleParticle")
+      setlocal1
+
+      getlocal1
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "alive_")
+
+L21:
+      hasnext2            3, 2
+      iftrue              L12
+
+      kill                3
+      kill                2
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "removeFromMap") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects.particles:CircleEffect/instance/removeFromMap"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:CircleEffect/instance"), "endEffect"), 0
+
+      getlocal0
+      callsupervoid       QName(PackageNamespace(""), "removeFromMap"), 0
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects.particles:CircleEffect/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

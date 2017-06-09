@@ -1,0 +1,25 @@
+script
+ sinit
+  refid "kabam.rotmg.appengine.api:RetryLoader/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("RetryLoader", [PackageNamespace("kabam.rotmg.appengine.api")])
+    pushnull
+    newclass            "kabam.rotmg.appengine.api:RetryLoader"
+    initproperty        QName(PackageNamespace("kabam.rotmg.appengine.api"), "RetryLoader")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("kabam.rotmg.appengine.api"), "RetryLoader")
+  #include "RetryLoader.class.asasm"
+ end ; trait
+end ; script

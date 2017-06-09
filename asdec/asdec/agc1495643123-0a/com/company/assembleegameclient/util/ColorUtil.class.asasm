@@ -1,0 +1,382 @@
+class
+ refid "com.company.assembleegameclient.util:ColorUtil"
+ instance QName(PackageNamespace("com.company.assembleegameclient.util"), "ColorUtil")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.company.assembleegameclient.util:ColorUtil")
+  iinit
+   refid "com.company.assembleegameclient.util:ColorUtil/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.util:ColorUtil/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "rangeRandomSmart") flag FINAL dispid 3
+  method
+   refid "com.company.assembleegameclient.util:ColorUtil/class/rangeRandomSmart"
+   param QName(PackageNamespace(""), "uint")
+   param QName(PackageNamespace(""), "uint")
+   returns QName(PackageNamespace(""), "Number")
+   body
+    maxstack 4
+    localcount 12
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     pushbyte            16
+     rshift
+     pushshort           255
+     bitand
+     convert_u
+     setlocal3
+
+     getlocal1
+     pushbyte            8
+     rshift
+     pushshort           255
+     bitand
+     convert_u
+     setlocal            4
+
+     getlocal1
+     pushshort           255
+     bitand
+     convert_u
+     setlocal            5
+
+     getlocal2
+     pushbyte            16
+     rshift
+     pushshort           255
+     bitand
+     convert_u
+     setlocal            6
+
+     getlocal2
+     pushbyte            8
+     rshift
+     pushshort           255
+     bitand
+     convert_u
+     setlocal            7
+
+     getlocal2
+     pushshort           255
+     bitand
+     convert_u
+     setlocal            8
+
+     getlocal            6
+     getlex              QName(PackageNamespace(""), "Math")
+     callproperty        QName(PackageNamespace(""), "random"), 0
+     getlocal3
+     getlocal            6
+     subtract
+     multiply
+     add
+     convert_u
+     setlocal            9
+
+     getlocal            7
+     getlex              QName(PackageNamespace(""), "Math")
+     callproperty        QName(PackageNamespace(""), "random"), 0
+     getlocal            4
+     getlocal            7
+     subtract
+     multiply
+     add
+     convert_u
+     setlocal            10
+
+     getlocal            8
+     getlex              QName(PackageNamespace(""), "Math")
+     callproperty        QName(PackageNamespace(""), "random"), 0
+     getlocal            5
+     getlocal            8
+     subtract
+     multiply
+     add
+     convert_u
+     setlocal            11
+
+     getlocal            9
+     pushbyte            16
+     lshift
+     getlocal            10
+     pushbyte            8
+     lshift
+     bitor
+     getlocal            11
+     bitor
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "randomSmart") flag FINAL dispid 4
+  method
+   refid "com.company.assembleegameclient.util:ColorUtil/class/randomSmart"
+   param QName(PackageNamespace(""), "uint")
+   returns QName(PackageNamespace(""), "Number")
+   body
+    maxstack 8
+    localcount 8
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     pushbyte            16
+     rshift
+     pushshort           255
+     bitand
+     convert_u
+     setlocal2
+
+     getlocal1
+     pushbyte            8
+     rshift
+     pushshort           255
+     bitand
+     convert_u
+     setlocal3
+
+     getlocal1
+     pushshort           255
+     bitand
+     convert_u
+     setlocal            4
+
+     getlex              QName(PackageNamespace(""), "Math")
+     pushbyte            0
+     getlex              QName(PackageNamespace(""), "Math")
+     pushshort           255
+     getlocal2
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "RandomUtil")
+     getlocal2
+     pushdouble          0.05
+     multiply
+     callproperty        QName(PackageNamespace(""), "plusMinus"), 1
+     add
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     coerce_a
+     setlocal            5
+
+     getlex              QName(PackageNamespace(""), "Math")
+     pushbyte            0
+     getlex              QName(PackageNamespace(""), "Math")
+     pushshort           255
+     getlocal3
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "RandomUtil")
+     getlocal3
+     pushdouble          0.05
+     multiply
+     callproperty        QName(PackageNamespace(""), "plusMinus"), 1
+     add
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     coerce_a
+     setlocal            6
+
+     getlex              QName(PackageNamespace(""), "Math")
+     pushbyte            0
+     getlex              QName(PackageNamespace(""), "Math")
+     pushshort           255
+     getlocal            4
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "RandomUtil")
+     getlocal            4
+     pushdouble          0.05
+     multiply
+     callproperty        QName(PackageNamespace(""), "plusMinus"), 1
+     add
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     coerce_a
+     setlocal            7
+
+     getlocal            5
+     pushbyte            16
+     lshift
+     getlocal            6
+     pushbyte            8
+     lshift
+     bitor
+     getlocal            7
+     bitor
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "rangeRandomMix") flag FINAL dispid 5
+  method
+   refid "com.company.assembleegameclient.util:ColorUtil/class/rangeRandomMix"
+   param QName(PackageNamespace(""), "uint")
+   param QName(PackageNamespace(""), "uint")
+   returns QName(PackageNamespace(""), "Number")
+   body
+    maxstack 4
+    localcount 13
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     pushbyte            16
+     rshift
+     pushshort           255
+     bitand
+     convert_u
+     setlocal3
+
+     getlocal1
+     pushbyte            8
+     rshift
+     pushshort           255
+     bitand
+     convert_u
+     setlocal            4
+
+     getlocal1
+     pushshort           255
+     bitand
+     convert_u
+     setlocal            5
+
+     getlocal2
+     pushbyte            16
+     rshift
+     pushshort           255
+     bitand
+     convert_u
+     setlocal            6
+
+     getlocal2
+     pushbyte            8
+     rshift
+     pushshort           255
+     bitand
+     convert_u
+     setlocal            7
+
+     getlocal2
+     pushshort           255
+     bitand
+     convert_u
+     setlocal            8
+
+     getlex              QName(PackageNamespace(""), "Math")
+     callproperty        QName(PackageNamespace(""), "random"), 0
+     convert_d
+     setlocal            9
+
+     getlocal            6
+     getlocal            9
+     getlocal3
+     getlocal            6
+     subtract
+     multiply
+     add
+     convert_u
+     setlocal            10
+
+     getlocal            7
+     getlocal            9
+     getlocal            4
+     getlocal            7
+     subtract
+     multiply
+     add
+     convert_u
+     setlocal            11
+
+     getlocal            8
+     getlocal            9
+     getlocal            5
+     getlocal            8
+     subtract
+     multiply
+     add
+     convert_u
+     setlocal            12
+
+     getlocal            10
+     pushbyte            16
+     lshift
+     getlocal            11
+     pushbyte            8
+     lshift
+     bitor
+     getlocal            12
+     bitor
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "rangeRandom") flag FINAL dispid 6
+  method
+   refid "com.company.assembleegameclient.util:ColorUtil/class/rangeRandom"
+   param QName(PackageNamespace(""), "uint")
+   param QName(PackageNamespace(""), "uint")
+   returns QName(PackageNamespace(""), "Number")
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal2
+     getlex              QName(PackageNamespace(""), "Math")
+     callproperty        QName(PackageNamespace(""), "random"), 0
+     getlocal1
+     getlocal2
+     subtract
+     multiply
+     add
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

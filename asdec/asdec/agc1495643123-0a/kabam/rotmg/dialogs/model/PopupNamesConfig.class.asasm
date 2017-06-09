@@ -1,0 +1,62 @@
+class
+ refid "kabam.rotmg.dialogs.model:PopupNamesConfig"
+ instance QName(PackageNamespace("kabam.rotmg.dialogs.model"), "PopupNamesConfig")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("kabam.rotmg.dialogs.model:PopupNamesConfig")
+  iinit
+   refid "kabam.rotmg.dialogs.model:PopupNamesConfig/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "kabam.rotmg.dialogs.model:PopupNamesConfig/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "DAILY_LOGIN_POPUP")
+    pushstring          "daily_login_popup"
+    initproperty        QName(PackageNamespace(""), "DAILY_LOGIN_POPUP")
+
+    findproperty        QName(PackageNamespace(""), "BEGINNERS_OFFER_POPUP")
+    pushstring          "beginners_offer_popup"
+    initproperty        QName(PackageNamespace(""), "BEGINNERS_OFFER_POPUP")
+
+    findproperty        QName(PackageNamespace(""), "PACKAGES_OFFER_POPUP")
+    pushstring          "packages_offer_popup"
+    initproperty        QName(PackageNamespace(""), "PACKAGES_OFFER_POPUP")
+
+    findproperty        QName(PackageNamespace(""), "NEWS_POPUP")
+    pushstring          "news_popup"
+    initproperty        QName(PackageNamespace(""), "NEWS_POPUP")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "DAILY_LOGIN_POPUP") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("daily_login_popup") end
+ trait const QName(PackageNamespace(""), "BEGINNERS_OFFER_POPUP") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("beginners_offer_popup") end
+ trait const QName(PackageNamespace(""), "PACKAGES_OFFER_POPUP") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("packages_offer_popup") end
+ trait const QName(PackageNamespace(""), "NEWS_POPUP") slotid 4 type QName(PackageNamespace(""), "String") value Utf8("news_popup") end
+end ; class

@@ -1,0 +1,57 @@
+class
+ refid "kabam.rotmg.dailyLogin.model:CalendarTypes"
+ instance QName(PackageNamespace("kabam.rotmg.dailyLogin.model"), "CalendarTypes")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("kabam.rotmg.dailyLogin.model:CalendarTypes")
+  iinit
+   refid "kabam.rotmg.dailyLogin.model:CalendarTypes/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "kabam.rotmg.dailyLogin.model:CalendarTypes/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "NON_CONSECUTIVE")
+    pushstring          "nonconsecutive"
+    initproperty        QName(PackageNamespace(""), "NON_CONSECUTIVE")
+
+    findproperty        QName(PackageNamespace(""), "CONSECUTIVE")
+    pushstring          "consecutive"
+    initproperty        QName(PackageNamespace(""), "CONSECUTIVE")
+
+    findproperty        QName(PackageNamespace(""), "UNLOCK")
+    pushstring          "unlock"
+    initproperty        QName(PackageNamespace(""), "UNLOCK")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "NON_CONSECUTIVE") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("nonconsecutive") end
+ trait const QName(PackageNamespace(""), "CONSECUTIVE") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("consecutive") end
+ trait const QName(PackageNamespace(""), "UNLOCK") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("unlock") end
+end ; class

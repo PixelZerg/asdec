@@ -1,0 +1,306 @@
+class
+ refid "com.company.assembleegameclient.objects.particles:EffectProperties"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects.particles"), "EffectProperties")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.company.assembleegameclient.objects.particles:EffectProperties")
+  iinit
+   refid "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init"
+   param QName(PackageNamespace(""), "XML")
+   body
+    maxstack 3
+    localcount 2
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     callproperty        Multiname("toString", [PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#0"), PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects.particles"), PackageInternalNs("com.company.assembleegameclient.objects.particles"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.objects.particles:EffectProperties"), StaticProtectedNs("com.company.assembleegameclient.objects.particles:EffectProperties")]), 0
+     initproperty        QName(PackageNamespace(""), "id")
+
+     getlocal0
+     getlocal1
+     getproperty         MultinameA("particle", [PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#0"), PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects.particles"), PackageInternalNs("com.company.assembleegameclient.objects.particles"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.objects.particles:EffectProperties"), StaticProtectedNs("com.company.assembleegameclient.objects.particles:EffectProperties")])
+     initproperty        QName(PackageNamespace(""), "particle")
+
+     getlocal0
+     getlocal1
+     getproperty         MultinameA("cooldown", [PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#0"), PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects.particles"), PackageInternalNs("com.company.assembleegameclient.objects.particles"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.objects.particles:EffectProperties"), StaticProtectedNs("com.company.assembleegameclient.objects.particles:EffectProperties")])
+     initproperty        QName(PackageNamespace(""), "cooldown")
+
+     getlocal0
+     getlocal1
+     getproperty         MultinameA("color", [PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#0"), PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects.particles"), PackageInternalNs("com.company.assembleegameclient.objects.particles"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.objects.particles:EffectProperties"), StaticProtectedNs("com.company.assembleegameclient.objects.particles:EffectProperties")])
+     initproperty        QName(PackageNamespace(""), "color")
+
+     getlocal0
+     getlocal1
+     getproperty         MultinameA("color2", [PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#0"), PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects.particles"), PackageInternalNs("com.company.assembleegameclient.objects.particles"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.objects.particles:EffectProperties"), StaticProtectedNs("com.company.assembleegameclient.objects.particles:EffectProperties")])
+     initproperty        QName(PackageNamespace(""), "color2")
+
+     getlocal0
+     getlocal1
+     getproperty         MultinameA("rate", [PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#0"), PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects.particles"), PackageInternalNs("com.company.assembleegameclient.objects.particles"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.objects.particles:EffectProperties"), StaticProtectedNs("com.company.assembleegameclient.objects.particles:EffectProperties")])
+     convert_d
+     dup
+     iftrue              L33
+
+     pop
+     pushbyte            5
+     convert_d
+L33:
+     initproperty        QName(PackageNamespace(""), "rate")
+
+     getlocal0
+     getlocal1
+     getproperty         MultinameA("speed", [PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#0"), PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects.particles"), PackageInternalNs("com.company.assembleegameclient.objects.particles"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.objects.particles:EffectProperties"), StaticProtectedNs("com.company.assembleegameclient.objects.particles:EffectProperties")])
+     convert_d
+     dup
+     iftrue              L43
+
+     pop
+     pushbyte            0
+     convert_d
+L43:
+     initproperty        QName(PackageNamespace(""), "speed")
+
+     getlocal0
+     getlocal1
+     getproperty         MultinameA("speedVariance", [PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#0"), PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects.particles"), PackageInternalNs("com.company.assembleegameclient.objects.particles"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.objects.particles:EffectProperties"), StaticProtectedNs("com.company.assembleegameclient.objects.particles:EffectProperties")])
+     convert_d
+     dup
+     iftrue              L53
+
+     pop
+     pushdouble          0.5
+     convert_d
+L53:
+     initproperty        QName(PackageNamespace(""), "speedVariance")
+
+     getlocal0
+     getlocal1
+     getproperty         MultinameA("spread", [PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#0"), PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects.particles"), PackageInternalNs("com.company.assembleegameclient.objects.particles"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.objects.particles:EffectProperties"), StaticProtectedNs("com.company.assembleegameclient.objects.particles:EffectProperties")])
+     convert_d
+     dup
+     iftrue              L63
+
+     pop
+     pushbyte            0
+     convert_d
+L63:
+     initproperty        QName(PackageNamespace(""), "spread")
+
+     getlocal0
+     getlocal1
+     getproperty         MultinameA("life", [PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#0"), PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects.particles"), PackageInternalNs("com.company.assembleegameclient.objects.particles"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.objects.particles:EffectProperties"), StaticProtectedNs("com.company.assembleegameclient.objects.particles:EffectProperties")])
+     convert_d
+     dup
+     iftrue              L73
+
+     pop
+     pushbyte            1
+     convert_d
+L73:
+     initproperty        QName(PackageNamespace(""), "life")
+
+     getlocal0
+     getlocal1
+     getproperty         MultinameA("lifeVariance", [PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#0"), PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects.particles"), PackageInternalNs("com.company.assembleegameclient.objects.particles"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.objects.particles:EffectProperties"), StaticProtectedNs("com.company.assembleegameclient.objects.particles:EffectProperties")])
+     convert_d
+     dup
+     iftrue              L83
+
+     pop
+     pushbyte            0
+     convert_d
+L83:
+     initproperty        QName(PackageNamespace(""), "lifeVariance")
+
+     getlocal0
+     getlocal1
+     getproperty         MultinameA("size", [PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#0"), PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects.particles"), PackageInternalNs("com.company.assembleegameclient.objects.particles"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.objects.particles:EffectProperties"), StaticProtectedNs("com.company.assembleegameclient.objects.particles:EffectProperties")])
+     convert_i
+     dup
+     iftrue              L92
+
+     pop
+     pushbyte            3
+L92:
+     initproperty        QName(PackageNamespace(""), "size")
+
+     getlocal0
+     getlocal1
+     getproperty         MultinameA("rise", [PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#0"), PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects.particles"), PackageInternalNs("com.company.assembleegameclient.objects.particles"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.objects.particles:EffectProperties"), StaticProtectedNs("com.company.assembleegameclient.objects.particles:EffectProperties")])
+     convert_d
+     dup
+     iftrue              L102
+
+     pop
+     pushbyte            3
+     convert_d
+L102:
+     initproperty        QName(PackageNamespace(""), "rise")
+
+     getlocal0
+     getlocal1
+     getproperty         MultinameA("riseVariance", [PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#0"), PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects.particles"), PackageInternalNs("com.company.assembleegameclient.objects.particles"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.objects.particles:EffectProperties"), StaticProtectedNs("com.company.assembleegameclient.objects.particles:EffectProperties")])
+     convert_d
+     dup
+     iftrue              L112
+
+     pop
+     pushbyte            0
+     convert_d
+L112:
+     initproperty        QName(PackageNamespace(""), "riseVariance")
+
+     getlocal0
+     getlocal1
+     getproperty         MultinameA("riseAcc", [PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#0"), PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects.particles"), PackageInternalNs("com.company.assembleegameclient.objects.particles"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.objects.particles:EffectProperties"), StaticProtectedNs("com.company.assembleegameclient.objects.particles:EffectProperties")])
+     convert_d
+     dup
+     iftrue              L122
+
+     pop
+     pushbyte            0
+     convert_d
+L122:
+     initproperty        QName(PackageNamespace(""), "riseAcc")
+
+     getlocal0
+     getlocal1
+     getproperty         MultinameA("rangeX", [PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#0"), PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects.particles"), PackageInternalNs("com.company.assembleegameclient.objects.particles"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.objects.particles:EffectProperties"), StaticProtectedNs("com.company.assembleegameclient.objects.particles:EffectProperties")])
+     convert_i
+     dup
+     iftrue              L131
+
+     pop
+     pushbyte            0
+L131:
+     initproperty        QName(PackageNamespace(""), "rangeX")
+
+     getlocal0
+     getlocal1
+     getproperty         MultinameA("rangeY", [PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#0"), PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects.particles"), PackageInternalNs("com.company.assembleegameclient.objects.particles"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.objects.particles:EffectProperties"), StaticProtectedNs("com.company.assembleegameclient.objects.particles:EffectProperties")])
+     convert_i
+     dup
+     iftrue              L140
+
+     pop
+     pushbyte            0
+L140:
+     initproperty        QName(PackageNamespace(""), "rangeY")
+
+     getlocal0
+     getlocal1
+     getproperty         MultinameA("zOffset", [PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#0"), PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects.particles"), PackageInternalNs("com.company.assembleegameclient.objects.particles"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.objects.particles:EffectProperties"), StaticProtectedNs("com.company.assembleegameclient.objects.particles:EffectProperties")])
+     convert_d
+     dup
+     iftrue              L150
+
+     pop
+     pushbyte            0
+     convert_d
+L150:
+     initproperty        QName(PackageNamespace(""), "zOffset")
+
+     getlocal0
+     getlocal1
+     getproperty         MultinameA("minRadius", [PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#0"), PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects.particles"), PackageInternalNs("com.company.assembleegameclient.objects.particles"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.objects.particles:EffectProperties"), StaticProtectedNs("com.company.assembleegameclient.objects.particles:EffectProperties")])
+     convert_d
+     dup
+     iftrue              L160
+
+     pop
+     pushbyte            0
+     convert_d
+L160:
+     initproperty        QName(PackageNamespace(""), "minRadius")
+
+     getlocal0
+     getlocal1
+     getproperty         MultinameA("maxRadius", [PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#0"), PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects.particles"), PackageInternalNs("com.company.assembleegameclient.objects.particles"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.objects.particles:EffectProperties"), StaticProtectedNs("com.company.assembleegameclient.objects.particles:EffectProperties")])
+     convert_d
+     dup
+     iftrue              L170
+
+     pop
+     pushbyte            1
+     convert_d
+L170:
+     initproperty        QName(PackageNamespace(""), "maxRadius")
+
+     getlocal0
+     getlocal1
+     getproperty         MultinameA("amount", [PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#0"), PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects.particles"), PackageInternalNs("com.company.assembleegameclient.objects.particles"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.objects.particles:EffectProperties"), StaticProtectedNs("com.company.assembleegameclient.objects.particles:EffectProperties")])
+     convert_i
+     dup
+     iftrue              L179
+
+     pop
+     pushbyte            1
+L179:
+     initproperty        QName(PackageNamespace(""), "amount")
+
+     getlocal0
+     getlocal1
+     getproperty         MultinameA("bitmapFile", [PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#0"), PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects.particles"), PackageInternalNs("com.company.assembleegameclient.objects.particles"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.objects.particles:EffectProperties"), StaticProtectedNs("com.company.assembleegameclient.objects.particles:EffectProperties")])
+     initproperty        QName(PackageNamespace(""), "bitmapFile")
+
+     getlocal0
+     getlocal1
+     getproperty         MultinameA("bitmapIndex", [PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#0"), PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:EffectProperties/instance/init#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects.particles"), PackageInternalNs("com.company.assembleegameclient.objects.particles"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.objects.particles:EffectProperties"), StaticProtectedNs("com.company.assembleegameclient.objects.particles:EffectProperties")])
+     initproperty        QName(PackageNamespace(""), "bitmapIndex")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "id") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "particle") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "cooldown") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "color") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PackageNamespace(""), "color2") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PackageNamespace(""), "rate") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "speed") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "speedVariance") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "spread") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "life") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "lifeVariance") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "size") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "friction") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "rise") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "riseVariance") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "riseAcc") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "rangeX") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "rangeY") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "zOffset") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "minRadius") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "maxRadius") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "amount") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "bitmapFile") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "bitmapIndex") type QName(PackageNamespace(""), "uint") end
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects.particles:EffectProperties/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

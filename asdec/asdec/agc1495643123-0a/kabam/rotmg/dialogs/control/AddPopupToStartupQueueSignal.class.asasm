@@ -1,0 +1,46 @@
+class
+ refid "kabam.rotmg.dialogs.control:AddPopupToStartupQueueSignal"
+ instance QName(PackageNamespace("kabam.rotmg.dialogs.control"), "AddPopupToStartupQueueSignal")
+  extends QName(PackageNamespace("org.osflash.signals"), "Signal")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("kabam.rotmg.dialogs.control:AddPopupToStartupQueueSignal")
+  iinit
+   refid "kabam.rotmg.dialogs.control:AddPopupToStartupQueueSignal/instance/init"
+   body
+    maxstack 5
+    localcount 1
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlex              QName(PackageNamespace(""), "String")
+     getlex              QName(PackageNamespace("org.osflash.signals"), "Signal")
+     getlex              QName(PackageNamespace(""), "int")
+     getlex              QName(PackageNamespace(""), "Object")
+     constructsuper      4
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "kabam.rotmg.dialogs.control:AddPopupToStartupQueueSignal/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

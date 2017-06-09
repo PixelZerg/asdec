@@ -1,0 +1,37 @@
+script
+ sinit
+  refid "kabam.rotmg.dialogs.control:FlushPopupStartupQueueSignal/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("FlushPopupStartupQueueSignal", [PackageNamespace("kabam.rotmg.dialogs.control")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("org.osflash.signals"), "OnceSignal")
+    pushscope
+
+    getlex              QName(PackageNamespace("org.osflash.signals"), "Signal")
+    pushscope
+
+    getlex              QName(PackageNamespace("org.osflash.signals"), "Signal")
+    newclass            "kabam.rotmg.dialogs.control:FlushPopupStartupQueueSignal"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("kabam.rotmg.dialogs.control"), "FlushPopupStartupQueueSignal")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("kabam.rotmg.dialogs.control"), "FlushPopupStartupQueueSignal")
+  #include "FlushPopupStartupQueueSignal.class.asasm"
+ end ; trait
+end ; script

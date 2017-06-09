@@ -1,0 +1,271 @@
+class
+ refid "kabam.rotmg.dailyLogin.controller:CalendarViewMediator"
+ instance QName(PackageNamespace("kabam.rotmg.dailyLogin.controller"), "CalendarViewMediator")
+  extends QName(PackageNamespace("robotlegs.bender.bundles.mvcs"), "Mediator")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("kabam.rotmg.dailyLogin.controller:CalendarViewMediator")
+  iinit
+   refid "kabam.rotmg.dailyLogin.controller:CalendarViewMediator/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "view") flag METADATA type QName(PackageNamespace("kabam.rotmg.dailyLogin.view"), "CalendarView")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "model") flag METADATA type QName(PackageNamespace("kabam.rotmg.dailyLogin.model"), "DailyLoginModel")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "addTextLine") flag METADATA type QName(PackageNamespace("kabam.rotmg.game.signals"), "AddTextLineSignal")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "claimRewardSignal") flag METADATA type QName(PackageNamespace("kabam.rotmg.dailyLogin.signal"), "ClaimDailyRewardResponseSignal")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "hudModel") flag METADATA type QName(PackageNamespace("kabam.rotmg.ui.model"), "HUDModel")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace(""), "initialize") flag OVERRIDE
+   method
+    refid "kabam.rotmg.dailyLogin.controller:CalendarViewMediator/instance/initialize"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "model")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "model")
+      getproperty         QName(PackageNamespace(""), "currentDisplayedCaledar")
+      callproperty        QName(PackageNamespace(""), "getDaysConfig"), 1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "model")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "model")
+      getproperty         QName(PackageNamespace(""), "currentDisplayedCaledar")
+      callproperty        QName(PackageNamespace(""), "getMaxDays"), 1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "model")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "model")
+      getproperty         QName(PackageNamespace(""), "currentDisplayedCaledar")
+      callproperty        QName(PackageNamespace(""), "getCurrentDay"), 1
+      callpropvoid        QName(PackageNamespace(""), "init"), 3
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "claimRewardSignal")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.controller:CalendarViewMediator/instance"), "onClaimReward")
+      callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "destroy") flag OVERRIDE
+   method
+    refid "kabam.rotmg.dailyLogin.controller:CalendarViewMediator/instance/destroy"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "claimRewardSignal")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.controller:CalendarViewMediator/instance"), "onClaimReward")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 1
+
+      getlocal0
+      callsupervoid       QName(PackageNamespace(""), "destroy"), 0
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.controller:CalendarViewMediator/instance"), "onClaimReward")
+   method
+    refid "kabam.rotmg.dailyLogin.controller:CalendarViewMediator/instance/kabam.rotmg.dailyLogin.controller:CalendarViewMediator/instance/onClaimReward"
+    param QName(PackageNamespace("kabam.rotmg.dailyLogin.message"), "ClaimDailyRewardResponse")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 8
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushstring          ""
+      setlocal2
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "gold")
+      pushbyte            0
+      ifngt               L62
+
+      pushstring          "gold"
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "addTextLine")
+      getlex              QName(PackageNamespace("kabam.rotmg.chat.model"), "ChatMessage")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace(""), "SERVER_CHAT_NAME")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "gold")
+      pushbyte            0
+      greaterthan
+      iffalse             L24
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "gold")
+      coerce_a
+      jump                L27
+
+L24:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "quantity")
+      coerce_a
+L27:
+      pushstring          "x "
+      add
+      getlocal2
+      add
+      pushstring          " was claimed."
+      add
+      pushbyte            -1
+      pushbyte            -1
+      pushstring          ""
+      pushfalse
+      callproperty        QName(PackageNamespace(""), "make"), 6
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "hudModel")
+      getproperty         QName(PackageNamespace(""), "gameSprite")
+      getproperty         QName(PackageNamespace(""), "map")
+      getproperty         QName(PackageNamespace(""), "player_")
+      pushnull
+      ifeq                L61
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "hudModel")
+      getproperty         QName(PackageNamespace(""), "gameSprite")
+      getproperty         QName(PackageNamespace(""), "map")
+      getproperty         QName(PackageNamespace(""), "player_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "hudModel")
+      getproperty         QName(PackageNamespace(""), "gameSprite")
+      getproperty         QName(PackageNamespace(""), "map")
+      getproperty         QName(PackageNamespace(""), "player_")
+      getproperty         QName(PackageNamespace(""), "credits_")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "gold")
+      add
+      setproperty         QName(PackageNamespace(""), "credits_")
+
+L61:
+      jump                L100
+
+L62:
+      getlex              QName(PackageNamespace("kabam.rotmg.text.view.stringBuilder"), "LineBuilder")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+      getproperty         QName(PackageNamespace(""), "typeToDisplayId_")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "itemId")
+      getproperty         MultinameL([PrivateNamespace(null, "kabam.rotmg.dailyLogin.controller:CalendarViewMediator/instance"), PackageNamespace(""), PrivateNamespace(null, "kabam.rotmg.dailyLogin.controller:CalendarViewMediator/instance/kabam.rotmg.dailyLogin.controller:CalendarViewMediator/instance/onClaimReward"), PackageNamespace("kabam.rotmg.dailyLogin.controller"), PackageInternalNs("kabam.rotmg.dailyLogin.controller"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("kabam.rotmg.dailyLogin.controller:CalendarViewMediator"), StaticProtectedNs("kabam.rotmg.dailyLogin.controller:CalendarViewMediator"), StaticProtectedNs("robotlegs.bender.bundles.mvcs:Mediator")])
+      callproperty        QName(PackageNamespace(""), "getLocalizedStringFromKey"), 1
+      coerce_s
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "addTextLine")
+      getlex              QName(PackageNamespace("kabam.rotmg.chat.model"), "ChatMessage")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace(""), "SERVER_CHAT_NAME")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "gold")
+      pushbyte            0
+      greaterthan
+      iffalse             L85
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "gold")
+      coerce_a
+      jump                L88
+
+L85:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "quantity")
+      coerce_a
+L88:
+      pushstring          "x "
+      add
+      getlocal2
+      add
+      pushstring          " was claimed and will be sent to the gift chests in your vault."
+      add
+      pushbyte            -1
+      pushbyte            -1
+      pushstring          ""
+      pushfalse
+      callproperty        QName(PackageNamespace(""), "make"), 6
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+L100:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "kabam.rotmg.dailyLogin.controller:CalendarViewMediator/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,362 @@
+class
+ refid "kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon"
+ instance QName(PackageNamespace("kabam.rotmg.dailyLogin.view"), "DailyCalendarInfoIcon")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  implements Multiname("TooltipAble", [PackageNamespace("kabam.rotmg.tooltips")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon")
+  iinit
+   refid "kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Object")
+   flag HAS_OPTIONAL
+   optional Utf8("")
+   optional Utf8("")
+   optional Null()
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("kabam.rotmg.tooltips"), "HoverTooltipDelegate")
+     constructprop       QName(PackageNamespace("kabam.rotmg.tooltips"), "HoverTooltipDelegate"), 0
+     initproperty        QName(PackageNamespace(""), "hoverTooltipDelegate")
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace("kabam.rotmg.text.view"), "TextFieldDisplayConcrete")
+     constructprop       QName(PackageNamespace("kabam.rotmg.text.view"), "TextFieldDisplayConcrete"), 0
+     getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+     getproperty         QName(PackageNamespace(""), "TABS_FONT_SIZE")
+     callproperty        QName(PackageNamespace(""), "setSize"), 1
+     pushint             16777215
+     callproperty        QName(PackageNamespace(""), "setColor"), 1
+     pushbyte            15
+     callproperty        QName(PackageNamespace(""), "setTextWidth"), 1
+     getlex              QName(PackageNamespace("flash.text"), "TextFieldAutoSize")
+     getproperty         QName(PackageNamespace(""), "CENTER")
+     callproperty        QName(PackageNamespace(""), "setAutoSize"), 1
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "setBold"), 1
+     pushbyte            22
+     callproperty        QName(PackageNamespace(""), "setSize"), 1
+     coerce              QName(PackageNamespace("kabam.rotmg.text.view"), "TextFieldDisplayConcrete")
+     dup
+     setlocal            4
+
+     findpropstrict      QName(PackageNamespace("kabam.rotmg.text.view.stringBuilder"), "StaticStringBuilder")
+     pushstring          "i"
+     constructprop       QName(PackageNamespace("kabam.rotmg.text.view.stringBuilder"), "StaticStringBuilder"), 1
+     callpropvoid        QName(PackageNamespace(""), "setStringBuilder"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal            4
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal1
+     pushstring          ""
+     ifeq                L42
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     callpropvoid        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon/instance"), "setToolTipTitle"), 3
+
+L42:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "hoverTooltipDelegate") type QName(PackageNamespace("kabam.rotmg.tooltips"), "HoverTooltipDelegate") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon/instance"), "toolTip_") type QName(PackageNamespace("com.company.assembleegameclient.ui.tooltip"), "TextToolTip") value Null() end
+  trait method QName(PackageNamespace(""), "destroy")
+   method
+    refid "kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon/instance/destroy"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      jump                L8
+
+L3:
+      label
+      getlocal0
+      getlex              QName(PackageNamespace(""), "numChildren")
+      decrement
+      callpropvoid        QName(PackageNamespace(""), "removeChildAt"), 1
+
+L8:
+      getlex              QName(PackageNamespace(""), "numChildren")
+      pushbyte            0
+      ifgt                L3
+
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon/instance"), "toolTip_")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "hoverTooltipDelegate")
+      callpropvoid        QName(PackageNamespace(""), "removeDisplayObject"), 0
+
+      getlocal0
+      pushnull
+      initproperty        QName(PackageNamespace(""), "hoverTooltipDelegate")
+
+      findpropstrict      QName(PackageNamespace(""), "removeEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_OVER")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon"), "onMouseOver")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "removeEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_OUT")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon"), "onMouseOut")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon/instance"), "setToolTipTitle")
+   method
+    refid "kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon/instance/kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon/instance/setToolTipTitle"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 8
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.ui.tooltip"), "TextToolTip")
+      pushint             3552822
+      pushint             10197915
+      getlocal1
+      getlocal2
+      pushshort           200
+      getlocal3
+      constructprop       QName(PackageNamespace("com.company.assembleegameclient.ui.tooltip"), "TextToolTip"), 6
+      initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon/instance"), "toolTip_")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "hoverTooltipDelegate")
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "setDisplayObject"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "hoverTooltipDelegate")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon/instance"), "toolTip_")
+      setproperty         QName(PackageNamespace(""), "tooltip")
+
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_OVER")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon"), "onMouseOver")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_OUT")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon"), "onMouseOut")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon"), "onMouseOver")
+   method
+    refid "kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon/instance/kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon:onMouseOver"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "transform")
+      getlex              QName(StaticProtectedNs("kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon"), "mouseOverCT")
+      setproperty         QName(PackageNamespace(""), "colorTransform")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon"), "onMouseOut")
+   method
+    refid "kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon/instance/kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon:onMouseOut"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "transform")
+      getlex              QName(PackageNamespace("com.company.util"), "MoreColorUtil")
+      getproperty         QName(PackageNamespace(""), "identity")
+      setproperty         QName(PackageNamespace(""), "colorTransform")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setShowToolTipSignal")
+   method
+    refid "kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon/instance/setShowToolTipSignal"
+    param QName(PackageNamespace("kabam.rotmg.core.signals"), "ShowTooltipSignal")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "hoverTooltipDelegate")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "setShowToolTipSignal"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getShowToolTip")
+   method
+    refid "kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon/instance/getShowToolTip"
+    returns QName(PackageNamespace("kabam.rotmg.core.signals"), "ShowTooltipSignal")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "hoverTooltipDelegate")
+      callproperty        QName(PackageNamespace(""), "getShowToolTip"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setHideToolTipsSignal")
+   method
+    refid "kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon/instance/setHideToolTipsSignal"
+    param QName(PackageNamespace("kabam.rotmg.core.signals"), "HideTooltipsSignal")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "hoverTooltipDelegate")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "setHideToolTipsSignal"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getHideToolTips")
+   method
+    refid "kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon/instance/getHideToolTips"
+    returns QName(PackageNamespace("kabam.rotmg.core.signals"), "HideTooltipsSignal")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "hoverTooltipDelegate")
+      callproperty        QName(PackageNamespace(""), "getHideToolTips"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon/class/init"
+  body
+   maxstack 6
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(StaticProtectedNs("kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon"), "mouseOverCT")
+    findpropstrict      QName(PackageNamespace("flash.geom"), "ColorTransform")
+    pushbyte            1
+    pushshort           220
+    pushshort           255
+    divide
+    pushshort           133
+    pushshort           255
+    divide
+    constructprop       QName(PackageNamespace("flash.geom"), "ColorTransform"), 3
+    initproperty        QName(StaticProtectedNs("kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon"), "mouseOverCT")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(StaticProtectedNs("kabam.rotmg.dailyLogin.view:DailyCalendarInfoIcon"), "mouseOverCT") slotid 1 type QName(PackageNamespace("flash.geom"), "ColorTransform") end
+end ; class

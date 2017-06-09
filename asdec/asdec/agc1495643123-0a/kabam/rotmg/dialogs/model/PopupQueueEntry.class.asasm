@@ -1,0 +1,238 @@
+class
+ refid "kabam.rotmg.dialogs.model:PopupQueueEntry"
+ instance QName(PackageNamespace("kabam.rotmg.dialogs.model"), "PopupQueueEntry")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("kabam.rotmg.dialogs.model:PopupQueueEntry")
+  iinit
+   refid "kabam.rotmg.dialogs.model:PopupQueueEntry/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace("org.osflash.signals"), "Signal")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "Object")
+   body
+    maxstack 2
+    localcount 5
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dialogs.model:PopupQueueEntry/instance"), "_name")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dialogs.model:PopupQueueEntry/instance"), "_signal")
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dialogs.model:PopupQueueEntry/instance"), "_showingPerDay")
+
+     getlocal0
+     getlocal            4
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dialogs.model:PopupQueueEntry/instance"), "_paramObject")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dialogs.model:PopupQueueEntry/instance"), "_name") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dialogs.model:PopupQueueEntry/instance"), "_signal") type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dialogs.model:PopupQueueEntry/instance"), "_showingPerDay") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dialogs.model:PopupQueueEntry/instance"), "_paramObject") type QName(PackageNamespace(""), "Object") end
+  trait getter QName(PackageNamespace(""), "name")
+   method
+    refid "kabam.rotmg.dialogs.model:PopupQueueEntry/instance/name/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dialogs.model:PopupQueueEntry/instance"), "_name")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "name")
+   method
+    refid "kabam.rotmg.dialogs.model:PopupQueueEntry/instance/name/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dialogs.model:PopupQueueEntry/instance"), "_name")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "signal")
+   method
+    refid "kabam.rotmg.dialogs.model:PopupQueueEntry/instance/signal/getter"
+    returns QName(PackageNamespace("org.osflash.signals"), "Signal")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dialogs.model:PopupQueueEntry/instance"), "_signal")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "signal")
+   method
+    refid "kabam.rotmg.dialogs.model:PopupQueueEntry/instance/signal/setter"
+    param QName(PackageNamespace("org.osflash.signals"), "Signal")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dialogs.model:PopupQueueEntry/instance"), "_signal")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "showingPerDay")
+   method
+    refid "kabam.rotmg.dialogs.model:PopupQueueEntry/instance/showingPerDay/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dialogs.model:PopupQueueEntry/instance"), "_showingPerDay")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "showingPerDay")
+   method
+    refid "kabam.rotmg.dialogs.model:PopupQueueEntry/instance/showingPerDay/setter"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dialogs.model:PopupQueueEntry/instance"), "_showingPerDay")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "paramObject")
+   method
+    refid "kabam.rotmg.dialogs.model:PopupQueueEntry/instance/paramObject/getter"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dialogs.model:PopupQueueEntry/instance"), "_paramObject")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "paramObject")
+   method
+    refid "kabam.rotmg.dialogs.model:PopupQueueEntry/instance/paramObject/setter"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dialogs.model:PopupQueueEntry/instance"), "_paramObject")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "kabam.rotmg.dialogs.model:PopupQueueEntry/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

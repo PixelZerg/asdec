@@ -1,0 +1,25 @@
+script
+ sinit
+  refid "kabam.rotmg.account.core.services:RegisterAccountTask/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    pushnull
+    newclass            "kabam.rotmg.account.core.services:RegisterAccountTask"
+    initproperty        QName(PackageNamespace("kabam.rotmg.account.core.services"), "RegisterAccountTask")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("kabam.rotmg.account.core.services"), "RegisterAccountTask") slotid 1
+  #include "RegisterAccountTask.class.asasm"
+ end ; trait
+end ; script

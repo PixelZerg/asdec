@@ -1,0 +1,367 @@
+class
+ refid "kabam.rotmg.dailyLogin.controller:DailyLoginModalMediator"
+ instance QName(PackageNamespace("kabam.rotmg.dailyLogin.controller"), "DailyLoginModalMediator")
+  extends QName(PackageNamespace("robotlegs.bender.bundles.mvcs"), "Mediator")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("kabam.rotmg.dailyLogin.controller:DailyLoginModalMediator")
+  iinit
+   refid "kabam.rotmg.dailyLogin.controller:DailyLoginModalMediator/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "view") flag METADATA type QName(PackageNamespace("kabam.rotmg.dailyLogin.view"), "DailyLoginModal")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "closeDialogs") flag METADATA type QName(PackageNamespace("kabam.rotmg.dialogs.control"), "CloseDialogsSignal")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "dailyLoginModel") flag METADATA type QName(PackageNamespace("kabam.rotmg.dailyLogin.model"), "DailyLoginModel")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "hudModel") flag METADATA type QName(PackageNamespace("kabam.rotmg.ui.model"), "HUDModel")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "exitGameSignal") flag METADATA type QName(PackageNamespace("kabam.rotmg.game.signals"), "ExitGameSignal")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "closeDialog") flag METADATA type QName(PackageNamespace("kabam.rotmg.dialogs.control"), "CloseDialogsSignal")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "flushStartupQueue") flag METADATA type QName(PackageNamespace("kabam.rotmg.dialogs.control"), "FlushPopupStartupQueueSignal")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace(""), "initialize") flag OVERRIDE
+   method
+    refid "kabam.rotmg.dailyLogin.controller:DailyLoginModalMediator/instance/initialize"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "dailyLoginModel")
+      callpropvoid        QName(PackageNamespace(""), "init"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      pushstring          "Login Rewards"
+      callpropvoid        QName(PackageNamespace(""), "addTitle"), 1
+
+      findpropstrict      QName(PackageNamespace("flash.globalization"), "DateTimeFormatter")
+      pushstring          "en-US"
+      constructprop       QName(PackageNamespace("flash.globalization"), "DateTimeFormatter"), 1
+      coerce              QName(PackageNamespace("flash.globalization"), "DateTimeFormatter")
+      setlocal1
+
+      getlocal1
+      pushstring          "yyyy-MM-dd hh:mm:ssa"
+      callpropvoid        QName(PackageNamespace(""), "setDateTimePattern"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "Date")
+      constructprop       QName(PackageNamespace(""), "Date"), 0
+      coerce              QName(PackageNamespace(""), "Date")
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace(""), "Date")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "fullYear")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "month")
+      pushbyte            1
+      add
+      pushbyte            1
+      pushbyte            0
+      dup
+      dup
+      constructprop       QName(PackageNamespace(""), "Date"), 6
+      coerce              QName(PackageNamespace(""), "Date")
+      setlocal3
+
+      getlocal3
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "time")
+      decrement
+      setproperty         QName(PackageNamespace(""), "time")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "hudModel")
+      getproperty         QName(PackageNamespace(""), "gameSprite")
+      getproperty         QName(PackageNamespace(""), "map")
+      getproperty         QName(PackageNamespace(""), "name_")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.map"), "Map")
+      getproperty         QName(PackageNamespace(""), "DAILY_QUEST_ROOM")
+      equals
+      callpropvoid        QName(PackageNamespace(""), "showLegend"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "dailyLoginModel")
+      callproperty        QName(PackageNamespace(""), "getServerTime"), 0
+      callproperty        QName(PackageNamespace(""), "format"), 1
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "format"), 1
+      callpropvoid        QName(PackageNamespace(""), "showServerTime"), 2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "hudModel")
+      getproperty         QName(PackageNamespace(""), "gameSprite")
+      getproperty         QName(PackageNamespace(""), "map")
+      getproperty         QName(PackageNamespace(""), "name_")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.map"), "Map")
+      getproperty         QName(PackageNamespace(""), "DAILY_QUEST_ROOM")
+      ifeq                L87
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getproperty         QName(PackageNamespace(""), "claimButton")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "CLICK")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.controller:DailyLoginModalMediator/instance"), "onClaimClickHandler")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "CLICK")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.controller:DailyLoginModalMediator/instance"), "onPopupClickHandler")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+L87:
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace(""), "data_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "dailyLoginModel")
+      callproperty        QName(PackageNamespace(""), "getTimestampDay"), 0
+      setproperty         Multiname("calendarShowOnDay", [PrivateNamespace(null, "kabam.rotmg.dailyLogin.controller:DailyLoginModalMediator/instance"), PackageNamespace(""), PrivateNamespace(null, "kabam.rotmg.dailyLogin.controller:DailyLoginModalMediator/instance/initialize"), PackageNamespace("kabam.rotmg.dailyLogin.controller"), PackageInternalNs("kabam.rotmg.dailyLogin.controller"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("kabam.rotmg.dailyLogin.view"), ProtectedNamespace("kabam.rotmg.dailyLogin.controller:DailyLoginModalMediator"), StaticProtectedNs("kabam.rotmg.dailyLogin.controller:DailyLoginModalMediator"), StaticProtectedNs("robotlegs.bender.bundles.mvcs:Mediator")])
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      callpropvoid        QName(PackageNamespace(""), "save"), 0
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "dailyLoginModel")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "shouldDisplayCalendarAtStartup")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      callpropvoid        QName(PackageNamespace(""), "addCloseButton"), 0
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getproperty         QName(PackageNamespace(""), "closeButton")
+      getproperty         QName(PackageNamespace(""), "clicked")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "onCloseButtonClicked")
+      callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onCloseButtonClicked")
+   method
+    refid "kabam.rotmg.dailyLogin.controller:DailyLoginModalMediator/instance/onCloseButtonClicked"
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getproperty         QName(PackageNamespace(""), "closeButton")
+      getproperty         QName(PackageNamespace(""), "clicked")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "onCloseButtonClicked")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "flushStartupQueue")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "destroy") flag OVERRIDE
+   method
+    refid "kabam.rotmg.dailyLogin.controller:DailyLoginModalMediator/instance/destroy"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "hudModel")
+      getproperty         QName(PackageNamespace(""), "gameSprite")
+      getproperty         QName(PackageNamespace(""), "map")
+      getproperty         QName(PackageNamespace(""), "name_")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.map"), "Map")
+      getproperty         QName(PackageNamespace(""), "DAILY_QUEST_ROOM")
+      ifeq                L25
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getproperty         QName(PackageNamespace(""), "claimButton")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "CLICK")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.controller:DailyLoginModalMediator/instance"), "onClaimClickHandler")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "CLICK")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.controller:DailyLoginModalMediator/instance"), "onPopupClickHandler")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+L25:
+      getlocal0
+      callsupervoid       QName(PackageNamespace(""), "destroy"), 0
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.controller:DailyLoginModalMediator/instance"), "enterPortal")
+   method
+    refid "kabam.rotmg.dailyLogin.controller:DailyLoginModalMediator/instance/kabam.rotmg.dailyLogin.controller:DailyLoginModalMediator/instance/enterPortal"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "closeDialogs")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 0
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "hudModel")
+      getproperty         QName(PackageNamespace(""), "gameSprite")
+      getproperty         QName(PackageNamespace(""), "gsc_")
+      callpropvoid        QName(PackageNamespace(""), "gotoQuestRoom"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.controller:DailyLoginModalMediator/instance"), "onClaimClickHandler")
+   method
+    refid "kabam.rotmg.dailyLogin.controller:DailyLoginModalMediator/instance/kabam.rotmg.dailyLogin.controller:DailyLoginModalMediator/instance/onClaimClickHandler"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.controller:DailyLoginModalMediator/instance"), "enterPortal"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.controller:DailyLoginModalMediator/instance"), "onPopupClickHandler")
+   method
+    refid "kabam.rotmg.dailyLogin.controller:DailyLoginModalMediator/instance/kabam.rotmg.dailyLogin.controller:DailyLoginModalMediator/instance/onPopupClickHandler"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlex              QName(PackageNamespace("kabam.rotmg.pets.view.components"), "DialogCloseButton")
+      ifeq                L8
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.controller:DailyLoginModalMediator/instance"), "enterPortal"), 0
+
+L8:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "kabam.rotmg.dailyLogin.controller:DailyLoginModalMediator/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,212 @@
+class
+ refid "kabam.rotmg.dailyLogin.view:CalendarView"
+ instance QName(PackageNamespace("kabam.rotmg.dailyLogin.view"), "CalendarView")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("kabam.rotmg.dailyLogin.view:CalendarView")
+  iinit
+   refid "kabam.rotmg.dailyLogin.view:CalendarView/instance/init#0"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "init")
+   method
+    refid "kabam.rotmg.dailyLogin.view:CalendarView/instance/init#1"
+    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("kabam.rotmg.dailyLogin.model"), "CalendarDayModel")>)
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 12
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("kabam.rotmg.dailyLogin.model"), "CalendarDayModel")
+      setlocal            7
+
+      pushbyte            0
+      setlocal            8
+
+      pushnull
+      coerce              QName(PackageNamespace("kabam.rotmg.dailyLogin.view"), "CalendarDayBox")
+      setlocal            9
+
+      pushbyte            0
+      setlocal            4
+
+      pushbyte            0
+      setlocal            5
+
+      pushbyte            0
+      setlocal            6
+
+      pushbyte            0
+      setlocal            10
+
+      getlocal1
+      coerce_a
+      setlocal            11
+
+      jump                L89
+
+L22:
+      label
+      getlocal            11
+      getlocal            10
+      nextvalue
+      coerce              QName(PackageNamespace("kabam.rotmg.dailyLogin.model"), "CalendarDayModel")
+      setlocal            7
+
+      findpropstrict      QName(PackageNamespace("kabam.rotmg.dailyLogin.view"), "CalendarDayBox")
+      getlocal            7
+      getlocal2
+      getlocal            4
+      pushbyte            1
+      add
+      getlocal3
+      equals
+      constructprop       QName(PackageNamespace("kabam.rotmg.dailyLogin.view"), "CalendarDayBox"), 3
+      coerce              QName(PackageNamespace("kabam.rotmg.dailyLogin.view"), "CalendarDayBox")
+      setlocal            9
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal            9
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlocal            9
+      getlocal            5
+      getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+      getproperty         QName(PackageNamespace(""), "BOX_WIDTH")
+      multiply
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal            5
+      pushbyte            0
+      ifngt               L60
+
+      getlocal            9
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            5
+      getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+      getproperty         QName(PackageNamespace(""), "BOX_MARGIN")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+L60:
+      getlocal            9
+      getlocal            6
+      getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+      getproperty         QName(PackageNamespace(""), "BOX_HEIGHT")
+      multiply
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal            6
+      pushbyte            0
+      ifngt               L78
+
+      getlocal            9
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            6
+      getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+      getproperty         QName(PackageNamespace(""), "BOX_MARGIN")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+L78:
+      inclocal_i          5
+      inclocal_i          4
+      getlocal            4
+      getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+      getproperty         QName(PackageNamespace(""), "NUMBER_OF_COLUMNS")
+      modulo
+      pushbyte            0
+      ifne                L89
+
+      pushbyte            0
+      setlocal            5
+
+      inclocal_i          6
+L89:
+      hasnext2            11, 10
+      iftrue              L22
+
+      kill                11
+      kill                10
+      getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+      getproperty         QName(PackageNamespace(""), "BOX_WIDTH")
+      getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+      getproperty         QName(PackageNamespace(""), "NUMBER_OF_COLUMNS")
+      multiply
+      getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+      getproperty         QName(PackageNamespace(""), "NUMBER_OF_COLUMNS")
+      decrement
+      getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+      getproperty         QName(PackageNamespace(""), "BOX_MARGIN")
+      multiply
+      add
+      convert_i
+      setlocal            8
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parent")
+      getproperty         QName(PackageNamespace(""), "width")
+      getlocal            8
+      subtract
+      pushbyte            2
+      divide
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal0
+      getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+      getproperty         QName(PackageNamespace(""), "DAILY_LOGIN_TABS_PADDING")
+      getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+      getproperty         QName(PackageNamespace(""), "TABS_HEIGHT")
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "kabam.rotmg.dailyLogin.view:CalendarView/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

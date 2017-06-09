@@ -1,0 +1,538 @@
+class
+ refid "kabam.rotmg.game.view.components:StatView"
+ instance QName(PackageNamespace("kabam.rotmg.game.view.components"), "StatView")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("kabam.rotmg.game.view.components:StatView")
+  iinit
+   refid "kabam.rotmg.game.view.components:StatView/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Boolean")
+   body
+    maxstack 7
+    localcount 5
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.ui.tooltip"), "TextToolTip")
+     pushint             3552822
+     pushint             10197915
+     pushstring          ""
+     pushstring          ""
+     pushshort           200
+     constructprop       QName(PackageNamespace("com.company.assembleegameclient.ui.tooltip"), "TextToolTip"), 5
+     initproperty        QName(PackageNamespace(""), "toolTip_")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "fullName_")
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace(""), "description_")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("kabam.rotmg.text.view"), "TextFieldDisplayConcrete")
+     constructprop       QName(PackageNamespace("kabam.rotmg.text.view"), "TextFieldDisplayConcrete"), 0
+     pushbyte            13
+     callproperty        QName(PackageNamespace(""), "setSize"), 1
+     pushint             11776947
+     callproperty        QName(PackageNamespace(""), "setColor"), 1
+     initproperty        QName(PackageNamespace(""), "nameText_")
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "nameText_")
+     findpropstrict      QName(PackageNamespace("kabam.rotmg.text.view.stringBuilder"), "LineBuilder")
+     constructprop       QName(PackageNamespace("kabam.rotmg.text.view.stringBuilder"), "LineBuilder"), 0
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "setParams"), 1
+     callpropvoid        QName(PackageNamespace(""), "setStringBuilder"), 1
+
+     getlocal0
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "nameText_")
+     callpropvoid        QName(PackageNamespace(""), "configureTextAndAdd"), 1
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("kabam.rotmg.text.view"), "TextFieldDisplayConcrete")
+     constructprop       QName(PackageNamespace("kabam.rotmg.text.view"), "TextFieldDisplayConcrete"), 0
+     pushbyte            13
+     callproperty        QName(PackageNamespace(""), "setSize"), 1
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "valColor_")
+     callproperty        QName(PackageNamespace(""), "setColor"), 1
+     pushtrue
+     callproperty        QName(PackageNamespace(""), "setBold"), 1
+     initproperty        QName(PackageNamespace(""), "valText_")
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "valText_")
+     findpropstrict      QName(PackageNamespace("kabam.rotmg.text.view.stringBuilder"), "StaticStringBuilder")
+     pushstring          "-"
+     constructprop       QName(PackageNamespace("kabam.rotmg.text.view.stringBuilder"), "StaticStringBuilder"), 1
+     callpropvoid        QName(PackageNamespace(""), "setStringBuilder"), 1
+
+     getlocal0
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "valText_")
+     callpropvoid        QName(PackageNamespace(""), "configureTextAndAdd"), 1
+
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace(""), "redOnZero_")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("org.osflash.signals.natives"), "NativeSignal")
+     getlocal0
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "MOUSE_OVER")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     constructprop       QName(PackageNamespace("org.osflash.signals.natives"), "NativeSignal"), 3
+     initproperty        QName(PackageNamespace(""), "mouseOver")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("org.osflash.signals.natives"), "NativeSignal")
+     getlocal0
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "MOUSE_OUT")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     constructprop       QName(PackageNamespace("org.osflash.signals.natives"), "NativeSignal"), 3
+     initproperty        QName(PackageNamespace(""), "mouseOut")
+
+     getlex              QName(PackageNamespace(""), "toMaxTextSignal")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "setNewText")
+     callpropvoid        QName(PackageNamespace(""), "add"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "fullName_") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "description_") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "nameText_") type QName(PackageNamespace("kabam.rotmg.text.view"), "TextFieldDisplayConcrete") end
+  trait slot QName(PackageNamespace(""), "valText_") type QName(PackageNamespace("kabam.rotmg.text.view"), "TextFieldDisplayConcrete") end
+  trait slot QName(PackageNamespace(""), "redOnZero_") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "val_") type QName(PackageNamespace(""), "int") value Integer(-1) end
+  trait slot QName(PackageNamespace(""), "boost_") type QName(PackageNamespace(""), "int") value Integer(-1) end
+  trait slot QName(PackageNamespace(""), "max_") type QName(PackageNamespace(""), "int") value Integer(-1) end
+  trait slot QName(PackageNamespace(""), "valColor_") type QName(PackageNamespace(""), "uint") value Integer(11776947) end
+  trait slot QName(PackageNamespace(""), "level_") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait slot QName(PackageNamespace(""), "toolTip_") type QName(PackageNamespace("com.company.assembleegameclient.ui.tooltip"), "TextToolTip") end
+  trait slot QName(PackageNamespace(""), "mouseOver") type QName(PackageNamespace("org.osflash.signals.natives"), "NativeSignal") end
+  trait slot QName(PackageNamespace(""), "mouseOut") type QName(PackageNamespace("org.osflash.signals.natives"), "NativeSignal") end
+  trait method QName(PackageNamespace(""), "configureTextAndAdd")
+   method
+    refid "kabam.rotmg.game.view.components:StatView/instance/configureTextAndAdd"
+    param QName(PackageNamespace("kabam.rotmg.text.view"), "TextFieldDisplayConcrete")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlex              QName(PackageNamespace("flash.text"), "TextFieldAutoSize")
+      getproperty         QName(PackageNamespace(""), "LEFT")
+      callpropvoid        QName(PackageNamespace(""), "setAutoSize"), 1
+
+      getlocal1
+      findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
+      pushbyte            0
+      dup
+      dup
+      constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 3
+      newarray            1
+      setproperty         QName(PackageNamespace(""), "filters")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addTooltip")
+   method
+    refid "kabam.rotmg.game.view.components:StatView/instance/addTooltip"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "toolTip_")
+      findpropstrict      QName(PackageNamespace("kabam.rotmg.text.view.stringBuilder"), "LineBuilder")
+      constructprop       QName(PackageNamespace("kabam.rotmg.text.view.stringBuilder"), "LineBuilder"), 0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "fullName_")
+      callproperty        QName(PackageNamespace(""), "setParams"), 1
+      callpropvoid        QName(PackageNamespace(""), "setTitle"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "toolTip_")
+      findpropstrict      QName(PackageNamespace("kabam.rotmg.text.view.stringBuilder"), "LineBuilder")
+      constructprop       QName(PackageNamespace("kabam.rotmg.text.view.stringBuilder"), "LineBuilder"), 0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "description_")
+      callproperty        QName(PackageNamespace(""), "setParams"), 1
+      callpropvoid        QName(PackageNamespace(""), "setText"), 1
+
+      getlex              QName(PackageNamespace(""), "stage")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "toolTip_")
+      callproperty        QName(PackageNamespace(""), "contains"), 1
+      iftrue              L27
+
+      getlex              QName(PackageNamespace(""), "stage")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "toolTip_")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L27:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "removeTooltip")
+   method
+    refid "kabam.rotmg.game.view.components:StatView/instance/removeTooltip"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "toolTip_")
+      getproperty         QName(PackageNamespace(""), "parent")
+      pushnull
+      ifeq                L13
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "toolTip_")
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "toolTip_")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L13:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw")
+   method
+    refid "kabam.rotmg.game.view.components:StatView/instance/draw"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Integer(0)
+    body
+     maxstack 2
+     localcount 6
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal            5
+
+      getlocal            4
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "level_")
+      equals
+      dup
+      iffalse             L16
+
+      pop
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "val_")
+      equals
+L16:
+      dup
+      iffalse             L23
+
+      pop
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "boost_")
+      equals
+L23:
+      iffalse             L25
+
+      returnvoid
+
+L25:
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "val_")
+
+      getlocal0
+      getlocal2
+      initproperty        QName(PackageNamespace(""), "boost_")
+
+      getlocal0
+      getlocal3
+      initproperty        QName(PackageNamespace(""), "max_")
+
+      getlocal0
+      getlocal            4
+      initproperty        QName(PackageNamespace(""), "level_")
+
+      getlocal1
+      getlocal2
+      subtract
+      getlocal3
+      ifnge               L46
+
+      pushint             16572160
+      convert_u
+      setlocal            5
+
+      jump                L79
+
+L46:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "redOnZero_")
+      convert_b
+      dup
+      iffalse             L56
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "val_")
+      pushbyte            0
+      lessequals
+L56:
+      dup
+      iftrue              L63
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "boost_")
+      pushbyte            0
+      lessthan
+L63:
+      iffalse             L68
+
+      pushint             16726072
+      convert_u
+      setlocal            5
+
+      jump                L79
+
+L68:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "boost_")
+      pushbyte            0
+      ifngt               L76
+
+      pushint             6206769
+      convert_u
+      setlocal            5
+
+      jump                L79
+
+L76:
+      pushint             11776947
+      convert_u
+      setlocal            5
+
+L79:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "valColor_")
+      getlocal            5
+      ifeq                L91
+
+      getlocal0
+      getlocal            5
+      initproperty        QName(PackageNamespace(""), "valColor_")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "valText_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "valColor_")
+      callpropvoid        QName(PackageNamespace(""), "setColor"), 1
+
+L91:
+      getlocal0
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace(""), "data_")
+      getproperty         Multiname("toggleToMaxText", [PrivateNamespace(null, "kabam.rotmg.game.view.components:StatView/instance/draw#0"), PackageNamespace(""), PrivateNamespace(null, "kabam.rotmg.game.view.components:StatView/instance/draw#1"), PackageNamespace("kabam.rotmg.game.view.components"), PackageInternalNs("kabam.rotmg.game.view.components"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("kabam.rotmg.game.view.components:StatView"), StaticProtectedNs("kabam.rotmg.game.view.components:StatView"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callpropvoid        QName(PackageNamespace(""), "setNewText"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setNewText")
+   method
+    refid "kabam.rotmg.game.view.components:StatView/instance/setNewText"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "val_")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+      coerce_s
+      setlocal2
+
+      getlocal1
+      iffalse             L40
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "max_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "val_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "boost_")
+      subtract
+      subtract
+      convert_i
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "level_")
+      pushbyte            20
+      greaterequals
+      dup
+      iffalse             L31
+
+      pop
+      getlocal3
+      pushbyte            0
+      greaterthan
+L31:
+      iffalse             L40
+
+      getlocal2
+      pushstring          "|"
+      getlocal3
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+      add
+      add
+      coerce_s
+      setlocal2
+
+L40:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "boost_")
+      pushbyte            0
+      ifeq                L66
+
+      getlocal2
+      pushstring          " ("
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "boost_")
+      pushbyte            0
+      greaterthan
+      iffalse             L54
+
+      pushstring          "+"
+      coerce_a
+      jump                L56
+
+L54:
+      pushstring          ""
+      coerce_a
+L56:
+      add
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "boost_")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+      add
+      pushstring          ")"
+      add
+      add
+      coerce_s
+      setlocal2
+
+L66:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "valText_")
+      findpropstrict      QName(PackageNamespace("kabam.rotmg.text.view.stringBuilder"), "StaticStringBuilder")
+      getlocal2
+      constructprop       QName(PackageNamespace("kabam.rotmg.text.view.stringBuilder"), "StaticStringBuilder"), 1
+      callpropvoid        QName(PackageNamespace(""), "setStringBuilder"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "valText_")
+      pushbyte            24
+      setproperty         QName(PackageNamespace(""), "x")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "kabam.rotmg.game.view.components:StatView/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "toMaxTextSignal")
+    findpropstrict      QName(PackageNamespace("org.osflash.signals"), "Signal")
+    getlex              QName(PackageNamespace(""), "Boolean")
+    constructprop       QName(PackageNamespace("org.osflash.signals"), "Signal"), 1
+    setproperty         QName(PackageNamespace(""), "toMaxTextSignal")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "toMaxTextSignal") slotid 1 type QName(PackageNamespace("org.osflash.signals"), "Signal") end
+end ; class

@@ -1,0 +1,456 @@
+class
+ refid "kabam.rotmg.dailyLogin.model:CalendarDayModel"
+ instance QName(PackageNamespace("kabam.rotmg.dailyLogin.model"), "CalendarDayModel")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("kabam.rotmg.dailyLogin.model:CalendarDayModel")
+  iinit
+   refid "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance/init"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "String")
+   body
+    maxstack 2
+    localcount 7
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_dayNumber")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_itemID")
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_gold")
+
+     getlocal0
+     getlocal            5
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_isClaimed")
+
+     getlocal0
+     getlocal            4
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_quantity")
+
+     getlocal0
+     getlocal            6
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_calendarType")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_dayNumber") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_quantity") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_itemID") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_gold") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_isClaimed") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_isCurrent") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_claimKey") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_calendarType") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait getter QName(PackageNamespace(""), "dayNumber")
+   method
+    refid "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance/dayNumber/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_dayNumber")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "dayNumber")
+   method
+    refid "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance/dayNumber/setter"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_dayNumber")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "itemID")
+   method
+    refid "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance/itemID/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_itemID")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "itemID")
+   method
+    refid "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance/itemID/setter"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_itemID")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "gold")
+   method
+    refid "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance/gold/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_gold")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "gold")
+   method
+    refid "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance/gold/setter"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_gold")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "isClaimed")
+   method
+    refid "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance/isClaimed/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_isClaimed")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "isClaimed")
+   method
+    refid "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance/isClaimed/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_isClaimed")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString")
+   method
+    refid "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "Day "
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_dayNumber")
+      add
+      pushstring          ", item: "
+      add
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_itemID")
+      add
+      pushstring          " x"
+      add
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_quantity")
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "isCurrent")
+   method
+    refid "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance/isCurrent/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_isCurrent")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "isCurrent")
+   method
+    refid "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance/isCurrent/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_isCurrent")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "quantity")
+   method
+    refid "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance/quantity/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_quantity")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "quantity")
+   method
+    refid "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance/quantity/setter"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_quantity")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "claimKey")
+   method
+    refid "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance/claimKey/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_claimKey")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "claimKey")
+   method
+    refid "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance/claimKey/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_claimKey")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "calendarType")
+   method
+    refid "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance/calendarType/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_calendarType")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "calendarType")
+   method
+    refid "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance/calendarType/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.model:CalendarDayModel/instance"), "_calendarType")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "kabam.rotmg.dailyLogin.model:CalendarDayModel/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

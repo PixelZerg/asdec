@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "kabam.rotmg.game.model:PotionInventoryModel/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "kabam.rotmg.game.model:PotionInventoryModel"
+    popscope
+    initproperty        QName(PackageNamespace("kabam.rotmg.game.model"), "PotionInventoryModel")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("kabam.rotmg.game.model"), "PotionInventoryModel") slotid 1
+  #include "PotionInventoryModel.class.asasm"
+ end ; trait
+end ; script

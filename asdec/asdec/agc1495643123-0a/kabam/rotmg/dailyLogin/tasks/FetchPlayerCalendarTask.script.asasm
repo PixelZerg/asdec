@@ -1,0 +1,33 @@
+script
+ sinit
+  refid "kabam.rotmg.dailyLogin.tasks:FetchPlayerCalendarTask/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("FetchPlayerCalendarTask", [PackageNamespace("kabam.rotmg.dailyLogin.tasks")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("kabam.lib.tasks"), "BaseTask")
+    pushscope
+
+    getlex              QName(PackageNamespace("kabam.lib.tasks"), "BaseTask")
+    newclass            "kabam.rotmg.dailyLogin.tasks:FetchPlayerCalendarTask"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("kabam.rotmg.dailyLogin.tasks"), "FetchPlayerCalendarTask")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("kabam.rotmg.dailyLogin.tasks"), "FetchPlayerCalendarTask")
+  #include "FetchPlayerCalendarTask.class.asasm"
+ end ; trait
+end ; script

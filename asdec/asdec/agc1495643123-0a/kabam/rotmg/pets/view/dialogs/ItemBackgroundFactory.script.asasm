@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "kabam.rotmg.pets.view.dialogs:ItemBackgroundFactory/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "kabam.rotmg.pets.view.dialogs:ItemBackgroundFactory"
+    popscope
+    initproperty        QName(PackageNamespace("kabam.rotmg.pets.view.dialogs"), "ItemBackgroundFactory")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("kabam.rotmg.pets.view.dialogs"), "ItemBackgroundFactory") slotid 1
+  #include "ItemBackgroundFactory.class.asasm"
+ end ; trait
+end ; script

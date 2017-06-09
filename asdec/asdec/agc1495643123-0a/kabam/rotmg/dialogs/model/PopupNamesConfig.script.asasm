@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "kabam.rotmg.dialogs.model:PopupNamesConfig/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("PopupNamesConfig", [PackageNamespace("kabam.rotmg.dialogs.model")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "kabam.rotmg.dialogs.model:PopupNamesConfig"
+    popscope
+    initproperty        QName(PackageNamespace("kabam.rotmg.dialogs.model"), "PopupNamesConfig")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("kabam.rotmg.dialogs.model"), "PopupNamesConfig")
+  #include "PopupNamesConfig.class.asasm"
+ end ; trait
+end ; script

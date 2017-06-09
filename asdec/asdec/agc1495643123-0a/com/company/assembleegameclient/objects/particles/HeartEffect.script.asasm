@@ -1,0 +1,61 @@
+script
+ sinit
+  refid "com.company.assembleegameclient.objects.particles:HeartEffect/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("HeartEffect", [PackageNamespace("com.company.assembleegameclient.objects.particles")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "BasicObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects.particles"), "ParticleEffect")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects.particles"), "ParticleEffect")
+    newclass            "com.company.assembleegameclient.objects.particles:HeartEffect"
+    popscope
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("com.company.assembleegameclient.objects.particles"), "HeartEffect")
+
+    findpropstrict      Multiname("HeartParticle", [PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:HeartEffect")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "BasicObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects.particles"), "Particle")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects.particles"), "Particle")
+    newclass            "com.company.assembleegameclient.objects.particles:HeartEffect/HeartParticle"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:HeartEffect"), "HeartParticle")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.company.assembleegameclient.objects.particles"), "HeartEffect")
+  #include "HeartEffect.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace(null, "com.company.assembleegameclient.objects.particles:HeartEffect"), "HeartParticle")
+  #include "HeartEffect/HeartParticle.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,285 @@
+class
+ refid "kabam.rotmg.dialogs.model:DialogsModel"
+ instance QName(PackageNamespace("kabam.rotmg.dialogs.model"), "DialogsModel")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("kabam.rotmg.dialogs.model:DialogsModel")
+  iinit
+   refid "kabam.rotmg.dialogs.model:DialogsModel/instance/init"
+   body
+    maxstack 5
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlex              QName(PackageNamespace("kabam.rotmg.dialogs.model"), "PopupNamesConfig")
+     getproperty         QName(PackageNamespace(""), "BEGINNERS_OFFER_POPUP")
+     getlex              QName(PackageNamespace("kabam.rotmg.dialogs.model"), "PopupNamesConfig")
+     getproperty         QName(PackageNamespace(""), "NEWS_POPUP")
+     getlex              QName(PackageNamespace("kabam.rotmg.dialogs.model"), "PopupNamesConfig")
+     getproperty         QName(PackageNamespace(""), "DAILY_LOGIN_POPUP")
+     getlex              QName(PackageNamespace("kabam.rotmg.dialogs.model"), "PopupNamesConfig")
+     getproperty         QName(PackageNamespace(""), "PACKAGES_OFFER_POPUP")
+     newarray            4
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dialogs.model:DialogsModel/instance#0"), "popupPriority")
+
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace(null, "kabam.rotmg.dialogs.model:DialogsModel/instance#0"), PackageNamespace("kabam.rotmg.dialogs.model"), PackageNamespace(""), PrivateNamespace(null, "kabam.rotmg.dialogs.model:DialogsModel/instance#1"), PackageInternalNs("kabam.rotmg.dialogs.model"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("kabam.rotmg.dialogs.model:DialogsModel"), StaticProtectedNs("kabam.rotmg.dialogs.model:DialogsModel"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace("kabam.rotmg.dialogs.model"), "PopupQueueEntry")
+     applytype           1
+     construct           0
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dialogs.model:DialogsModel/instance#0"), "queue")
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dialogs.model:DialogsModel/instance#0"), "popupPriority") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dialogs.model:DialogsModel/instance#0"), "queue") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("kabam.rotmg.dialogs.model"), "PopupQueueEntry")>) end
+  trait method QName(PackageNamespace(""), "addPopupToStartupQueue")
+   method
+    refid "kabam.rotmg.dialogs.model:DialogsModel/instance/addPopupToStartupQueue"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace("org.osflash.signals"), "Signal")
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal3
+      pushbyte            -1
+      equals
+      dup
+      iftrue              L12
+
+      pop
+      getlocal0
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "canDisplayPopupToday"), 1
+      convert_b
+L12:
+      iffalse             L24
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dialogs.model:DialogsModel/instance#0"), "queue")
+      findpropstrict      QName(PackageNamespace("kabam.rotmg.dialogs.model"), "PopupQueueEntry")
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      constructprop       QName(PackageNamespace("kabam.rotmg.dialogs.model"), "PopupQueueEntry"), 4
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace(null, "kabam.rotmg.dialogs.model:DialogsModel/instance#0"), "sortQueue"), 0
+
+L24:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "kabam.rotmg.dialogs.model:DialogsModel/instance#0"), "sortQueue")
+   method
+    refid "kabam.rotmg.dialogs.model:DialogsModel/instance/kabam.rotmg.dialogs.model:DialogsModel/instance/sortQueue"
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_ACTIVATION
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal1
+
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dialogs.model:DialogsModel/instance#0"), "queue")
+      newfunction         "kabam.rotmg.dialogs.model:DialogsModel/instance/kabam.rotmg.dialogs.model:DialogsModel/instance/sortQueue/inline_method"
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "sort"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "flushStartupQueue")
+   method
+    refid "kabam.rotmg.dialogs.model:DialogsModel/instance/flushStartupQueue"
+    returns QName(PackageNamespace("kabam.rotmg.dialogs.model"), "PopupQueueEntry")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dialogs.model:DialogsModel/instance#0"), "queue")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifne                L9
+
+      pushnull
+      returnvalue
+
+L9:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dialogs.model:DialogsModel/instance#0"), "queue")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "shift"), 0
+      coerce              QName(PackageNamespace("kabam.rotmg.dialogs.model"), "PopupQueueEntry")
+      setlocal1
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace(""), "data_")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "name")
+      findpropstrict      QName(PackageNamespace(""), "Date")
+      constructprop       QName(PackageNamespace(""), "Date"), 0
+      getproperty         QName(PackageNamespace(""), "time")
+      setproperty         MultinameL([PrivateNamespace(null, "kabam.rotmg.dialogs.model:DialogsModel/instance#0"), PackageNamespace("kabam.rotmg.dialogs.model"), PackageNamespace(""), PrivateNamespace(null, "kabam.rotmg.dialogs.model:DialogsModel/instance#1"), PackageInternalNs("kabam.rotmg.dialogs.model"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("kabam.rotmg.dialogs.model:DialogsModel"), StaticProtectedNs("kabam.rotmg.dialogs.model:DialogsModel")])
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "canDisplayPopupToday")
+   method
+    refid "kabam.rotmg.dialogs.model:DialogsModel/instance/canDisplayPopupToday"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal2
+
+      pushbyte            0
+      setlocal3
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace(""), "data_")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "kabam.rotmg.dialogs.model:DialogsModel/instance#0"), PackageNamespace("kabam.rotmg.dialogs.model"), PackageNamespace(""), PrivateNamespace(null, "kabam.rotmg.dialogs.model:DialogsModel/instance#1"), PackageInternalNs("kabam.rotmg.dialogs.model"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("kabam.rotmg.dialogs.model:DialogsModel"), StaticProtectedNs("kabam.rotmg.dialogs.model:DialogsModel")])
+      iftrue              L13
+
+      pushtrue
+      returnvalue
+
+L13:
+      getlex              QName(PackageNamespace(""), "Math")
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace(""), "data_")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "kabam.rotmg.dialogs.model:DialogsModel/instance#0"), PackageNamespace("kabam.rotmg.dialogs.model"), PackageNamespace(""), PrivateNamespace(null, "kabam.rotmg.dialogs.model:DialogsModel/instance#1"), PackageInternalNs("kabam.rotmg.dialogs.model"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("kabam.rotmg.dialogs.model:DialogsModel"), StaticProtectedNs("kabam.rotmg.dialogs.model:DialogsModel")])
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      pushint             86400000
+      divide
+      callproperty        QName(PackageNamespace(""), "floor"), 1
+      convert_i
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "Math")
+      findpropstrict      QName(PackageNamespace(""), "Date")
+      constructprop       QName(PackageNamespace(""), "Date"), 0
+      getproperty         QName(PackageNamespace(""), "time")
+      pushint             86400000
+      divide
+      callproperty        QName(PackageNamespace(""), "floor"), 1
+      convert_i
+      setlocal3
+
+      getlocal3
+      getlocal2
+      greaterthan
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getPopupPriorityByName")
+   method
+    refid "kabam.rotmg.dialogs.model:DialogsModel/instance/getPopupPriorityByName"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dialogs.model:DialogsModel/instance#0"), "popupPriority")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      convert_i
+      setlocal2
+
+      getlocal2
+      pushbyte            0
+      ifnlt               L15
+
+      getlex              QName(PackageNamespace(""), "int")
+      getproperty         QName(PackageNamespace(""), "MAX_VALUE")
+      convert_i
+      setlocal2
+
+L15:
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "kabam.rotmg.dialogs.model:DialogsModel/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

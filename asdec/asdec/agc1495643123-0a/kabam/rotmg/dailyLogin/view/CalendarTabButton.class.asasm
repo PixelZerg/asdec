@@ -1,0 +1,505 @@
+class
+ refid "kabam.rotmg.dailyLogin.view:CalendarTabButton"
+ instance QName(PackageNamespace("kabam.rotmg.dailyLogin.view"), "CalendarTabButton")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("kabam.rotmg.dailyLogin.view:CalendarTabButton")
+  iinit
+   refid "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "int")
+   body
+    maxstack 10
+    localcount 6
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsPath")
+     getlex              Multiname("Vector", [PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), PackageNamespace(""), PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance/init"), PackageNamespace("kabam.rotmg.dailyLogin.view"), PackageInternalNs("kabam.rotmg.dailyLogin.view"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("kabam.rotmg.dailyLogin.view:CalendarTabButton"), StaticProtectedNs("kabam.rotmg.dailyLogin.view:CalendarTabButton"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace(""), "int")
+     applytype           1
+     construct           0
+     getlex              Multiname("Vector", [PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), PackageNamespace(""), PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance/init"), PackageNamespace("kabam.rotmg.dailyLogin.view"), PackageInternalNs("kabam.rotmg.dailyLogin.view"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("kabam.rotmg.dailyLogin.view:CalendarTabButton"), StaticProtectedNs("kabam.rotmg.dailyLogin.view:CalendarTabButton"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace(""), "Number")
+     applytype           1
+     construct           0
+     constructprop       QName(PackageNamespace("flash.display"), "GraphicsPath"), 2
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "path_")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsSolidFill")
+     pushint             3552822
+     pushbyte            1
+     constructprop       QName(PackageNamespace("flash.display"), "GraphicsSolidFill"), 2
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "fill_")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsSolidFill")
+     pushint             2236962
+     pushbyte            1
+     constructprop       QName(PackageNamespace("flash.display"), "GraphicsSolidFill"), 2
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "fillIdle_")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsStroke")
+     getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+     getproperty         QName(PackageNamespace(""), "BOX_BORDER")
+     pushfalse
+     getlex              QName(PackageNamespace("flash.display"), "LineScaleMode")
+     getproperty         QName(PackageNamespace(""), "NORMAL")
+     getlex              QName(PackageNamespace("flash.display"), "CapsStyle")
+     getproperty         QName(PackageNamespace(""), "NONE")
+     getlex              QName(PackageNamespace("flash.display"), "JointStyle")
+     getproperty         QName(PackageNamespace(""), "ROUND")
+     pushbyte            3
+     findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsSolidFill")
+     pushint             16777215
+     constructprop       QName(PackageNamespace("flash.display"), "GraphicsSolidFill"), 1
+     constructprop       QName(PackageNamespace("flash.display"), "GraphicsStroke"), 7
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "lineStyle_")
+
+     getlocal0
+     findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
+     getproperty         Multiname("Vector", [PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), PackageNamespace(""), PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance/init"), PackageNamespace("kabam.rotmg.dailyLogin.view"), PackageInternalNs("kabam.rotmg.dailyLogin.view"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("kabam.rotmg.dailyLogin.view:CalendarTabButton"), StaticProtectedNs("kabam.rotmg.dailyLogin.view:CalendarTabButton"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace("flash.display"), "IGraphicsData")
+     applytype           1
+     pushbyte            5
+     construct           1
+     dup
+     pushbyte            0
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "lineStyle_")
+     setproperty         MultinameL([PackageNamespace("")])
+
+     dup
+     pushbyte            1
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "fill_")
+     setproperty         MultinameL([PackageNamespace("")])
+
+     dup
+     pushbyte            2
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "path_")
+     setproperty         MultinameL([PackageNamespace("")])
+
+     dup
+     pushbyte            3
+     getlex              QName(PackageNamespace("com.company.util"), "GraphicsUtil")
+     getproperty         QName(PackageNamespace(""), "END_FILL")
+     setproperty         MultinameL([PackageNamespace("")])
+
+     dup
+     pushbyte            4
+     getlex              QName(PackageNamespace("com.company.util"), "GraphicsUtil")
+     getproperty         QName(PackageNamespace(""), "END_STROKE")
+     setproperty         MultinameL([PackageNamespace("")])
+
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "graphicsDataBackground")
+
+     getlocal0
+     findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
+     getproperty         Multiname("Vector", [PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), PackageNamespace(""), PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance/init"), PackageNamespace("kabam.rotmg.dailyLogin.view"), PackageInternalNs("kabam.rotmg.dailyLogin.view"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("kabam.rotmg.dailyLogin.view:CalendarTabButton"), StaticProtectedNs("kabam.rotmg.dailyLogin.view:CalendarTabButton"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace("flash.display"), "IGraphicsData")
+     applytype           1
+     pushbyte            5
+     construct           1
+     dup
+     pushbyte            0
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "lineStyle_")
+     setproperty         MultinameL([PackageNamespace("")])
+
+     dup
+     pushbyte            1
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "fillIdle_")
+     setproperty         MultinameL([PackageNamespace("")])
+
+     dup
+     pushbyte            2
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "path_")
+     setproperty         MultinameL([PackageNamespace("")])
+
+     dup
+     pushbyte            3
+     getlex              QName(PackageNamespace("com.company.util"), "GraphicsUtil")
+     getproperty         QName(PackageNamespace(""), "END_FILL")
+     setproperty         MultinameL([PackageNamespace("")])
+
+     dup
+     pushbyte            4
+     getlex              QName(PackageNamespace("com.company.util"), "GraphicsUtil")
+     getproperty         QName(PackageNamespace(""), "END_STROKE")
+     setproperty         MultinameL([PackageNamespace("")])
+
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "graphicsDataBackgroundIdle")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "_calendarType")
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "tabName")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "hintText")
+
+     getlocal0
+     callpropvoid        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "drawTab"), 0
+
+     getlocal0
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "ADDED")
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "onAddedHandler")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "path_") type QName(PackageNamespace("flash.display"), "GraphicsPath") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "fill_") type QName(PackageNamespace("flash.display"), "GraphicsSolidFill") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "fillIdle_") type QName(PackageNamespace("flash.display"), "GraphicsSolidFill") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "lineStyle_") type QName(PackageNamespace("flash.display"), "GraphicsStroke") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "graphicsDataBackground") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "IGraphicsData")>) end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "graphicsDataBackgroundIdle") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "IGraphicsData")>) end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "_calendarType") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "state_") type QName(PackageNamespace(""), "String") value Utf8("idle") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "tabNameTxt") type QName(PackageNamespace("kabam.rotmg.text.view"), "TextFieldDisplayConcrete") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "background") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "tabName") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "hintText") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "hintTextField") end
+  trait slot QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "tooltip") type QName(PackageNamespace("kabam.rotmg.dailyLogin.view"), "DailyCalendarInfoIcon") end
+  trait method QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "onAddedHandler")
+   method
+    refid "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance/kabam.rotmg.dailyLogin.view:CalendarTabButton/instance/onAddedHandler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ADDED")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "onAddedHandler")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlocal0
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "REMOVED_FROM_STAGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "onRemovedFromStage")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "onRemovedFromStage")
+   method
+    refid "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance/kabam.rotmg.dailyLogin.view:CalendarTabButton/instance/onRemovedFromStage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "REMOVED_FROM_STAGE")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "onRemovedFromStage")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "drawTab")
+   method
+    refid "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance/kabam.rotmg.dailyLogin.view:CalendarTabButton/instance/drawTab"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 9
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "background")
+      iffalse             L9
+
+      findpropstrict      QName(PackageNamespace(""), "removeChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "background")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L9:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "tooltip")
+      iffalse             L16
+
+      findpropstrict      QName(PackageNamespace(""), "removeChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "tooltip")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L16:
+      getlocal0
+      getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.view"), "CalendarDayBox")
+      pushbyte            1
+      dup
+      pushbyte            0
+      dup
+      newarray            4
+      getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+      getproperty         QName(PackageNamespace(""), "TABS_WIDTH")
+      getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+      getproperty         QName(PackageNamespace(""), "TABS_HEIGHT")
+      pushint             3552822
+      pushbyte            1
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "state_")
+      getlex              QName(PackageNamespace(""), "STATE_IDLE")
+      equals
+      iffalse             L38
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "graphicsDataBackgroundIdle")
+      coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "IGraphicsData")>)
+      jump                L41
+
+L38:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "graphicsDataBackground")
+      coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "IGraphicsData")>)
+L41:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "path_")
+      callproperty        QName(PackageNamespace(""), "drawRectangleWithCuts"), 7
+      initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "background")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "background")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "tabNameTxt")
+      iffalse             L56
+
+      findpropstrict      QName(PackageNamespace(""), "removeChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "tabNameTxt")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L56:
+      getlocal0
+      findpropstrict      QName(PackageNamespace("kabam.rotmg.text.view"), "TextFieldDisplayConcrete")
+      constructprop       QName(PackageNamespace("kabam.rotmg.text.view"), "TextFieldDisplayConcrete"), 0
+      getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+      getproperty         QName(PackageNamespace(""), "TABS_FONT_SIZE")
+      callproperty        QName(PackageNamespace(""), "setSize"), 1
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "state_")
+      getlex              QName(PackageNamespace(""), "STATE_IDLE")
+      equals
+      iffalse             L70
+
+      pushint             16777215
+      convert_u
+      jump                L72
+
+L70:
+      pushint             16768512
+      convert_u
+L72:
+      callproperty        QName(PackageNamespace(""), "setColor"), 1
+      getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+      getproperty         QName(PackageNamespace(""), "TABS_WIDTH")
+      callproperty        QName(PackageNamespace(""), "setTextWidth"), 1
+      getlex              QName(PackageNamespace("flash.text"), "TextFieldAutoSize")
+      getproperty         QName(PackageNamespace(""), "CENTER")
+      callproperty        QName(PackageNamespace(""), "setAutoSize"), 1
+      initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "tabNameTxt")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "tabNameTxt")
+      findpropstrict      QName(PackageNamespace("kabam.rotmg.text.view.stringBuilder"), "StaticStringBuilder")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "tabName")
+      constructprop       QName(PackageNamespace("kabam.rotmg.text.view.stringBuilder"), "StaticStringBuilder"), 1
+      callpropvoid        QName(PackageNamespace(""), "setStringBuilder"), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "tabNameTxt")
+      getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+      getproperty         QName(PackageNamespace(""), "TABS_HEIGHT")
+      getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+      getproperty         QName(PackageNamespace(""), "TABS_FONT_SIZE")
+      subtract
+      pushbyte            2
+      divide
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("kabam.rotmg.dailyLogin.view"), "DailyCalendarInfoIcon")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "tabName")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "hintText")
+      constructprop       QName(PackageNamespace("kabam.rotmg.dailyLogin.view"), "DailyCalendarInfoIcon"), 2
+      initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "tooltip")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "tooltip")
+      getlex              QName(PackageNamespace("kabam.rotmg.dailyLogin.config"), "CalendarSettings")
+      getproperty         QName(PackageNamespace(""), "TABS_WIDTH")
+      pushbyte            15
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "tooltip")
+      pushbyte            5
+      setproperty         QName(PackageNamespace(""), "y")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "tooltip")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "state_")
+      getlex              QName(PackageNamespace(""), "STATE_IDLE")
+      ifne                L128
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "tabNameTxt")
+      pushdouble          0.5
+      setproperty         QName(PackageNamespace(""), "alpha")
+
+L128:
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "tabNameTxt")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "state")
+   method
+    refid "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance/state/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "state_")
+      ifeq                L11
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "state_")
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "drawTab"), 0
+
+L11:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "calendarType")
+   method
+    refid "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance/calendarType/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.dailyLogin.view:CalendarTabButton/instance"), "_calendarType")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "kabam.rotmg.dailyLogin.view:CalendarTabButton/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "STATE_SELECTED")
+    pushstring          "selected"
+    initproperty        QName(PackageNamespace(""), "STATE_SELECTED")
+
+    findproperty        QName(PackageNamespace(""), "STATE_IDLE")
+    pushstring          "idle"
+    initproperty        QName(PackageNamespace(""), "STATE_IDLE")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "STATE_SELECTED") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("selected") end
+ trait const QName(PackageNamespace(""), "STATE_IDLE") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("idle") end
+end ; class

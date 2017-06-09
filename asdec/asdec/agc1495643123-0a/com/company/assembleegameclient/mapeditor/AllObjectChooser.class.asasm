@@ -1,0 +1,323 @@
+class
+ refid "com.company.assembleegameclient.mapeditor:AllObjectChooser"
+ instance QName(PackageInternalNs("com.company.assembleegameclient.mapeditor"), "AllObjectChooser")
+  extends QName(PackageInternalNs("com.company.assembleegameclient.mapeditor"), "Chooser")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.company.assembleegameclient.mapeditor:AllObjectChooser")
+  iinit
+   refid "com.company.assembleegameclient.mapeditor:AllObjectChooser/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   flag HAS_OPTIONAL
+   optional Utf8("")
+   optional Utf8("All Map Objects")
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.mapeditor"), "Layer")
+     getproperty         QName(PackageNamespace(""), "OBJECT")
+     constructsuper      1
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+     initproperty        QName(PrivateNamespace(null, "com.company.assembleegameclient.mapeditor:AllObjectChooser/instance"), "cache")
+
+     getlocal0
+     getlocal1
+     pushtrue
+     getlocal2
+     callpropvoid        QName(PackageNamespace(""), "reloadObjects"), 3
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "com.company.assembleegameclient.mapeditor:AllObjectChooser/instance"), "cache") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+  trait slot QName(PrivateNamespace(null, "com.company.assembleegameclient.mapeditor:AllObjectChooser/instance"), "lastSearch") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait method QName(PackageNamespace(""), "getLastSearch")
+   method
+    refid "com.company.assembleegameclient.mapeditor:AllObjectChooser/instance/getLastSearch"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "com.company.assembleegameclient.mapeditor:AllObjectChooser/instance"), "lastSearch")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "reloadObjects")
+   method
+    refid "com.company.assembleegameclient.mapeditor:AllObjectChooser/instance/reloadObjects"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Boolean")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Utf8("")
+    optional False()
+    optional Utf8("All Map Objects")
+    body
+     maxstack 4
+     localcount 14
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "RegExp")
+      setlocal            5
+
+      pushnull
+      coerce_s
+      setlocal            7
+
+      pushbyte            0
+      setlocal            8
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "XML")
+      setlocal            9
+
+      pushbyte            0
+      setlocal            10
+
+      pushnull
+      coerce              QName(PackageInternalNs("com.company.assembleegameclient.mapeditor"), "ObjectElement")
+      setlocal            11
+
+      getlocal2
+      iftrue              L22
+
+      findpropstrict      QName(ProtectedNamespace("com.company.assembleegameclient.mapeditor:Chooser"), "removeElements")
+      callpropvoid        QName(ProtectedNamespace("com.company.assembleegameclient.mapeditor:Chooser"), "removeElements"), 0
+
+L22:
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.company.assembleegameclient.mapeditor:AllObjectChooser/instance"), "lastSearch")
+
+      getlex              Multiname("Vector", [PrivateNamespace(null, "com.company.assembleegameclient.mapeditor:AllObjectChooser/instance"), PackageNamespace("com.company.assembleegameclient.mapeditor"), PackageNamespace(""), PackageInternalNs("com.company.assembleegameclient.mapeditor"), PrivateNamespace(null, "com.company.assembleegameclient.mapeditor:AllObjectChooser/instance/reloadObjects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.mapeditor:AllObjectChooser"), StaticProtectedNs("com.company.assembleegameclient.mapeditor:AllObjectChooser"), StaticProtectedNs("com.company.assembleegameclient.mapeditor:Chooser"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("__AS3__.vec")])
+      getlex              QName(PackageNamespace(""), "String")
+      applytype           1
+      construct           0
+      coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "String")>)
+      setlocal            4
+
+      getlocal1
+      pushstring          ""
+      ifeq                L40
+
+      findpropstrict      QName(PackageNamespace(""), "RegExp")
+      getlocal1
+      pushstring          "gix"
+      constructprop       QName(PackageNamespace(""), "RegExp"), 2
+      coerce              QName(PackageNamespace(""), "RegExp")
+      setlocal            5
+
+L40:
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.mapeditor"), "GroupDivider")
+      getproperty         QName(PackageNamespace(""), "GROUPS")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "com.company.assembleegameclient.mapeditor:AllObjectChooser/instance"), PackageNamespace("com.company.assembleegameclient.mapeditor"), PackageNamespace(""), PackageInternalNs("com.company.assembleegameclient.mapeditor"), PrivateNamespace(null, "com.company.assembleegameclient.mapeditor:AllObjectChooser/instance/reloadObjects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.mapeditor:AllObjectChooser"), StaticProtectedNs("com.company.assembleegameclient.mapeditor:AllObjectChooser"), StaticProtectedNs("com.company.assembleegameclient.mapeditor:Chooser"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce              QName(PackageNamespace("flash.utils"), "Dictionary")
+      setlocal            6
+
+      pushbyte            0
+      setlocal            12
+
+      getlocal            6
+      coerce_a
+      setlocal            13
+
+      jump                L93
+
+L52:
+      label
+      getlocal            13
+      getlocal            12
+      nextvalue
+      coerce              QName(PackageNamespace(""), "XML")
+      setlocal            9
+
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal            9
+      getproperty         MultinameA("id", [PrivateNamespace(null, "com.company.assembleegameclient.mapeditor:AllObjectChooser/instance"), PackageNamespace("com.company.assembleegameclient.mapeditor"), PackageNamespace(""), PackageInternalNs("com.company.assembleegameclient.mapeditor"), PrivateNamespace(null, "com.company.assembleegameclient.mapeditor:AllObjectChooser/instance/reloadObjects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.mapeditor:AllObjectChooser"), StaticProtectedNs("com.company.assembleegameclient.mapeditor:AllObjectChooser"), StaticProtectedNs("com.company.assembleegameclient.mapeditor:Chooser"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      coerce_s
+      setlocal            7
+
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal            9
+      getproperty         MultinameA("type", [PrivateNamespace(null, "com.company.assembleegameclient.mapeditor:AllObjectChooser/instance"), PackageNamespace("com.company.assembleegameclient.mapeditor"), PackageNamespace(""), PackageInternalNs("com.company.assembleegameclient.mapeditor"), PrivateNamespace(null, "com.company.assembleegameclient.mapeditor:AllObjectChooser/instance/reloadObjects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.mapeditor:AllObjectChooser"), StaticProtectedNs("com.company.assembleegameclient.mapeditor:AllObjectChooser"), StaticProtectedNs("com.company.assembleegameclient.mapeditor:Chooser"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      convert_i
+      setlocal            8
+
+      getlocal            5
+      pushnull
+      equals
+      dup
+      iftrue              L81
+
+      pop
+      getlocal            7
+      getlocal            5
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "search"), 1
+      pushbyte            0
+      greaterequals
+L81:
+      dup
+      iftrue              L89
+
+      pop
+      getlocal            8
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      equals
+L89:
+      iffalse             L93
+
+      getlocal            4
+      getlocal            7
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L93:
+      hasnext2            13, 12
+      iftrue              L52
+
+      kill                13
+      kill                12
+      getlocal            4
+      getlex              QName(PackageNamespace("com.company.util"), "MoreStringUtil")
+      getproperty         QName(PackageNamespace(""), "cmp")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "sort"), 1
+
+      pushbyte            0
+      setlocal            12
+
+      getlocal            4
+      coerce_a
+      setlocal            13
+
+      jump                L156
+
+L107:
+      label
+      getlocal            13
+      getlocal            12
+      nextvalue
+      coerce_s
+      setlocal            7
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+      getproperty         QName(PackageNamespace(""), "idToType_")
+      getlocal            7
+      getproperty         MultinameL([PrivateNamespace(null, "com.company.assembleegameclient.mapeditor:AllObjectChooser/instance"), PackageNamespace("com.company.assembleegameclient.mapeditor"), PackageNamespace(""), PackageInternalNs("com.company.assembleegameclient.mapeditor"), PrivateNamespace(null, "com.company.assembleegameclient.mapeditor:AllObjectChooser/instance/reloadObjects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.mapeditor:AllObjectChooser"), StaticProtectedNs("com.company.assembleegameclient.mapeditor:AllObjectChooser"), StaticProtectedNs("com.company.assembleegameclient.mapeditor:Chooser"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      convert_i
+      setlocal            10
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+      getproperty         QName(PackageNamespace(""), "xmlLibrary_")
+      getlocal            10
+      getproperty         MultinameL([PrivateNamespace(null, "com.company.assembleegameclient.mapeditor:AllObjectChooser/instance"), PackageNamespace("com.company.assembleegameclient.mapeditor"), PackageNamespace(""), PackageInternalNs("com.company.assembleegameclient.mapeditor"), PrivateNamespace(null, "com.company.assembleegameclient.mapeditor:AllObjectChooser/instance/reloadObjects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.mapeditor:AllObjectChooser"), StaticProtectedNs("com.company.assembleegameclient.mapeditor:AllObjectChooser"), StaticProtectedNs("com.company.assembleegameclient.mapeditor:Chooser"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce              QName(PackageNamespace(""), "XML")
+      setlocal            9
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "com.company.assembleegameclient.mapeditor:AllObjectChooser/instance"), "cache")
+      getlocal            10
+      getproperty         MultinameL([PrivateNamespace(null, "com.company.assembleegameclient.mapeditor:AllObjectChooser/instance"), PackageNamespace("com.company.assembleegameclient.mapeditor"), PackageNamespace(""), PackageInternalNs("com.company.assembleegameclient.mapeditor"), PrivateNamespace(null, "com.company.assembleegameclient.mapeditor:AllObjectChooser/instance/reloadObjects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.mapeditor:AllObjectChooser"), StaticProtectedNs("com.company.assembleegameclient.mapeditor:AllObjectChooser"), StaticProtectedNs("com.company.assembleegameclient.mapeditor:Chooser"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      iftrue              L147
+
+      findpropstrict      QName(PackageInternalNs("com.company.assembleegameclient.mapeditor"), "ObjectElement")
+      getlocal            9
+      constructprop       QName(PackageInternalNs("com.company.assembleegameclient.mapeditor"), "ObjectElement"), 1
+      coerce              QName(PackageInternalNs("com.company.assembleegameclient.mapeditor"), "ObjectElement")
+      setlocal            11
+
+      getlocal3
+      pushstring          "All Game Objects"
+      ifne                L141
+
+      getlocal            11
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "downloadOnly")
+
+L141:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "com.company.assembleegameclient.mapeditor:AllObjectChooser/instance"), "cache")
+      getlocal            10
+      getlocal            11
+      setproperty         MultinameL([PrivateNamespace(null, "com.company.assembleegameclient.mapeditor:AllObjectChooser/instance"), PackageNamespace("com.company.assembleegameclient.mapeditor"), PackageNamespace(""), PackageInternalNs("com.company.assembleegameclient.mapeditor"), PrivateNamespace(null, "com.company.assembleegameclient.mapeditor:AllObjectChooser/instance/reloadObjects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.mapeditor:AllObjectChooser"), StaticProtectedNs("com.company.assembleegameclient.mapeditor:AllObjectChooser"), StaticProtectedNs("com.company.assembleegameclient.mapeditor:Chooser"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      jump                L153
+
+L147:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "com.company.assembleegameclient.mapeditor:AllObjectChooser/instance"), "cache")
+      getlocal            10
+      getproperty         MultinameL([PrivateNamespace(null, "com.company.assembleegameclient.mapeditor:AllObjectChooser/instance"), PackageNamespace("com.company.assembleegameclient.mapeditor"), PackageNamespace(""), PackageInternalNs("com.company.assembleegameclient.mapeditor"), PrivateNamespace(null, "com.company.assembleegameclient.mapeditor:AllObjectChooser/instance/reloadObjects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.company.assembleegameclient.mapeditor:AllObjectChooser"), StaticProtectedNs("com.company.assembleegameclient.mapeditor:AllObjectChooser"), StaticProtectedNs("com.company.assembleegameclient.mapeditor:Chooser"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce              QName(PackageInternalNs("com.company.assembleegameclient.mapeditor"), "ObjectElement")
+      setlocal            11
+
+L153:
+      findpropstrict      QName(ProtectedNamespace("com.company.assembleegameclient.mapeditor:Chooser"), "addElement")
+      getlocal            11
+      callpropvoid        QName(ProtectedNamespace("com.company.assembleegameclient.mapeditor:Chooser"), "addElement"), 1
+
+L156:
+      hasnext2            13, 12
+      iftrue              L107
+
+      kill                13
+      kill                12
+      getlex              QName(ProtectedNamespace("com.company.assembleegameclient.mapeditor:Chooser"), "scrollBar_")
+      getlex              QName(PackageNamespace(""), "HEIGHT")
+      getlex              QName(ProtectedNamespace("com.company.assembleegameclient.mapeditor:Chooser"), "elementSprite_")
+      getproperty         QName(PackageNamespace(""), "height")
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "setIndicatorSize"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.mapeditor:AllObjectChooser/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,49 @@
+class
+ refid "kabam.rotmg.news.model:InGameNews"
+ instance QName(PackageNamespace("kabam.rotmg.news.model"), "InGameNews")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("kabam.rotmg.news.model:InGameNews")
+  iinit
+   refid "kabam.rotmg.news.model:InGameNews/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "showAtStartup") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "title") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "startTime") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "newsKey") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "text") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "platform") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "weight") type QName(PackageNamespace(""), "int") end
+ end ; instance
+ cinit
+  refid "kabam.rotmg.news.model:InGameNews/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,168 @@
+class
+ refid "kabam.rotmg.account.core.view:PurchaseConfirmationMediator"
+ instance QName(PackageNamespace("kabam.rotmg.account.core.view"), "PurchaseConfirmationMediator")
+  extends QName(PackageNamespace("robotlegs.bender.bundles.mvcs"), "Mediator")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("kabam.rotmg.account.core.view:PurchaseConfirmationMediator")
+  iinit
+   refid "kabam.rotmg.account.core.view:PurchaseConfirmationMediator/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "view") flag METADATA type QName(PackageNamespace("kabam.rotmg.account.core.view"), "PurchaseConfirmationDialog")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "close") flag METADATA type QName(PackageNamespace("kabam.rotmg.dialogs.control"), "CloseDialogsSignal")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace(""), "initialize") flag OVERRIDE
+   method
+    refid "kabam.rotmg.account.core.view:PurchaseConfirmationMediator/instance/initialize"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.ui.dialogs"), "Dialog")
+      getproperty         QName(PackageNamespace(""), "LEFT_BUTTON")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.account.core.view:PurchaseConfirmationMediator/instance"), "onYesClickHandler")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.ui.dialogs"), "Dialog")
+      getproperty         QName(PackageNamespace(""), "RIGHT_BUTTON")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.account.core.view:PurchaseConfirmationMediator/instance"), "onNoClickHandler")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "kabam.rotmg.account.core.view:PurchaseConfirmationMediator/instance"), "onYesClickHandler")
+   method
+    refid "kabam.rotmg.account.core.view:PurchaseConfirmationMediator/instance/kabam.rotmg.account.core.view:PurchaseConfirmationMediator/instance/onYesClickHandler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "close")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 0
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      callpropvoid        QName(PackageNamespace(""), "confirmedHandler"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "kabam.rotmg.account.core.view:PurchaseConfirmationMediator/instance"), "onNoClickHandler")
+   method
+    refid "kabam.rotmg.account.core.view:PurchaseConfirmationMediator/instance/kabam.rotmg.account.core.view:PurchaseConfirmationMediator/instance/onNoClickHandler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "close")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "destroy") flag OVERRIDE
+   method
+    refid "kabam.rotmg.account.core.view:PurchaseConfirmationMediator/instance/destroy"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.ui.dialogs"), "Dialog")
+      getproperty         QName(PackageNamespace(""), "LEFT_BUTTON")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.account.core.view:PurchaseConfirmationMediator/instance"), "onYesClickHandler")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.ui.dialogs"), "Dialog")
+      getproperty         QName(PackageNamespace(""), "RIGHT_BUTTON")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "kabam.rotmg.account.core.view:PurchaseConfirmationMediator/instance"), "onNoClickHandler")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "kabam.rotmg.account.core.view:PurchaseConfirmationMediator/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class
