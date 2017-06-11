@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace asdec
 {
-    public class ABCUtil
+    public static class ABCUtil
     {
         public enum Opcode : Byte
         {
@@ -234,7 +234,7 @@ namespace asdec
             public OpcodeArgumentType[] argumentTypes;
         }
 
-        public readonly OpcodeInfo[] opcodeInfo = new OpcodeInfo[256]
+        public static readonly OpcodeInfo[] opcodeInfo = new OpcodeInfo[256]
         {
             #region opcode info
             /* 0x00 */
