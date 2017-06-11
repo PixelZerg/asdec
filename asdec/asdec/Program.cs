@@ -20,10 +20,10 @@ namespace asdec
 
             if (File.Exists("output.html")) File.Delete("output.html");
 
-            foreach (Token t in lexed.GetTokens().ToList())
-            {
-                Console.WriteLine(t.ToString());
-            }
+            //foreach (Token t in lexed.GetTokens().ToList())
+            //{
+            //    Console.WriteLine(t.ToString());
+            //}
             lexed.WithFormatter(new HtmlFormatter(new HtmlFormatterOptions()
             {
             })).ToFile("output.html");
