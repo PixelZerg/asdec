@@ -52,8 +52,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abc.cs" />
     <Compile Include="ABCUtil.cs" />
     <Compile Include="AVMLexer.cs" />
+    <Compile Include="Errors\AbcException.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
