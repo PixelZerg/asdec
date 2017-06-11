@@ -46,7 +46,7 @@ namespace asdec
 
 
             ruleset.Add(@"[\s]#[^\n]+", TokenTypes.Literal);//compiler directive
-            ruleset.Add(@";[^\n]+", TokenTypes.Comment);//not working
+            ruleset.Add(@";[^\n]+", TokenTypes.Comment);
             ruleset.Add(@"\bL\d+:", TokenTypes.Literal.Number);//label
 
             rules["root"] = ruleset.Build();
