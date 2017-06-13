@@ -32,8 +32,11 @@ namespace asdec
             //    ));
             //Process.Start("output.html");
 
-            //new Abc("../../agc/AssembleeGameClient1495643123-0.main.asasm").Build();
-            new Abc("../../agc/AssembleeGameClient1495643123-0.main.asasm").Build();
+            //new Abc("../../agc/AssembleeGameClient1495643123-0.main.asasm").Build();333
+            new Abc("../../agc").Build();
+
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
 
             //TODO: implement internal model. Ref: https://github.com/CyberShadow/RABCDAsm/blob/f7c28ac3407b47a9fd8707d0a9f1f3f326d39484/assembler.d#L967
 

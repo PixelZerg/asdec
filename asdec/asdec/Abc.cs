@@ -14,25 +14,25 @@ namespace asdec
     {
         public const bool DEBUG = true;
 
-        public FileInfo f = null;
+        public DirectoryInfo d = null;
         public bool loaded = false;
         internal List<Token> tokens = new List<Token>();
 
         #region 
         public Abc() { }
-        public Abc(string file)
+        public Abc(string dir)
         {
-            f = new FileInfo(file);
+            d = new DirectoryInfo(dir);
         }
-        public void Load(string file)
+        public void Load(string dir)
         {
-            f = new FileInfo(file);
+            d = new DirectoryInfo(dir);
             Load();
         }
 
         public void Load()
         {
-            if (DEBUG) Console.WriteLine("Loading: " + f.Name);
+            if (DEBUG) Console.WriteLine("Loading: " + d.Name);
             Lex();
             loaded = true;
             if (DEBUG) Console.WriteLine("Loaded!");
@@ -40,7 +40,7 @@ namespace asdec
 
         public void Lex()
         {
-            tokens = Pygmentize.File(f.FullName).WithLexer(new AVMLexer()).GetTokens().ToList();
+            tokens = Pygmentize.File(d.FullName).WithLexer(new AVMLexer()).GetTokens().ToList();
             if (DEBUG) Console.WriteLine("Lexed: {0} tokens", tokens.Count);
         }
         #endregion
@@ -49,7 +49,7 @@ namespace asdec
         {
             if (!loaded)
             {
-                if (f != null) Load();
+                if (d != null) Load();
                 else throw new AbcException("Abc file not loaded!");
             }
         }
