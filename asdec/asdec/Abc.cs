@@ -3,7 +3,8 @@ using PygmentSharp.Core;
 using PygmentSharp.Core.Tokens;
 using System;
 using System.Collections.Generic;
-using System.IO;
+//using System.IO;
+using DirectoryInfo = System.IO.DirectoryInfo;//e.g on how java-like directives could be implemented
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
