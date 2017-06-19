@@ -11,7 +11,7 @@ namespace asdec.ASModel
     {
         public Dir Parent = null;
         public string Name = string.Empty;
-        public Dictionary<string, Dir> subdirs { get; private set; } = new Dictionary<string, Dir>();
+        public Dictionary<string, Dir> subdirs { get; internal set; } = new Dictionary<string, Dir>();
         public Dictionary<string, Asasm> files = new Dictionary<string, Asasm>();
 
         /// <summary>
@@ -32,6 +32,15 @@ namespace asdec.ASModel
             return ret;
         }
 
+        public Asasm AddFile(string name, Asasm file)
+        {
+            files.Add(name, file);
+            return file;
+        }
+
+        /// <summary>
+        /// no leading nor trailing
+        /// </summary>
         public Asasm GetFile(string path)
         {
             string[] p = path.Split('/');
@@ -43,6 +52,9 @@ namespace asdec.ASModel
             return cdir.files[p[p.Length - 1]];
         }
 
+        /// <summary>
+        /// leading no trailing
+        /// </summary>
         public string GetPath()
         {
             string ret = "";

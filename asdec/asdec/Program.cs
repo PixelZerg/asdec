@@ -35,13 +35,7 @@ namespace asdec
 
             //new Abc("../../agc/AssembleeGameClient1495643123-0.main.asasm").Build();333
 
-            //new Abc("../../agc").Build();
-
-            Dir root = new Dir();
-            Dir fa = root.AddSubDir("banana").AddSubDir("roa").AddSubDir("fa");
-            root.AddSubDir("la").AddSubDir("rei").AddSubDir("ja").AddSubDir("foo");
-            root.AddSubDir("aA");
-            Console.WriteLine(fa.GetPath());
+            new Abc("../../agc").Build();
 
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
