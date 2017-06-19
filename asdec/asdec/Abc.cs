@@ -31,5 +31,11 @@ namespace asdec
         {
             root = new Dir();
         }
+
+        private void BuildMain()
+        {
+            //find main
+            //build it
+        }
     }
 }
