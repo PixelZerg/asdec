@@ -1,4 +1,4 @@
-﻿using PygmentSharp.Core;
+using PygmentSharp.Core;
 using PygmentSharp.Core.Lexing;
 using PygmentSharp.Core.Tokens;
 using System;
@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static asdec.ABCUtil;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
 
@@ -29,7 +28,7 @@ namespace asdec
             //add all opcodes and crate rgx for non-opcodes
             string non = @"\b(?!.*((";
             string ya = "";
-            foreach (OpcodeInfo op in opcodeInfo)
+            foreach (ABCUtil.OpcodeInfo op in ABCUtil.opcodeInfo)
             {
                 //ruleset.Add(op.name+@"\b", TokenTypes.Keyword);
                 ya += @"\b" + op.name + @"\b|";
@@ -88,7 +87,7 @@ namespace asdec
                         }
 
                         var context = new RegexLexerContext(pos, m, stateStack, rule.TokenType);
-                        Debug.Assert(m.Index == pos, $"Regex \"{rule.Regex}\" should have matched at position {pos} but matched at {m.Index}");
+                        //Debug.Assert(m.Index == pos, $"Regex \"{rule.Regex}\" should have matched at position {pos} but matched at {m.Index}");
 
                         var tokens = rule.Action.Execute(context);
 

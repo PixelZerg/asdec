@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +8,7 @@ namespace asdec
 {
     public static class ABCUtil
     {
-        public enum Opcode : Byte
+        public enum Opcode : byte
         {
             OP_raw = 0x00, /// from RABCDASM
             OP_bkpt = 0x01,
