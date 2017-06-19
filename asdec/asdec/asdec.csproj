@@ -54,9 +54,9 @@
   <ItemGroup>
     <Compile Include="Abc.cs" />
     <Compile Include="ABCUtil.cs" />
+    <Compile Include="ASModel\Dir.cs" />
     <Compile Include="ASModel\Node.cs" />
     <Compile Include="ASModel\Nodes\Asasm.cs" />
-    <Compile Include="ASModel\Objects\Multiname.cs" />
     <Compile Include="AVMLexer.cs" />
     <Compile Include="Errors\AbcException.cs" />
     <Compile Include="Program.cs" />
@@ -84,7 +84,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ASModel\Instructions\" />
+    <Folder Include="ASModel\Objects\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using asdec.ASModel.Nodes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,49 @@ namespace asdec.ASModel
 {
     public class Dir
     {
-        public Dictionary<string, Dir> subdirs = new Dictionary<string, Dir>();
+        public Dir Parent = null;
+        public string Name = string.Empty;
+        public Dictionary<string, Dir> subdirs { get; private set; } = new Dictionary<string, Dir>();
+        public Dictionary<string, Asasm> files = new Dictionary<string, Asasm>();
+
+        /// <summary>
+        /// root dir constructor
+        /// </summary>
+        public Dir() { }
+
+        public Dir(string name,Dir parent)
+        {
+            this.Parent = parent;
+            this.Name = name;
+        }
+
+        public Dir AddSubDir(string name)
+        {
+            Dir ret = new Dir(name,this);
+            subdirs.Add(name, ret);
+            return ret;
+        }
+
+        public Asasm GetFile(string path)
+        {
+            string[] p = path.Split('/');
+            Dir cdir = this;
+            for (int i = 0; i < p.Length-1; i++)
+            {
+                cdir = cdir.subdirs[p[i]];
+            }
+            return cdir.files[p[p.Length - 1]];
+        }
+
+        public string GetPath()
+        {
+            string ret = "";
+            if (this.Parent != null)
+            {
+                ret += this.Parent.GetPath()+@"/";
+            }
+            ret += this.Name;
+            return ret;
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using PygmentSharp.Core;
+﻿using asdec.ASModel;
+using PygmentSharp.Core;
 using PygmentSharp.Core.Formatting;
 using PygmentSharp.Core.Tokens;
 using System;
@@ -33,7 +34,14 @@ namespace asdec
             //Process.Start("output.html");
 
             //new Abc("../../agc/AssembleeGameClient1495643123-0.main.asasm").Build();333
-            new Abc("../../agc").Build();
+
+            //new Abc("../../agc").Build();
+
+            Dir root = new Dir();
+            Dir fa = root.AddSubDir("banana").AddSubDir("roa").AddSubDir("fa");
+            root.AddSubDir("la").AddSubDir("rei").AddSubDir("ja").AddSubDir("foo");
+            root.AddSubDir("aA");
+            Console.WriteLine(fa.GetPath());
 
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
