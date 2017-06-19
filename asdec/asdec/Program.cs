@@ -35,7 +35,7 @@ namespace asdec
 
             //new Abc("../../agc/AssembleeGameClient1495643123-0.main.asasm").Build();333
 
-            new Abc("../../agc").Build();
+            //new Abc("../../agc").Build();
 
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();

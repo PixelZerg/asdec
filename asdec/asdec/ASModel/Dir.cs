@@ -25,10 +25,25 @@ namespace asdec.ASModel
             this.Name = name;
         }
 
-        public Dir AddSubDir(string name)
+        /// <summary>
+        /// no leading nor trailing
+        /// </summary>
+        public Dir AddSubDir(string path)
         {
-            Dir ret = new Dir(name,this);
-            subdirs.Add(name, ret);
+            int si = path.IndexOf('/');
+            string sub = path;
+            string el = null;
+            if (si > -1)
+            {
+                sub = path.Substring(0, si);
+                el = path.Remove(0, si + 1);
+            }
+            Dir ret = new Dir(sub,this);
+            if (el != null)
+            {
+                ret.AddSubDir(el);
+            }
+            subdirs.Add(sub, ret);
             return ret;
         }
 

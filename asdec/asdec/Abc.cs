@@ -8,6 +8,7 @@ using DirectoryInfo = System.IO.DirectoryInfo;//e.g on how java-like directives 
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using asdec.ASModel;
 
 namespace asdec
 {
@@ -15,20 +16,20 @@ namespace asdec
     {
         public const bool DEBUG = true;
 
-        public DirectoryInfo rootDir = null;
-
+        public string rootPath = null;
+        public Dir root = null;
 
         #region 
         public Abc() { }
-        public Abc(string rootdir)
+        public Abc(string rootpath)
         {
-            rootDir = new DirectoryInfo(rootdir);
+            this.rootPath = rootpath;
         }
         #endregion
 
         public void Build()
         {
-
+            root = new Dir();
         }
     }
 }
