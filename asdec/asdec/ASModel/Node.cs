@@ -11,7 +11,49 @@ namespace asdec.ASModel
         public string Name = string.Empty;
         public List<Node> Children = new List<Node>();
         
-        public virtual void Process();
+        public TokenStream ts = null;
+        public int startIndex = 0;
+        
+        protected Node(TokenStream tokenStream)
+        {
+            this.ts = tokenStream;
+            try
+            {
+                this.startIndex = this.ts.GetSave();
+            }
+            catch { }
+        }
+        
+        protected virtual void Process(){
+        }
+        
+        public abstract Node Select();
+        
+        public Node Get(Node n){
+            SkipWhitespace();
+            n.Process();
+            SkipWhitespace();
+            //n select //dont add to children
+            SkipWhitespace();
+            return n;//or null
+        }
+        
+        //getexpect
+        
+        public bool Accept(Node n){
+            SkipWhitespace();
+            n.Process();//try catch whatever
+            SkipWhitespace();
+            //n.select //add to children
+            SkipWhitespace();
+        }
+        
+        public bool Expect(Node n){
+            if(!Accept(n)){
+                //throw
+            }
+            return true;
+        }
         
         public void SkipWhitespace(){
             //while true
