@@ -33,9 +33,14 @@ namespace asdec.ASModel
             SkipWhitespace();
             n.Process();
             SkipWhitespace();
-            //n select //dont add to children
+            Node ret=null;
+            try{
+                ret= n.Select();//n select //dont add to childre
+                ret.
+            }catch{
+            }
             SkipWhitespace();
-            return n;//or null
+            return ret;//or null
         }
         
         //getexpect
