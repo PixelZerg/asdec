@@ -23,7 +23,7 @@ namespace asdec
 
             //foreach (Token t in lexed.GetTokens().ToList())
             //{
-            //    Console.WriteLine(t.ToString());
+            //    .WriteLine(t.ToString());
             //}
             //lexed.WithFormatter(new HtmlFormatter(new HtmlFormatterOptions()
             //{
