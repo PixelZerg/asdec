@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace asdec.ASModel.Objects
 {
-    public class Multiname
+    public class Argument//base class
     {
     }
 }

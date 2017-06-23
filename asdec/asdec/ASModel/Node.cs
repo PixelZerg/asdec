@@ -1,3 +1,4 @@
+using asdec.ASModel.Nodes;
 using asdec.Errors;
 using PygmentSharp.Core.Tokens;
 using System;
@@ -88,16 +89,34 @@ namespace asdec.ASModel
         public Node GetExpect(Node n)
         {
             if (Accept(n, false)) return n;
-            else throw new ASParsingException(ts);
+            else throw new ExpectedNodeException(ts);
         }
-        
+
+        public bool Accept(string str, TokenNode.VerificationMode v = TokenNode.VerificationMode.Is)
+        {
+            return Accept(new TokenNode(ts, "", str, v));
+        }
+
+        public bool Expect(string str, TokenNode.VerificationMode v = TokenNode.VerificationMode.Is)
+        {
+            return Expect(new TokenNode(ts, "", str, v));
+        }
+
         public bool Accept(Node n,bool addToChildren=true){
-            try {
+            try
+            {
                 Debug.Indent();
                 SkipWhitespace();
                 try
                 {
-                    n.Process();
+                    try
+                    {
+                        n.Process();
+                    }
+                    catch
+                    {
+                        return false;
+                    }
                     SkipWhitespace();
 
                     n.parent = this;
@@ -127,7 +146,7 @@ namespace asdec.ASModel
         
         public bool Expect(Node n){
             if(!Accept(n)){
-                throw new ASParsingException(ts);
+                throw new ExpectedNodeException(ts);
             }
             return true;
         }
@@ -145,7 +164,6 @@ namespace asdec.ASModel
                 if (String.IsNullOrWhiteSpace(t.Value) || t.isType("Comment") || t.isType("Whitespace"))
                 {
                     ts.increment();
-                    continue;
                 }
                 else if (t.isType("Literal"))
                 {

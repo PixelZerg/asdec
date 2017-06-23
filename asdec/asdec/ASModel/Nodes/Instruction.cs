@@ -1,4 +1,6 @@
-﻿using System;
+﻿using asdec.ASModel.Objects;
+using PygmentSharp.Core.Tokens;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,14 +11,25 @@ namespace asdec.ASModel.Nodes
 {
     public class Instruction : Node
     {
+        public OpcodeInfo opcode;
+        public List<Argument> args = null;
 
-        protected Instruction(TokenStream tokenStream, OpcodeInfo opcode) : base(tokenStream)
-        { 
+        public Instruction(TokenStream tokenStream, OpcodeInfo opcode) : base(tokenStream)
+        {
+            this.opcode = opcode;
         }
 
         public override Node Select()
         {
-            Arguments//blahblah
+            //todo redo w/internal tokenstream
+            if (!Accept(new TokenNode(ts, TokenTypes.Keyword, opcode.name))) return null;
+            TokenNode raw = new TokenNode(ts, TokenTypes.Text);
+            Expect(raw);
+            args = new ArgumentsParser(raw.getvalue()).//blah;
+            return null;
         }
     }
 }
+
+//https://github.com/CyberShadow/RABCDAsm/blob/master/assembler.d#L1137
+

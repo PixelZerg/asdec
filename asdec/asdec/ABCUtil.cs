@@ -496,5 +496,14 @@ namespace asdec
 	/* 0xFF */		new OpcodeInfo("0xFF",              new OpcodeArgumentType[]{OpcodeArgumentType.Unknown}),
             #endregion
         };
+
+        public static OpcodeInfo? OpcodeByName(string name)
+        {
+            foreach (OpcodeInfo op in opcodeInfo)
+            {
+                if (op.name == name) return op;
+            }
+            return null;
+        }
     }
 }
