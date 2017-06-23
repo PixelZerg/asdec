@@ -1,4 +1,5 @@
 using asdec.Errors;
+using PygmentSharp.Core.Tokens;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,7 +44,7 @@ namespace asdec.ASModel
             return cur;
         }
 
-        protected virtual void Process() {
+        public virtual void Process() {
         }
 
         public abstract Node Select();
@@ -69,9 +70,14 @@ namespace asdec.ASModel
             return GetExpect(Cr<T>(a));
         }
 
-        public Node Accept<T>(params object[] a) where T : Node
+        public bool Accept<T>(params object[] a) where T : Node
         {
             return Accept(Cr<T>(a));
+        }
+
+        public bool Expect<T>(params object[] a) where T : Node
+        {
+            return Expect(Cr<T>(a));
         }
 
         public Node Get(Node n) {
@@ -125,13 +131,32 @@ namespace asdec.ASModel
             }
             return true;
         }
-        
-        public void SkipWhitespace(){
+
+        public void SkipWhitespace()
+        {
             //while true
             //  look next token
             //  if whitespace skip
             //  else if start with # handle preprocessor
             //  else return
+            while (true)
+            {
+                Token t = this.ts.getCur();
+                if (String.IsNullOrWhiteSpace(t.Value) || t.isType("Comment") || t.isType("Whitespace"))
+                {
+                    ts.increment();
+                    continue;
+                }
+                else if (t.isType("Literal"))
+                {
+                    //handle compiler directive
+                    Debug.WriteLine("compiler directive");
+                }
+                else
+                {
+                    return;
+                }
+            }
         }
     }
 }

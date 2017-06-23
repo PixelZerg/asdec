@@ -6,20 +6,15 @@ using System.Threading.Tasks;
 
 namespace asdec.ASModel.Nodes
 {
-    public class Asasm : Node
+    public class Arguments : Node
     {
-        public Asasm(TokenStream ts) : base(ts)
+        protected Arguments(TokenStream tokenStream) : base(tokenStream)
         {
-        }
-
-        public override void Process()
-        {
-            
         }
 
         public override Node Select()
-        { 
-
+        {
+            throw new NotImplementedException();
         }
     }
 }
