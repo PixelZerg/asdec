@@ -54,13 +54,21 @@
   <ItemGroup>
     <Compile Include="Abc.cs" />
     <Compile Include="ABCUtil.cs" />
+    <Compile Include="ASModel\ArgumentsParser.cs" />
     <Compile Include="ASModel\Dir.cs" />
     <Compile Include="ASModel\Node.cs" />
     <Compile Include="ASModel\Nodes\Asasm.cs" />
+    <Compile Include="ASModel\Nodes\Code.cs" />
     <Compile Include="ASModel\Nodes\Instruction.cs" />
+    <Compile Include="ASModel\Nodes\TokenNode.cs" />
+    <Compile Include="ASModel\Objects\Argument.cs" />
+    <Compile Include="ASModel\Objects\Namespace.cs" />
+    <Compile Include="ASModel\Objects\ValueArg.cs" />
     <Compile Include="Debug.cs" />
     <Compile Include="Errors\ASParsingException.cs" />
+    <Compile Include="Errors\ExpectedNodeException.cs" />
     <Compile Include="Errors\ParsingException.cs" />
+    <Compile Include="Errors\StopProcessException.cs" />
     <Compile Include="TokenStream.cs" />
     <Compile Include="AVMLexer.cs" />
     <Compile Include="Errors\AbcException.cs" />
@@ -89,9 +97,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ASModel\Objects\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
