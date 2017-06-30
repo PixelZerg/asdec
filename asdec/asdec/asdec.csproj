@@ -56,7 +56,6 @@
     <Compile Include="ABCUtil.cs" />
     <Compile Include="ASModel\Dir.cs" />
     <Compile Include="ASModel\Node.cs" />
-    <Compile Include="ASModel\Nodes\Arguments.cs" />
     <Compile Include="ASModel\Nodes\Asasm.cs" />
     <Compile Include="ASModel\Nodes\Instruction.cs" />
     <Compile Include="Debug.cs" />

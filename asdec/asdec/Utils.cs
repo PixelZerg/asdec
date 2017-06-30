@@ -1,6 +1,7 @@
 ﻿using PygmentSharp.Core.Tokens;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,9 +10,28 @@ namespace asdec
 {
     public static class Utils
     {
+        public const long NULL_INT = long.MaxValue;
+        public const ulong NULL_UINT = ulong.MaxValue;
+        public const double NULL_DOUBLE = double.NaN;
+
+        public const ulong MAX_UINT = (1L << 36) - 1;
+        public const long MAX_INT = (long)(MAX_UINT / 2);
+        public const long MIN_INT = -MAX_INT - 1;
+
+
         public static bool Quiet = false;
         public static bool DEBUG_PARSING = true;
         public static bool NO_CHECK_KEYWORD = false;
+
+        public static string Read(this StringReader sr, int len)
+        {
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < len; i++)
+            {
+                sb.Append((Char)sr.Read());
+            }
+            return sb.ToString();
+        }
 
         public static bool hasType(this Token token, string type)
         {

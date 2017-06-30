@@ -22,7 +22,7 @@ namespace asdec.ASModel.Nodes
             {
                 if (Accept("end")) break;
                 //todo accept label
-                Token t = ts.getCur();
+                Token t = ts.getCur();//whitespace already skipped
                 OpcodeInfo? op = OpcodeByName(t.Value);
                 if (!op.HasValue) throw new ASParsingException("Unknown opcode: " + t.Value);
                 Expect(new Instruction(ts, op.Value));//reduntant double check

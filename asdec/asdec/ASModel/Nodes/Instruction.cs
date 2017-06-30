@@ -25,7 +25,7 @@ namespace asdec.ASModel.Nodes
             if (!Accept(new TokenNode(ts, TokenTypes.Keyword, opcode.name))) return null;
             TokenNode raw = new TokenNode(ts, TokenTypes.Text);
             Expect(raw);
-            args = new ArgumentsParser(raw.getvalue()).//blah;
+            args = new ArgumentsParser(opcode.argumentTypes, raw.getvalue()).Parse();
             return null;
         }
     }
