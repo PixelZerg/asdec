@@ -155,6 +155,26 @@ namespace asdec.ASModel
             }
         }
 
+        private Namespace ReadNamespace()
+        {
+            string word = ReadWord();
+            if (word == "null") return null;
+            ASType kind = (ASType)Enum.Parse(typeof(ASType), word);
+            Expect("(");
+
+            string name = ReadString();
+            uint id;
+            if ((Char)sr.Peek() == ',')
+            {
+                sr.Read();//skipchar
+                string s = ReadString();
+                //TODO
+            }
+            Expect(")");
+
+            return new Namespace(kind, name, id);
+        }
+
         private bool Expect(string str)
         {
             if (!Accept(str)) throw new ASParsingException("Error parsing argument: " + this._raw);

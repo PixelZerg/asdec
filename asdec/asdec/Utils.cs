@@ -33,6 +33,7 @@ namespace asdec
             return sb.ToString();
         }
 
+
         public static bool hasType(this Token token, string type)
         {
             string[] t = type.Split('.');

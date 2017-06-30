@@ -8,6 +8,73 @@ namespace asdec
 {
     public static class ABCUtil
     {
+        public enum ASType : byte
+        {
+            Void = 0x00,  // not actually interned
+            Undefined = Void,
+            Utf8 = 0x01,
+            Decimal = 0x02,
+            Integer = 0x03,
+            UInteger = 0x04,
+            PrivateNamespace = 0x05,
+            Double = 0x06,
+            QName = 0x07,  // ns::name, const ns, const name
+            Namespace = 0x08,
+            Multiname = 0x09,    //[ns...]::name, const [ns...], const name
+            False = 0x0A,
+            True = 0x0B,
+            Null = 0x0C,
+            QNameA = 0x0D,    // @ns::name, const ns, const name
+            MultinameA = 0x0E,// @[ns...]::name, const [ns...], const name
+            RTQName = 0x0F,    // ns::name, var ns, const name
+            RTQNameA = 0x10,    // @ns::name, var ns, const name
+            RTQNameL = 0x11,    // ns::[name], var ns, var name
+            RTQNameLA = 0x12, // @ns::[name], var ns, var name
+            Namespace_Set = 0x15, // a set of namespaces - used by multiname
+            PackageNamespace = 0x16, // a namespace that was derived from a package
+            PackageInternalNs = 0x17, // a namespace that had no uri
+            ProtectedNamespace = 0x18,
+            ExplicitNamespace = 0x19,
+            StaticProtectedNs = 0x1A,
+            MultinameL = 0x1B,
+            MultinameLA = 0x1C,
+            TypeName = 0x1D,
+            Max
+        }
+
+        public static string[] ASTypeNames = new string[(int)ASType.Max] {
+            "Void",
+            "Utf8",
+            "Decimal",
+            "Integer",
+            "UInteger",
+            "PrivateNamespace",
+            "Double",
+            "QName",
+            "Namespace",
+            "Multiname",
+            "False",
+            "True",
+            "Null",
+            "QNameA",
+            "MultinameA",
+            "RTQName",
+            "RTQNameA",
+            "RTQNameL",
+            "RTQNameLA",
+            "???",
+            "???",
+            "Namespace_Set",
+            "PackageNamespace",
+            "PackageInternalNs",
+            "ProtectedNamespace",
+            "ExplicitNamespace",
+            "StaticProtectedNs",
+            "MultinameL",
+            "MultinameLA",
+            "TypeName",
+        };
+
         public enum Opcode : byte
         {
             OP_raw = 0x00, /// from RABCDASM
