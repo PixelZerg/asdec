@@ -8,6 +8,8 @@ namespace asdec.ASModel.Nodes
 {
     public class Asasm : Node
     {
+        public Dictionary<string, uint> NamespaceLabels = new Dictionary<string, uint>();
+
         public Asasm(TokenStream ts) : base(ts)
         {
         }

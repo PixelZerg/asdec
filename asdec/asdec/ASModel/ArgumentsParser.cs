@@ -15,8 +15,10 @@ namespace asdec.ASModel
         public OpcodeArgumentType[] types = null;
         private string _raw = null;
         public StringReader sr = null;
-        public ArgumentsParser(OpcodeArgumentType[] types, string args)
+        public Node Parent = null;
+        public ArgumentsParser(Node parent, OpcodeArgumentType[] types, string args)
         {
+            this.Parent = parent;
             this.types = types;
             this.sr = new StringReader(args);
             this._raw = args;
@@ -56,6 +58,9 @@ namespace asdec.ASModel
 
                     case OpcodeArgumentType.Namespace:
                         ret.Add(ReadNamespace());
+                        break;
+                    case OpcodeArgumentType.Multiname:
+                        ret.Add(ReadMultiname());
                         break;
                         //TODO
                 }
@@ -159,7 +164,6 @@ namespace asdec.ASModel
             }
         }
 
-        private Dictionary<string, uint> NamespaceLabels = new Dictionary<string, uint>();
 
         private Namespace ReadNamespace()
         {
@@ -176,12 +180,12 @@ namespace asdec.ASModel
                 string s = ReadString();
                 try {
                     //id = NamespaceLabels.First(x => x.Key == s).Value;//s in namespacelabels
-                    id = NamespaceLabels[s];
+                    id = Parent.mostParent().NamespaceLabels[s];
                 }
                 catch
                 {
-                    id = (uint)NamespaceLabels.Count + 1;
-                    NamespaceLabels.Add(s, id);
+                    id = (uint)Parent.mostParent().NamespaceLabels.Count + 1;
+                    Parent.mostParent().NamespaceLabels.Add(s, id);
                 }
             } else id = 0;
             Expect(")");
@@ -189,9 +193,103 @@ namespace asdec.ASModel
             return new Namespace(kind, name, id);
         }
 
+        public MultinameBase ReadMultiname()
+        {
+            string word = ReadWord();
+            if (word == "null") return null;
+
+            MultinameBase ret;
+            ASType kind = (ASType)Enum.Parse(typeof(ASType), word);
+
+            Expect("(");
+            switch (kind)
+            {
+                case ASType.QName:
+                case ASType.QNameA:
+                    ret = new QName();
+                    ((QName)ret).Ns = ReadNamespace();
+                    Expect(",");
+                    ((QName)ret).Name = ReadString();
+                    break;
+                case ASType.RTQName:
+                case ASType.RTQNameA:
+                    ret = new RTQName();
+                    ((RTQName)ret).Name = ReadString();
+                    break;
+                case ASType.RTQNameL:
+                case ASType.RTQNameLA:
+                    ret = new MultinameBase();
+                    break;
+                case ASType.Multiname:
+                case ASType.MultinameA:
+                    ret = new Multiname();
+                    ((Multiname)ret).Name = ReadString();
+                    Expect(",");
+                    ((Multiname)ret).NsSet =ReadNamespaceSet();
+                    break;
+                case ASType.MultinameL:
+                case ASType.MultinameLA:
+                    ret = new Multiname();
+                    ((MultinameL)ret).NsSet = ReadNamespaceSet();
+                    break;
+                case ASType.TypeName:
+                    ret = new TypeName();
+                    ((TypeName)ret).Name = ReadMultiname();
+                    ((TypeName)ret).Params = ReadList('<','>',ReadMultiname,false);
+                    break;
+                default:
+                    throw new ASParsingException("Cannot handle multiname kind: " + kind.ToString());
+            }
+            ret.Kind = kind;
+            Expect(")");
+            return ret;
+        }
+
+        private List<T> ReadList<T>(char OPEN, char CLOSE, Func<T> READER, bool ALLOW_NULL)
+        {
+            if (ALLOW_NULL)
+            {
+                SkipWhitespace();
+                if((Char)sr.Peek() != OPEN)
+                {
+                    Expect("null");
+                    return null;
+                }
+            }
+
+            Expect(""+OPEN);
+            List<T> a = new List<T>();
+
+            SkipWhitespace();
+            if((Char)sr.Peek() == CLOSE)
+            {
+                sr.Read();//skipchar //CLOSE
+                if (ALLOW_NULL)
+                {
+                    //FIXME?
+                    return a;
+                }
+                else return null;
+            }
+
+            while (true)
+            {
+                a.Add(READER());
+                char c = (Char)sr.Read();
+                if (c == CLOSE) break;
+                if (c != ',') throw new ASParsingException("Expected " + CLOSE + " or ,");
+            }
+            return a;
+        }
+
+        private List<Namespace> ReadNamespaceSet()
+        {
+            return ReadList<Namespace>('[', ']', ReadNamespace, true);
+        }
+
         private bool Expect(string str)
         {
-            if (!Accept(str)) throw new ASParsingException("Error parsing argument: " + this._raw);
+            if (!Accept(str)) throw new ASParsingException("Expected \""+str+"\" when parsing argument: " + this._raw);
             return true;
         }
 

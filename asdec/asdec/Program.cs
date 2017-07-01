@@ -1,4 +1,5 @@
 ﻿using asdec.ASModel;
+using asdec.ASModel.Nodes;
 using PygmentSharp.Core;
 using PygmentSharp.Core.Formatting;
 using PygmentSharp.Core.Tokens;
@@ -37,7 +38,11 @@ namespace asdec
 
             //new Abc("../../agc").Build();
 
-            var x =new ArgumentsParser(new ABCUtil.OpcodeArgumentType[] { ABCUtil.OpcodeArgumentType.Namespace }, "       ProtectedNamespace(\"BitmapD\\nata\\x53Spy\")").Parse();
+            var x =new ArgumentsParser(new Asasm(null), new ABCUtil.OpcodeArgumentType[] {
+                ABCUtil.OpcodeArgumentType.Multiname ,
+                ABCUtil.OpcodeArgumentType.Multiname ,
+                ABCUtil.OpcodeArgumentType.Multiname ,
+            }, "       QName(PackageNamespace(\"flash.display\"), \"BitmapData\"), Multiname(\"dispatch\", [PrivateNamespace(null, \"WebMain/instance\"), PackageNamespace(\"\"), ProtectedNamespace(\"WebMain\"), PrivateNamespace(null, \"WebMain/instance/WebMain/instance\"), PackageInternalNs(\"\"), Namespace(\"http://adobe.com/AS3/2006/builtin\"), StaticProtectedNs(\"WebMain\"), StaticProtectedNs(\"flash.display:Sprite\"), StaticProtectedNs(\"flash.display:DisplayObjectContainer\"), StaticProtectedNs(\"flash.display:InteractiveObject\"), StaticProtectedNs(\"flash.display:DisplayObject\"), StaticProtectedNs(\"flash.events:EventDispatcher\")]), TypeName(QName(PackageNamespace(\"__AS3__.vec\"), \"Vector\")<QName(PackageNamespace(\"flash.display\"), \"DisplayObject\")>)").Parse();
 
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();

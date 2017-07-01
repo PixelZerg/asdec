@@ -35,14 +35,14 @@ namespace asdec.ASModel
             return this.ts.GetSave() - startIndex;
         }
 
-        public Node mostParent()
+        public Asasm mostParent()
         {
             Node cur = this;
             while (cur.parent != null)
             {
                 cur = cur.parent;
             }
-            return cur;
+            return (Asasm)cur;
         }
 
         public virtual void Process() {
@@ -153,6 +153,7 @@ namespace asdec.ASModel
 
         public void SkipWhitespace()
         {
+            if (this.parent == null) { if (!(this is Asasm)) throw new ASParsingException("Parent null?!"); }
             //while true
             //  look next token
             //  if whitespace skip

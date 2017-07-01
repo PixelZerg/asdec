@@ -62,6 +62,7 @@
     <Compile Include="ASModel\Nodes\Instruction.cs" />
     <Compile Include="ASModel\Nodes\TokenNode.cs" />
     <Compile Include="ASModel\Objects\Argument.cs" />
+    <Compile Include="ASModel\Objects\MultinameBase.cs" />
     <Compile Include="ASModel\Objects\Namespace.cs" />
     <Compile Include="ASModel\Objects\ValueArg.cs" />
     <Compile Include="Debug.cs" />
