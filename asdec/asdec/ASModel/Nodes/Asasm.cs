@@ -18,8 +18,8 @@ namespace asdec.ASModel.Nodes
         }
 
         public override Node Select()
-        { 
-
+        {
+            throw new NotImplementedException();//TODO
         }
     }
 }

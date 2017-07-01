@@ -35,7 +35,9 @@ namespace asdec
 
             //new Abc("../../agc/AssembleeGameClient1495643123-0.main.asasm").Build();333
 
-            new Abc("../../agc").Build();
+            //new Abc("../../agc").Build();
+
+            var x =new ArgumentsParser(new ABCUtil.OpcodeArgumentType[] { ABCUtil.OpcodeArgumentType.Namespace }, "       ProtectedNamespace(\"BitmapD\\nata\\x53Spy\")").Parse();
 
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();

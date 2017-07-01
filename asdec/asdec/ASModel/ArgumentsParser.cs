@@ -53,6 +53,10 @@ namespace asdec.ASModel
                     case OpcodeArgumentType.String:
                         ret.Add(new ValueArg((String)ReadString()));
                         break;
+
+                    case OpcodeArgumentType.Namespace:
+                        ret.Add(ReadNamespace());
+                        break;
                         //TODO
                 }
                 if (i < types.Length - 1) Expect(",");
@@ -144,7 +148,7 @@ namespace asdec.ASModel
                             case 'n':sb.Append('\n'); break;
                             case 'r':sb.Append('\r'); break;
                             case 'x':
-                                sb.Append(Int32.Parse(((Char)sr.Read() + (Char)sr.Read()).ToString(), System.Globalization.NumberStyles.HexNumber).ToString());
+                                sb.Append((Char)Int32.Parse(((Char)sr.Read() + (Char)sr.Read()).ToString(), System.Globalization.NumberStyles.HexNumber));
                                 break;
                             default: sb.Append(c); break;
                         }
@@ -154,6 +158,8 @@ namespace asdec.ASModel
                 }
             }
         }
+
+        private Dictionary<string, uint> NamespaceLabels = new Dictionary<string, uint>();
 
         private Namespace ReadNamespace()
         {
@@ -168,8 +174,16 @@ namespace asdec.ASModel
             {
                 sr.Read();//skipchar
                 string s = ReadString();
-                //TODO
-            }
+                try {
+                    //id = NamespaceLabels.First(x => x.Key == s).Value;//s in namespacelabels
+                    id = NamespaceLabels[s];
+                }
+                catch
+                {
+                    id = (uint)NamespaceLabels.Count + 1;
+                    NamespaceLabels.Add(s, id);
+                }
+            } else id = 0;
             Expect(")");
 
             return new Namespace(kind, name, id);

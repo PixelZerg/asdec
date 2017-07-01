@@ -7,7 +7,7 @@ using asdec;
 
 namespace asdec.ASModel.Objects
 {
-    public class Namespace
+    public class Namespace : Argument
     {
         public ABCUtil.ASType Kind;
         public string Name;
