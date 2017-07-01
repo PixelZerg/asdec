@@ -38,7 +38,7 @@ namespace asdec
 
             //new Abc("../../agc").Build();
 
-            var x =new ArgumentsParser(new Asasm(null), new ABCUtil.OpcodeArgumentType[] {
+            var x =new ArgumentsParser(new Main(null), new ABCUtil.OpcodeArgumentType[] {
                 ABCUtil.OpcodeArgumentType.Multiname ,
                 ABCUtil.OpcodeArgumentType.Multiname ,
                 ABCUtil.OpcodeArgumentType.Multiname ,

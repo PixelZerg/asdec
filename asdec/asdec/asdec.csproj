@@ -60,6 +60,7 @@
     <Compile Include="ASModel\Nodes\Asasm.cs" />
     <Compile Include="ASModel\Nodes\Code.cs" />
     <Compile Include="ASModel\Nodes\Instruction.cs" />
+    <Compile Include="ASModel\Nodes\Main.cs" />
     <Compile Include="ASModel\Nodes\TokenNode.cs" />
     <Compile Include="ASModel\Objects\Argument.cs" />
     <Compile Include="ASModel\Objects\MultinameBase.cs" />
