@@ -38,12 +38,15 @@ namespace asdec
 
             //new Abc("../../agc").Build();
 
-            var x =new ArgumentsParser(new Main(null), new ABCUtil.OpcodeArgumentType[] {
-                ABCUtil.OpcodeArgumentType.Multiname ,
-                ABCUtil.OpcodeArgumentType.Multiname ,
-                ABCUtil.OpcodeArgumentType.Multiname ,
-            }, "       QName(PackageNamespace(\"flash.display\"), \"BitmapData\"), Multiname(\"dispatch\", [PrivateNamespace(null, \"WebMain/instance\"), PackageNamespace(\"\"), ProtectedNamespace(\"WebMain\"), PrivateNamespace(null, \"WebMain/instance/WebMain/instance\"), PackageInternalNs(\"\"), Namespace(\"http://adobe.com/AS3/2006/builtin\"), StaticProtectedNs(\"WebMain\"), StaticProtectedNs(\"flash.display:Sprite\"), StaticProtectedNs(\"flash.display:DisplayObjectContainer\"), StaticProtectedNs(\"flash.display:InteractiveObject\"), StaticProtectedNs(\"flash.display:DisplayObject\"), StaticProtectedNs(\"flash.events:EventDispatcher\")]), TypeName(QName(PackageNamespace(\"__AS3__.vec\"), \"Vector\")<QName(PackageNamespace(\"flash.display\"), \"DisplayObject\")>)").Parse();
+            var x = new ArgumentsParser(new Main(null), new ABCUtil.OpcodeArgumentType[] {
+                ABCUtil.OpcodeArgumentType.Class,
+                ABCUtil.OpcodeArgumentType.Method,
+                ABCUtil.OpcodeArgumentType.JumpTarget,
+                ABCUtil.OpcodeArgumentType.SwitchDefaultTarget,
+                ABCUtil.OpcodeArgumentType.SwitchTargets,
 
+            }, "\"com.adobe.serialization.json:JSONDecoder\", \"com.company.assembleegameclient.ui:RankText/instance/draw/inline_method\", L69, L185, [L112, L122, L132, L173, L185]"
+            ).Parse();
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
 

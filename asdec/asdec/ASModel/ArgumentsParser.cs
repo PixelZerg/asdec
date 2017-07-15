@@ -62,7 +62,20 @@ namespace asdec.ASModel
                     case OpcodeArgumentType.Multiname:
                         ret.Add(ReadMultiname());
                         break;
-                        //TODO
+
+                    case OpcodeArgumentType.Class:
+                    case OpcodeArgumentType.Method:
+                        ret.Add(new Refid(ReadString()));
+                        break;
+
+                    case OpcodeArgumentType.SwitchDefaultTarget:
+                    case OpcodeArgumentType.JumpTarget:
+                        ret.Add(new Label(ReadWord()));
+                        break;
+                    case OpcodeArgumentType.SwitchTargets:
+                        SkipWhitespace();
+                        ret.Add(new Labels(ReadList('[', ']', ReadWord, false)));
+                        break;
                 }
                 if (i < types.Length - 1) Expect(",");
                 i++;

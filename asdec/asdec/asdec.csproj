@@ -63,8 +63,11 @@
     <Compile Include="ASModel\Nodes\Main.cs" />
     <Compile Include="ASModel\Nodes\TokenNode.cs" />
     <Compile Include="ASModel\Objects\Argument.cs" />
+    <Compile Include="ASModel\Objects\Label.cs" />
+    <Compile Include="ASModel\Objects\Labels.cs" />
     <Compile Include="ASModel\Objects\MultinameBase.cs" />
     <Compile Include="ASModel\Objects\Namespace.cs" />
+    <Compile Include="ASModel\Objects\Refid.cs" />
     <Compile Include="ASModel\Objects\ValueArg.cs" />
     <Compile Include="Debug.cs" />
     <Compile Include="Errors\ASParsingException.cs" />
